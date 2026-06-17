@@ -1,0 +1,49 @@
+<!-- ================================================
+     FES HealthTech — Shared Navbar Component
+     Loaded dynamically by components/components.js
+     ================================================ -->
+
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar" role="navigation" aria-label="القائمة الرئيسية">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="FES HealthTech — الصفحة الرئيسية">
+      <img src="assets/logo.png" alt="شعار FES HealthTech" />
+    </a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="pages/about.html">من نحن</a></li>
+      <li><a href="pages/portfolio.html">أعمالنا</a></li>
+      <li><a href="pages/contact.html">تواصل معنا</a></li>
+    </ul>
+
+    <div class="nav-cta">
+      <a href="pages/portfolio.html" class="btn btn-outline btn-sm">استكشف منتجاتنا</a>
+      <a href="pages/contact.html" class="btn btn-primary btn-sm">تواصل معنا</a>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="فتح القائمة" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Drawer -->
+<div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-label="القائمة المتنقلة">
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="drawer-panel">
+    <div class="drawer-header">
+      <img src="assets/logo.png" alt="FES HealthTech" style="height:28px;" />
+      <button class="drawer-close" id="drawerClose" aria-label="إغلاق القائمة">✕</button>
+    </div>
+    <a href="index.html" class="drawer-link">🏠 الرئيسية</a>
+    <a href="pages/about.html" class="drawer-link">🏢 من نحن</a>
+    <a href="pages/portfolio.html" class="drawer-link">📱 أعمالنا</a>
+    <a href="pages/contact.html" class="drawer-link">✉️ تواصل معنا</a>
+    <div class="drawer-cta">
+      <a href="pages/portfolio.html" class="btn btn-outline">استكشف منتجاتنا</a>
+      <a href="pages/contact.html" class="btn btn-primary">تواصل معنا</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="سياسة الخصوصية — FES HealthTech. كيف نجمع البيانات، نستخدمها، ونحميها." />
+  <title>سياسة الخصوصية | FES HealthTech</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/png" href="../assets/logo.png" />
+  <style>
+    /* ════════════════════════════════════════
+       FES HealthTech — Privacy Policy Page CSS
+       Clinical Luxury & High-Contrast Readability
+       ════════════════════════════════════════ */
+
+    /* Light Clinical Luxury Theme */
+    body, html, .legal-page {
+      background-color: #F8FAFF !important;
+      background: linear-gradient(180deg, #F0F4FF 0%, #F8FAFF 100%) !important;
+      color: #374151 !important;
+      font-family: var(--font-arabic);
+      overflow-x: hidden !important;
+      width: 100% !important;
+      position: relative !important;
+    }
+
+    /* Page Hero (Light Theme Override) */
+    .page-hero {
+      background: #F0F4FF !important;
+      background-image: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(37, 99, 235, 0.08) 0%, transparent 80%) !important;
+      padding: calc(var(--nav-height) + 80px) 0 60px !important;
+      border-bottom: 1px solid rgba(37, 99, 235, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(37, 99, 235, 0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(37, 99, 235, 0.015) 1px, transparent 1px);
+      background-size: 50px 50px;
+      pointer-events: none;
+    }
+
+    .page-breadcrumb {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: #64748B;
+      margin-bottom: 18px;
+    }
+    .page-breadcrumb a {
+      color: #64748B;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+    .page-breadcrumb a:hover {
+      color: var(--primary);
+    }
+    .page-breadcrumb-sep {
+      color: rgba(37, 99, 235, 0.25);
+    }
+
+    .page-hero-eyebrow {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      display: inline-block;
+      padding: 6px 14px;
+      background: rgba(37, 99, 235, 0.06);
+      border-radius: 99px;
+      border: 1px solid rgba(37, 99, 235, 0.1);
+    }
+
+    .page-hero-title {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 900;
+      color: #0D1B2A !important;
+      line-height: 1.3;
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+    .page-hero-title span {
+      background: linear-gradient(135deg, #1D4ED8 0%, #0D9488 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
+    }
+
+    .page-hero-subtitle {
+      font-size: 1.12rem;
+      color: #475569 !important;
+      max-width: 800px;
+      line-height: 1.85;
+      margin: 0;
+      font-weight: 400;
+    }
+
+    /* Legal Layout Grid */
+    .legal-layout-grid {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 48px;
+      margin-top: 60px;
+      margin-bottom: 90px;
+      align-items: start;
+    }
+
+    /* Sidebar TOC */
+    .legal-sidebar-toc {
+      position: sticky;
+      top: calc(var(--nav-height) + 32px);
+      background: rgba(255, 255, 255, 0.75) !important;
+      backdrop-filter: blur(20px) !important;
+      -webkit-backdrop-filter: blur(20px) !important;
+      border: 1px solid rgba(37, 99, 235, 0.08) !important;
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(13, 27, 42, 0.02) !important;
+    }
+    .toc-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #0D1B2A;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(37, 99, 235, 0.08);
+    }
+    .toc-links {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toc-link {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #64748B;
+      padding: 8px 12px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition);
+    }
+    .toc-link:hover {
+      color: var(--primary);
+      background: rgba(37, 99, 235, 0.04);
+    }
+    .toc-link.active {
+      color: var(--primary) !important;
+      background: rgba(37, 99, 235, 0.06) !important;
+      font-weight: 700;
+    }
+    .toc-num {
+      font-family: var(--font-english);
+      font-weight: 700;
+      font-size: 0.8rem;
+    }
+
+    /* Mobile TOC Accordion */
+    .mobile-toc-accordion {
+      display: none;
+      position: relative;
+      margin-top: 32px;
+      margin-bottom: 16px;
+      z-index: 100;
+    }
+    .mobile-toc-trigger {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95) !important;
+      border: 1px solid rgba(37, 99, 235, 0.1) !important;
+      border-radius: 16px;
+      padding: 14px 20px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #0D1B2A;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 15px rgba(13, 27, 42, 0.02) !important;
+      transition: var(--transition);
+    }
+    .mobile-toc-trigger:active {
+      transform: scale(0.99);
+    }
+    .mobile-toc-trigger .toc-icon {
+      font-size: 0.75rem;
+      transition: transform 0.3s ease;
+      color: var(--primary);
+    }
+    .mobile-toc-trigger.open .toc-icon {
+      transform: rotate(180deg);
+    }
+    .mobile-toc-dropdown {
+      display: none;
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0; right: 0;
+      background: #FFFFFF !important;
+      border: 1px solid rgba(37, 99, 235, 0.1) !important;
+      border-radius: 16px;
+      box-shadow: 0 15px 35px rgba(13, 27, 42, 0.1) !important;
+      padding: 10px;
+      max-height: 280px;
+      overflow-y: auto;
+      z-index: 101;
+    }
+    .mobile-toc-item {
+      display: block;
+      padding: 10px 16px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #475569;
+      border-radius: 10px;
+      transition: var(--transition);
+      text-align: right;
+    }
+    .mobile-toc-item:hover {
+      background: rgba(37, 99, 235, 0.04);
+      color: var(--primary);
+    }
+
+    /* Content Area */
+    .legal-content-wrap {
+      background: rgba(255, 255, 255, 0.75) !important;
+      backdrop-filter: blur(20px) !important;
+      -webkit-backdrop-filter: blur(20px) !important;
+      border: 1px solid rgba(37, 99, 235, 0.08) !important;
+      border-radius: 28px;
+      padding: 44px;
+      box-shadow: 0 20px 50px rgba(13, 27, 42, 0.03) !important;
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+
+    .legal-highlight {
+      background: rgba(37, 99, 235, 0.05) !important;
+      border: 1px solid rgba(37, 99, 235, 0.12) !important;
+      color: #1E3A8A !important;
+      padding: 20px 24px;
+      border-radius: 20px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    .legal-section {
+      margin-bottom: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(37, 99, 235, 0.06);
+      scroll-margin-top: calc(var(--nav-height) + 40px);
+    }
+    .legal-section:last-of-type {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .legal-section-title {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #0D1B2A !important;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap !important;
+      gap: 12px;
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+
+    .legal-section-num {
+      width: 32px;
+      height: 32px;
+      background: rgba(37, 99, 235, 0.08) !important;
+      border: 1px solid rgba(37, 99, 235, 0.15) !important;
+      border-radius: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary) !important;
+      font-size: 0.9rem;
+      font-weight: 800;
+      font-family: var(--font-english);
+      flex-shrink: 0 !important;
+    }
+
+    .legal-text {
+      font-size: 0.98rem;
+      line-height: 1.95;
+      color: #475569 !important;
+      margin-bottom: 16px;
+    }
+    .legal-text:last-of-type {
+      margin-bottom: 0;
+    }
+    .legal-text strong {
+      color: #0D1B2A !important;
+    }
+
+    /* Wrap emails and long links to prevent mobile overflow */
+    .legal-text, .legal-highlight {
+      overflow-wrap: break-word !important;
+      word-wrap: break-word !important;
+    }
+
+    /* ════════════════════════════════════════
+       RESPONSIVE DESIGN & MOBILE OPTIMIZATIONS
+       ════════════════════════════════════════ */
+    @media (max-width: 992px) {
+      .page-hero {
+        padding: calc(var(--nav-height) + 50px) 0 50px !important;
+      }
+      .legal-layout-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+        margin-top: 40px;
+        margin-bottom: 60px;
+      }
+      .legal-sidebar-toc {
+        display: none !important;
+      }
+      .mobile-toc-accordion {
+        display: block !important;
+      }
+      .legal-content-wrap {
+        padding: 32px 24px !important;
+        border-radius: 24px !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .reveal-left, .reveal-right {
+        transform: translateY(20px) !important;
+      }
+      .reveal-left.revealed, .reveal-right.revealed {
+        transform: translateY(0) !important;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .container {
+        padding: 0 20px !important;
+      }
+      .page-hero-title {
+        font-size: 1.85rem !important;
+        line-height: 1.35 !important;
+      }
+      .page-hero-subtitle {
+        font-size: 0.98rem !important;
+        line-height: 1.75 !important;
+      }
+      .legal-content-wrap {
+        padding: 24px 18px !important;
+        border-radius: 20px !important;
+      }
+      .legal-section-title {
+        font-size: 1.15rem !important;
+      }
+      .legal-section-num {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+        border-radius: 8px;
+      }
+      .legal-text {
+        font-size: 0.92rem !important;
+        line-height: 1.8 !important;
+      }
+      .legal-highlight {
+        padding: 16px 18px !important;
+        font-size: 0.88rem !important;
+      }
+    }
+  </style>
+</head>
+<body class="legal-page">
+
+  <div id="navbar-placeholder"></div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container page-hero-content">
+      <nav class="page-breadcrumb">
+        <a href="../index.html">الرئيسية</a>
+        <span class="page-breadcrumb-sep">›</span>
+        <span>سياسة الخصوصية</span>
+      </nav>
+      <div class="page-hero-eyebrow">🔒 الخصوصية · Privacy Policy</div>
+      <h1 class="page-hero-title">سياسة <span>الخصوصية</span></h1>
+      <p class="page-hero-subtitle">
+        نُعلن التزامنا التام بحماية خصوصيتك وبيانات مستخدمينا وفق أعلى المعايير الدولية.
+        آخر تحديث: يناير 2026.
+      </p>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="legal-layout-grid">
+      
+      <!-- Sidebar TOC (Desktop) -->
+      <aside class="legal-sidebar-toc">
+        <div class="toc-title">المحتويات</div>
+        <nav class="toc-links">
+          <a href="#sec-1" class="toc-link active"><span class="toc-num">1.</span> المعلومات التي نجمعها</a>
+          <a href="#sec-2" class="toc-link"><span class="toc-num">2.</span> كيف نستخدم معلوماتك</a>
+          <a href="#sec-3" class="toc-link"><span class="toc-num">3.</span> مشاركة البيانات</a>
+          <a href="#sec-4" class="toc-link"><span class="toc-num">4.</span> ملفات تعريف الارتباط</a>
+          <a href="#sec-5" class="toc-link"><span class="toc-num">5.</span> حماية البيانات وأمانها</a>
+          <a href="#sec-6" class="toc-link"><span class="toc-num">6.</span> حقوقك القانونية</a>
+          <a href="#sec-7" class="toc-link"><span class="toc-num">7.</span> سياسات التطبيقات</a>
+          <a href="#sec-8" class="toc-link"><span class="toc-num">8.</span> تحديثات السياسة</a>
+          <a href="#sec-9" class="toc-link"><span class="toc-num">9.</span> معلومات التواصل</a>
+        </nav>
+      </aside>
+
+      <!-- Mobile TOC Accordion -->
+      <div class="mobile-toc-accordion">
+        <button class="mobile-toc-trigger" id="mobileTocBtn">
+          <span>🔍 انتقل سريعاً إلى أقسام السياسة...</span>
+          <span class="toc-icon">▼</span>
+        </button>
+        <div class="mobile-toc-dropdown" id="mobileTocDropdown">
+          <a href="#sec-1" class="mobile-toc-item">1. المعلومات التي نجمعها</a>
+          <a href="#sec-2" class="mobile-toc-item">2. كيف نستخدم معلوماتك</a>
+          <a href="#sec-3" class="mobile-toc-item">3. مشاركة البيانات</a>
+          <a href="#sec-4" class="mobile-toc-item">4. ملفات تعريف الارتباط</a>
+          <a href="#sec-5" class="mobile-toc-item">5. حماية البيانات وأمانها</a>
+          <a href="#sec-6" class="mobile-toc-item">6. حقوقك القانونية</a>
+          <a href="#sec-7" class="mobile-toc-item">7. سياسات التطبيقات</a>
+          <a href="#sec-8" class="mobile-toc-item">8. تحديثات السياسة</a>
+          <a href="#sec-9" class="mobile-toc-item">9. معلومات التواصل</a>
+        </div>
+      </div>
+
+      <!-- Legal Content Wrap -->
+      <div class="legal-content-wrap">
+
+        <div class="legal-highlight">
+          🔒 هذه السياسة تتعلق بموقع <strong>feshealthtech.com</strong> الشركة فحسب.
+          لكل تطبيق من تطبيقاتنا سياسة خصوصية مستقلة خاصة به.
+        </div>
+
+        <div class="legal-section" id="sec-1">
+          <h2 class="legal-section-title">
+            <span class="legal-section-num">1</span>
+            المعلومات التي نجمعها
+          </h2>
+          <p class="legal-text">عند استخدامك لموقع feshealthtech.com، قد نجمع:</p>
+          <p class="legal-text">
+            <strong>أ. معلومات تُقدّمها أنت:</strong> عند إرسال نموذج التواصل نجمع الاسم، البريد الإلكتروني، وموضوع التواصل.
+            عند الاشتراك في نشرتنا البريدية نجمع البريد الإلكتروني فقط.
+          </p>
+          <p class="legal-text">
+            <strong>ب. معلومات تُجمع تلقائياً:</strong> عنوان IP، نوع المتصفح، الصفحات المُزارة، وقت الزيارة.
+            نستخدم هذه البيانات فقط لتحسين أداء الموقع وليس لتحديد هويتك.
+          </p>
+        </div>
+
+        <div class="legal-section" id="sec-2">
+          <h2 class="legal-section-title">
+            <span class="legal-section-num">2</span>
+            كيف نستخدم معلوماتك
+          </h2>
+          <p class="legal-text">نستخدم المعلومات التي تُقدمها <strong>حصراً</strong> للأغراض التالية:</p>
+          <p class="legal-text">• الرد على استفساراتك ورسائلك عبر نموذج التواصل</p>
+          <p class="legal-text">• إرسال النشرة البريدية إن اشتركت فيها (يمكنك إلغاء الاشتراك في أي وقت)</p>
+          <p class="legal-text">• تحسين أداء الموقع وتجربة المستخدم</p>
+          <p class="legal-text">• الامتثال للمتطلبات القانونية عند الاقتضاء</p>
+        </div>
+
+        <div class="legal-section" id="sec-3">
+          <h2 class="legal-section-title">
+            <span class="legal-section-num">3</span>
+            مشاركة البيانات مع أطراف ثالثة
+          </h2>
+          <p class="legal-text">
+            <strong>لا نبيع، ولا نؤجر، ولا نتاجر بمعلوماتك الشخصية مع أي طرف ثالث.</strong>
+          </p>
+          <p class="legal-text">قد نشارك بياناتك في الحالات التالية فقط:</p>
+          <p class="legal-text">• مزودو خدمات موثوقون يساعدوننا في تشغيل الموقع (مثل Google Analytics بصلاحيات محدودة)</p>
+          <p class="legal-text">• الامتثال للأوامر القانونية من جهات قضائية مختصة</p>
+        </div>
+
+        <div class="legal-section" id="sec-4">
+          <h2 class="legal-section-title">
+            <span class="legal-section-num">4</span>
+            ملفات تعريف الارتباط (Cookies)
+          </h2>
+          <p class="legal-text">
+            يستخدم موقعنا ملفات تعريف ارتباط محدودة لأغراض وظيفية فقط (تذكر تفضيلاتك).
+            لا نستخدم ملفات تعريف ارتباط للإعلانات المستهدفة.
+          </p>
+          <p class="legal-text">
+            يمكنك تعطيل ملفات تعريف الارتباط من إعدادات متصفحك في أي وقت.
+          </p>
+        </div>
+
+        <div class="legal-section" id="sec-5">
+          <h2 class="legal-section-title">
+            <span class="legal-section-num">5</span>
+            حماية البيانات وأمانها
+          </h2>
+          <p class="legal-text">
+            نتخذ تدابير تقنية وتنظيمية مناسبة لحماية بياناتك من الوصول غير المصرح به،
+            الكشف، التعديل، أو الحذف. تشمل هذه التدابير: HTTPS/SSL، تشفير البيانات الحساسة،
+            وتقييد الوصول للبيانات.
+          </p>
+        </div>
+
+        <div class="legal-section" id="sec-6">
+          <h2 class="legal-section-title">
+            <span class="legal-section-num">6</span>
+            حقوقك
+          </h2>
+          <p class="legal-text">لك الحق في:</p>
+          <p class="legal-text">• <strong>الوصول:</strong> طلب نسخة من البيانات التي نحتفظ بها عنك</p>
+          <p class="legal-text">• <strong>التصحيح:</strong> تصحيح أي بيانات غير دقيقة</p>
+          <p class="legal-text">• <strong>الحذف:</strong> طلب حذف بياناتك من أنظمتنا</p>
+          <p class="legal-text">• <strong>الاعتراض:</strong> الاعتراض على معالجة بياناتك لأغراض التسويق</p>
+          <p class="legal-text">لممارسة هذه الحقوق، تواصل معنا عبر: <strong>privacy@feshealthtech.com</strong></p>
+        </div>
+
+        <div class="legal-section" id="sec-7">
+          <h2 class="legal-section-title">
+            <span class="legal-section-num">7</span>
+            سياسات خصوصية التطبيقات
+          </h2>
+          <div class="legal-highlight">
+            📱 لكل تطبيق سياسة خصوصية مستقلة ومفصّلة تتناول بياناته الخاصة. هذه السياسة تخص الموقع المؤسسي فحسب.
+          </div>
+        </div>
+
+        <div class="legal-section" id="sec-8">
+          <h2 class="legal-section-title">
+            <span class="legal-section-num">8</span>
+            تحديثات السياسة
+          </h2>
+          <p class="legal-text">
+            قد نُحدّث هذه السياسة من وقت لآخر. سنُعلن عن أي تغييرات جوهرية على الموقع.
+            استمرار استخدامك للموقع بعد أي تعديل يعني موافقتك على السياسة الجديدة.
+          </p>
+        </div>
+
+        <div class="legal-section" id="sec-9">
+          <h2 class="legal-section-title">
+            <span class="legal-section-num">9</span>
+            التواصل
+          </h2>
+          <p class="legal-text">
+            لأي استفسار حول هذه السياسة أو لممارسة حقوقك، تواصل معنا:
+          </p>
+          <p class="legal-text">
+            <strong>البريد الإلكتروني:</strong> privacy@feshealthtech.com<br />
+            <strong>الموقع:</strong> <a href="contact.html" style="color:var(--primary); font-weight:700;">صفحة التواصل</a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="../components/components.js"></script>
+  <script>
+    (function () {
+      // Mobile TOC Accordion Toggle
+      const mobileTocBtn = document.getElementById('mobileTocBtn');
+      const mobileTocDropdown = document.getElementById('mobileTocDropdown');
+      
+      if (mobileTocBtn && mobileTocDropdown) {
+        mobileTocBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isOpen = mobileTocBtn.classList.toggle('open');
+          mobileTocDropdown.style.display = isOpen ? 'block' : 'none';
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', () => {
+          if (mobileTocBtn) mobileTocBtn.classList.remove('open');
+          if (mobileTocDropdown) mobileTocDropdown.style.display = 'none';
+        });
+
+        // Close dropdown when clicking a link
+        mobileTocDropdown.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileTocBtn.classList.remove('open');
+            mobileTocDropdown.style.display = 'none';
+          });
+        });
+      }
+
+      // ScrollSpy for Desktop Sidebar
+      const sections = document.querySelectorAll('.legal-section');
+      const tocLinks = document.querySelectorAll('.toc-link');
+
+      if (sections.length && tocLinks.length) {
+        const handleScroll = () => {
+          let currentId = '';
+          const scrollPosition = window.scrollY + 160;
+
+          sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+              currentId = section.getAttribute('id');
+            }
+          });
+
+          // Fallback to first section if at the top
+          if (window.scrollY < 200) {
+            currentId = sections[0].getAttribute('id');
+          }
+
+          tocLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === `#${currentId}`);
+          });
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll(); // Run once initially
+      }
+    })();
+  </script>
+</body>
+</html>
