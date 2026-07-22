@@ -651,16 +651,56 @@
       border-radius: 50%;
       box-shadow: 0 0 8px rgba(16,185,129,0.5);
     }
-    .c-mockup-body {
-      padding: 20px;
+    .c-mockup-tab-nav {
+      display: flex;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 6px;
+      gap: 6px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      box-sizing: border-box;
+      width: 100%;
+    }
+    .c-mockup-tab {
+      flex: 1;
+      background: transparent;
+      border: none;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 8px 6px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      font-family: inherit;
+      text-align: center;
+      white-space: nowrap;
+    }
+    .c-mockup-tab:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.04);
+    }
+    .c-mockup-tab.active {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    }
+    .c-mockup-panel {
+      display: none;
+      padding: 24px;
+      animation: fadeIn 0.3s ease;
+      box-sizing: border-box;
+      width: 100%;
+    }
+    .c-mockup-panel.active {
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 16px;
     }
     .c-mockup-stats {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
+      gap: 12px;
+      width: 100%;
     }
     .c-mockup-stat {
       background: rgba(255,255,255,0.03);
@@ -668,32 +708,35 @@
       border-radius: 12px;
       padding: 12px 10px;
       text-align: center;
+      box-sizing: border-box;
     }
     .c-mockup-stat-num {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       font-weight: 900;
       color: #60A5FA;
       display: block;
     }
     .c-mockup-stat-label {
-      font-size: 0.58rem;
-      color: rgba(255,255,255,0.4);
-      margin-top: 2px;
+      font-size: 0.62rem;
+      color: rgba(255,255,255,0.45);
+      margin-top: 4px;
       display: block;
     }
     .c-mockup-row {
       display: flex;
-      gap: 10px;
+      gap: 12px;
       align-items: center;
-      padding: 12px 14px;
+      padding: 12px 16px;
       background: rgba(255,255,255,0.02);
       border: 1px solid rgba(255,255,255,0.05);
-      border-radius: 12px;
-      font-size: 0.72rem;
-      color: rgba(255,255,255,0.6);
+      border-radius: 14px;
+      font-size: 0.76rem;
+      color: rgba(255,255,255,0.65);
+      box-sizing: border-box;
+      width: 100%;
     }
     .c-mockup-row-icon {
-      font-size: 1rem;
+      font-size: 1.1rem;
       flex-shrink: 0;
     }
     .c-mockup-row strong {
