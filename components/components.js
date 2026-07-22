@@ -75,7 +75,7 @@
       <div class="footer-brand">
         <img src="${R}assets/logo.png" alt="FES HealthTech" class="footer-logo" />
         <p class="footer-brand-text">
-          FES HealthTech — شركة تقنية طبية رائدة متخصصة في بناء الأنظمة السريرية الذكية
+          FES HealthTech — شركة تقنيات صحية رائدة متخصصة في بناء منصات إدارة العيادات والحلول الرقمية الذكية
           للرعاية الصحية عالمياً. نؤمن بأن التكنولوجيا الجيدة تخدم الممارس الصحي ولا تُعقّد عمله.
         </p>
         <div class="footer-social">
@@ -102,10 +102,7 @@
       <div>
         <h4 class="footer-col-title">منتجاتنا</h4>
         <ul class="footer-links">
-          <li><a href="${R}pages/portfolio.html#murshid">مرشد — الذكاء الاصطناعي للتغذية</a></li>
-          <li><a href="${R}pages/portfolio.html#renalflow">RenalFlow — صحة الكلى</a></li>
-          <li><a href="${R}pages/portfolio.html#nutridrug">NutriDrug — التداخلات الدوائية</a></li>
-          <li><a href="${R}pages/portfolio.html#bariatric">Bariatric Guide — جراحة البدانة</a></li>
+          <li><a href="${R}pages/portfolio.html#murshid">مرشد — إدارة عيادات التغذية</a></li>
         </ul>
       </div>
 

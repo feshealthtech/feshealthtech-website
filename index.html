@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="FES HealthTech — الشركة الرائدة في تطوير الأنظمة السريرية ونظم الذكاء الاصطناعي للرعاية الصحية والمؤسسات الطبية عالمياً." />
-  <meta name="keywords" content="FES HealthTech, أنظمة سريرية, تقنية طبية B2B, ذكاء اصطناعي طبي, مستشفيات, مرشد, RenalFlow, NutriDrug, Bariatric" />
-  <meta property="og:title" content="FES HealthTech | العقل التقني للطب السريري الحديث" />
-  <meta property="og:description" content="البنية التحتية البرمجية السريرية للرعاية الصحية الرقمية" />
+  <meta name="description" content="FES HealthTech — شركة تقنيات صحية رائدة متخصصة في بناء منصات إدارة العيادات والحلول الرقمية الذكية للممارسين الصحيين." />
+  <meta name="keywords" content="FES HealthTech, تقنيات صحية, إدارة العيادات, مرشد, أخصائيي التغذية, حاسبات تغذوية, OCR طبي, تطبيق تغذية" />
+  <meta property="og:title" content="FES HealthTech | نبني التقنيات الصحية الذكية" />
+  <meta property="og:description" content="منصات إدارية وتشغيلية ذكية للممارسين الصحيين — حاسبات موضعية عالية الدقة وتقنيات استخلاص بصري ذكي" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://feshealthtech.com" />
-  <title>FES HealthTech | العقل التقني للطب السريري الحديث</title>
+  <title>FES HealthTech | نبني التقنيات الصحية الذكية</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
 
@@ -20,15 +20,15 @@
     "name": "FES HealthTech",
     "url": "https://feshealthtech.com",
     "logo": "https://feshealthtech.com/assets/logo.png",
-    "description": "تطوير الأنظمة السريرية والذكاء الاصطناعي الطبي للمؤسسات الصحية",
+    "description": "شركة تقنيات صحية رائدة متخصصة في بناء منصات إدارة العيادات والحلول الرقمية الذكية للممارسين الصحيين",
     "foundingDate": "2024"
   }
   </script>
 
   <style>
     /* ═══════════════════════════════════════════════════
-       FES HealthTech — B2B Corporate Homepage Styles
-       clinical luxury, dark/light contrast, deep navy
+       FES HealthTech — Homepage v3.0 (Rebuilt)
+       Premium health-tech administrative positioning
     ═══════════════════════════════════════════════════ */
 
     html, body {
@@ -37,158 +37,188 @@
       color: var(--navy-text);
     }
 
-    /* ─── Hero section B2B style ─── */
+    /* ─── HERO ─── */
     .c-hero {
       background: var(--navy);
       background-image:
-        radial-gradient(ellipse 100% 70% at 50% -10%, rgba(37,99,235,0.2) 0%, transparent 60%),
-        radial-gradient(ellipse 60% 50% at 0% 100%, rgba(30,58,138,0.15) 0%, transparent 60%);
-      padding: calc(var(--nav-height) + 64px) 0 80px;
+        radial-gradient(ellipse 100% 70% at 50% -10%, rgba(37,99,235,0.18) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 0% 100%, rgba(30,58,138,0.12) 0%, transparent 60%);
+      padding: calc(var(--nav-height) + 72px) 0 100px;
       position: relative;
+      overflow: hidden;
     }
-
     .c-hero::after {
       content: '';
       position: absolute;
       bottom: 0; left: 0; right: 0;
-      height: 100px;
-      background: linear-gradient(to bottom, transparent, var(--bg-page));
+      height: 120px;
+      background: linear-gradient(to bottom, transparent, var(--white));
       pointer-events: none;
     }
-
     .c-hero-grid {
       display: grid;
-      grid-template-columns: 1fr 1.1fr;
-      gap: 48px;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    .c-hero-text {
-      text-align: right;
-    }
-
-    .c-badge-premium {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(245,158,11,0.08);
-      border: 1px solid rgba(245,158,11,0.2);
-      color: #FCD34D;
-      font-size: clamp(0.7rem, 2vw, 0.8rem);
-      font-weight: 700;
-      padding: 6px 16px;
-      border-radius: 99px;
-      margin-bottom: 24px;
-    }
-
-    .c-hero-title {
-      font-size: clamp(2rem, 4.5vw, 3.4rem);
-      font-weight: 900;
-      color: #fff;
-      line-height: 1.15;
-      margin-bottom: 24px;
-    }
-
-    .c-hero-title span {
-      background: linear-gradient(135deg, #60A5FA 0%, #2563EB 50%, #93C5FD 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .c-hero-sub {
-      font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-      color: rgba(148,163,184,0.9);
-      line-height: 1.8;
-      margin-bottom: 36px;
-      max-width: 580px;
-    }
-
-    .c-hero-actions {
-      display: flex;
-      gap: 16px;
-    }
-
-    .c-hero-visual {
-      position: relative;
-      width: 100%;
-    }
-
-    /* ─── Platform OS Section ─── */
-    .c-platform {
-      background: var(--bg-page);
-      padding: 96px 0;
-      color: var(--text-dark);
-      position: relative;
-    }
-
-    .c-platform-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 1fr;
+      grid-template-columns: 1fr 1fr;
       gap: 56px;
       align-items: center;
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 24px;
     }
-
-    .c-platform-card {
-      background: var(--white);
-      border: 1px solid var(--border-light);
-      border-radius: 24px;
-      padding: 36px;
-      box-shadow: var(--shadow-md);
+    .c-hero-text { text-align: right; }
+    .c-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(96,165,250,0.08);
+      border: 1px solid rgba(96,165,250,0.2);
+      color: #93C5FD;
+      font-size: clamp(0.68rem, 2vw, 0.78rem);
+      font-weight: 700;
+      padding: 7px 18px;
+      border-radius: 99px;
+      margin-bottom: 28px;
     }
-
-    .c-os-list {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      margin-top: 32px;
+    .c-hero-title {
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.18;
+      margin-bottom: 24px;
     }
-
-    .c-os-item {
+    .c-hero-title span {
+      background: linear-gradient(135deg, #60A5FA 0%, #2563EB 50%, #93C5FD 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .c-hero-sub {
+      font-size: clamp(0.88rem, 2.5vw, 1.08rem);
+      color: rgba(148,163,184,0.9);
+      line-height: 1.85;
+      margin-bottom: 36px;
+      max-width: 560px;
+    }
+    .c-hero-actions {
       display: flex;
       gap: 16px;
-      align-items: flex-start;
+      margin-bottom: 24px;
     }
 
-    .c-os-icon {
-      width: 44px; height: 44px;
-      background: var(--primary-pale);
-      border-radius: 12px;
+    /* Hero Visual — Glassmorphism Pillar Card */
+    .c-hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .c-hero-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 28px;
+      padding: 40px 32px;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      position: relative;
+      width: 100%;
+      max-width: 480px;
+      box-shadow: 0 32px 64px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.06);
+    }
+    .c-hero-card::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: 29px;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(96,165,250,0.3), transparent 40%, transparent 60%, rgba(37,99,235,0.2));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+    .c-hero-card-header {
       display: flex;
       align-items: center;
-      justify-content: center;
-      font-size: 1.25rem;
-      color: var(--primary);
+      gap: 12px;
+      margin-bottom: 32px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .c-hero-card-logo {
+      width: 40px; height: 40px;
+      background: linear-gradient(135deg, #2563EB, #60A5FA);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem; font-weight: 900; color: #fff;
+    }
+    .c-hero-card-brand {
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: 0.02em;
+    }
+    .c-hero-card-brand small {
+      display: block;
+      font-size: 0.65rem;
+      font-weight: 500;
+      color: rgba(148,163,184,0.6);
+      margin-top: 2px;
+    }
+    .c-pillar-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .c-pillar-item {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      padding: 14px 16px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 16px;
+      transition: var(--transition);
+    }
+    .c-pillar-item:hover {
+      background: rgba(37,99,235,0.08);
+      border-color: rgba(96,165,250,0.2);
+      transform: translateX(-4px);
+    }
+    .c-pillar-icon {
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
       flex-shrink: 0;
     }
-
-    .c-os-title {
-      font-size: 1.05rem;
-      font-weight: 800;
-      color: var(--text-dark);
-      margin-bottom: 4px;
-    }
-
-    .c-os-desc {
+    .c-pillar-icon.blue { background: rgba(37,99,235,0.12); }
+    .c-pillar-icon.green { background: rgba(16,185,129,0.12); }
+    .c-pillar-icon.amber { background: rgba(245,158,11,0.12); }
+    .c-pillar-text h4 {
       font-size: 0.88rem;
-      color: var(--text-muted);
-      line-height: 1.6;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 2px;
+    }
+    .c-pillar-text p {
+      font-size: 0.72rem;
+      color: rgba(148,163,184,0.65);
+      line-height: 1.4;
     }
 
-    /* ─── Section Header ─── */
+    /* ─── TRUST STRIP ─── */
+    .c-trust {
+      background: var(--white);
+      padding: 28px 0;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    /* ─── SECTION HEADER (shared) ─── */
     .c-sec-header {
       max-width: 700px;
       margin: 0 auto 56px;
       text-align: center;
       padding: 0 24px;
     }
-
     .c-sec-eyebrow {
       display: inline-block;
       font-size: 0.72rem;
@@ -202,7 +232,6 @@
       border-radius: 99px;
       margin-bottom: 16px;
     }
-
     .c-sec-title {
       font-size: clamp(1.8rem, 4vw, 2.6rem);
       font-weight: 900;
@@ -210,26 +239,245 @@
       line-height: 1.25;
       margin-bottom: 16px;
     }
-
-    .c-sec-title span {
-      color: var(--primary);
-    }
-
+    .c-sec-title span { color: var(--primary); }
     .c-sec-desc {
       font-size: clamp(0.9rem, 2vw, 1.05rem);
       color: var(--text-muted);
       line-height: 1.7;
     }
 
-    /* ─── Investor / MOAT Section ─── */
-    .c-investor {
-      background: var(--white);
+    /* ─── VISION & MISSION ─── */
+    .c-vision {
+      background: var(--bg-page);
       padding: 96px 0;
+    }
+    .c-vision-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .c-vision-card {
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: 24px;
+      padding: 40px 32px;
+      transition: var(--transition-spring);
+      position: relative;
+      overflow: hidden;
+    }
+    .c-vision-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary);
+    }
+    .c-vision-card::after {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      width: 120px; height: 120px;
+      background: radial-gradient(circle, rgba(37,99,235,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .c-vision-icon {
+      font-size: 2.4rem;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+    .c-vision-title {
+      font-size: 1.3rem;
+      font-weight: 900;
       color: var(--text-dark);
-      border-top: 1px solid var(--border-light);
+      margin-bottom: 14px;
+    }
+    .c-vision-text {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.8;
     }
 
-    .c-investor-grid {
+    /* ─── FLAGSHIP PRODUCT (Murshid) ─── */
+    .c-flagship {
+      background: var(--navy);
+      background-image:
+        radial-gradient(ellipse 80% 60% at 80% 20%, rgba(37,99,235,0.15) 0%, transparent 60%);
+      padding: 100px 0;
+      color: #fff;
+      overflow: hidden;
+    }
+    .c-flagship-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 56px;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .c-flagship-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(245,158,11,0.08);
+      border: 1px solid rgba(245,158,11,0.2);
+      color: #FCD34D;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 6px 16px;
+      border-radius: 99px;
+      margin-bottom: 20px;
+    }
+    .c-flagship-title {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+    .c-flagship-title span {
+      background: linear-gradient(135deg, #60A5FA 0%, #93C5FD 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .c-flagship-desc {
+      font-size: clamp(0.9rem, 2vw, 1.02rem);
+      color: rgba(148,163,184,0.85);
+      line-height: 1.8;
+      margin-bottom: 28px;
+    }
+    .c-feature-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .c-feature-item {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.85);
+    }
+    .c-feature-item .fi-icon {
+      width: 32px; height: 32px;
+      background: rgba(37,99,235,0.12);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+    .c-flagship-actions {
+      display: flex;
+      gap: 16px;
+    }
+
+    /* Flagship Visual — App Mockup */
+    .c-flagship-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .c-app-mockup {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px;
+      padding: 0;
+      width: 100%;
+      max-width: 380px;
+      overflow: hidden;
+      box-shadow: 0 40px 80px rgba(0,0,0,0.35);
+      position: relative;
+    }
+    .c-app-mockup::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: 25px;
+      padding: 1px;
+      background: linear-gradient(180deg, rgba(96,165,250,0.25), transparent 50%, transparent 80%, rgba(37,99,235,0.15));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+    .c-mockup-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.02);
+    }
+    .c-mockup-bar-title {
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: #fff;
+    }
+    .c-mockup-bar-dot {
+      width: 8px; height: 8px;
+      background: #10B981;
+      border-radius: 50%;
+      box-shadow: 0 0 8px rgba(16,185,129,0.5);
+    }
+    .c-mockup-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .c-mockup-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .c-mockup-stat {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      padding: 12px 10px;
+      text-align: center;
+    }
+    .c-mockup-stat-num {
+      font-size: 1.2rem;
+      font-weight: 900;
+      color: #60A5FA;
+      display: block;
+    }
+    .c-mockup-stat-label {
+      font-size: 0.58rem;
+      color: rgba(255,255,255,0.4);
+      margin-top: 2px;
+      display: block;
+    }
+    .c-mockup-row {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      padding: 12px 14px;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 12px;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.6);
+    }
+    .c-mockup-row-icon {
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .c-mockup-row strong {
+      color: #fff;
+      font-weight: 700;
+    }
+
+    /* ─── PLATFORM CORE ─── */
+    .c-platform {
+      background: var(--white);
+      padding: 96px 0;
+    }
+    .c-platform-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
@@ -237,248 +485,160 @@
       margin: 0 auto;
       padding: 0 24px;
     }
-
-    .c-investor-card {
+    .c-tech-card {
       background: var(--bg-page);
       border: 1px solid var(--border-light);
-      border-radius: 20px;
-      padding: 32px 24px;
-      transition: var(--transition);
+      border-radius: 24px;
+      padding: 36px 28px;
+      transition: var(--transition-spring);
+      position: relative;
+      overflow: hidden;
     }
-
-    .c-investor-card:hover {
+    .c-tech-card:hover {
+      transform: translateY(-8px);
       border-color: var(--primary);
-      background: var(--white);
-      box-shadow: var(--shadow-md);
-      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
     }
-
-    .c-investor-icon {
-      font-size: 2rem;
-      margin-bottom: 16px;
-      display: inline-block;
+    .c-tech-icon {
+      width: 56px; height: 56px;
+      background: var(--primary-pale);
+      border-radius: 16px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
     }
-
-    .c-investor-title {
+    .c-tech-title {
       font-size: 1.15rem;
       font-weight: 900;
       color: var(--text-dark);
       margin-bottom: 12px;
     }
+    .c-tech-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
 
-    .c-investor-desc {
+    /* ─── SECURITY / MOAT ─── */
+    .c-moat {
+      background: var(--navy);
+      background-image: radial-gradient(ellipse 80% 50% at 50% 100%, rgba(37,99,235,0.1) 0%, transparent 60%);
+      padding: 96px 0;
+      color: #fff;
+    }
+    .c-moat .c-sec-title { color: #fff; }
+    .c-moat .c-sec-desc { color: rgba(148,163,184,0.8); }
+    .c-moat .c-sec-eyebrow {
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(255,255,255,0.15);
+      color: #fff;
+    }
+    .c-moat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .c-moat-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 20px;
+      padding: 32px 24px;
+      transition: var(--transition);
+      position: relative;
+    }
+    .c-moat-card:hover {
+      border-color: rgba(96,165,250,0.3);
+      background: rgba(255,255,255,0.05);
+      transform: translateY(-4px);
+    }
+    .c-moat-card::before {
+      content: '';
+      position: absolute;
+      top: -1px; right: 24px;
+      width: 60px; height: 3px;
+      background: linear-gradient(90deg, #2563EB, #60A5FA);
+      border-radius: 0 0 4px 4px;
+    }
+    .c-moat-icon {
+      font-size: 2rem;
+      margin-bottom: 18px;
+      display: inline-block;
+    }
+    .c-moat-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    .c-moat-desc {
+      font-size: 0.88rem;
+      color: rgba(148,163,184,0.75);
+      line-height: 1.75;
+    }
+
+    /* ─── ADVISORY / SCIENTIFIC REVIEW ─── */
+    .c-advisory-section {
+      background: var(--bg-page);
+      padding: 96px 0;
+    }
+    .c-advisory-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .c-adv-card {
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: 24px;
+      padding: 36px 28px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      transition: var(--transition-spring);
+    }
+    .c-adv-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary);
+    }
+    .c-adv-icon {
+      width: 52px; height: 52px;
+      background: var(--primary-pale);
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+    .c-adv-body h3 {
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+    .c-adv-body p {
       font-size: 0.88rem;
       color: var(--text-muted);
       line-height: 1.7;
     }
 
-    /* ─── Suites section (replaces portfolio) ─── */
-    .c-suites {
-      background: var(--bg-page);
-      padding: 96px 0;
-      color: var(--text-dark);
-    }
-
-    .c-suites-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    .c-suite-card {
-      background: var(--white);
-      border: 1px solid var(--border-light);
-      border-radius: 24px;
-      padding: 36px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: var(--transition-spring);
-    }
-
-    .c-suite-card:hover {
-      transform: translateY(-6px);
-      border-color: var(--primary);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .c-suite-top {
-      margin-bottom: 24px;
-    }
-
-    .c-suite-icon {
-      font-size: 2.2rem;
-      margin-bottom: 18px;
-      display: inline-block;
-    }
-
-    .c-suite-title {
-      font-size: 1.4rem;
-      font-weight: 900;
-      color: var(--text-dark);
-      margin-bottom: 6px;
-    }
-
-    .c-suite-subtitle {
-      font-size: 0.72rem;
-      font-weight: 700;
-      color: var(--primary);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 16px;
-      display: block;
-    }
-
-    .c-suite-desc {
-      font-size: 0.92rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-      margin-bottom: 20px;
-    }
-
-    .c-suite-features {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .c-tag {
-      background: var(--bg-page);
-      border: 1px solid var(--border-light);
-      padding: 6px 12px;
-      border-radius: var(--radius-md);
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: var(--text-dark);
-    }
-
-    .c-suite-action {
-      margin-top: 24px;
-      padding-top: 20px;
-      border-top: 1px solid var(--border-light);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .c-suite-status {
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: var(--text-muted);
-    }
-
-    /* ─── Governance / Trust section ─── */
-    .c-gov {
-      background: var(--navy);
-      background-image: radial-gradient(ellipse 80% 50% at 50% 100%, rgba(37,99,235,0.12) 0%, transparent 60%);
-      padding: 96px 0;
-      color: #fff;
-    }
-
-    .c-gov .c-sec-title { color: #fff; }
-    .c-gov .c-sec-desc { color: rgba(148,163,184,0.8); }
-
-    .c-gov-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    .c-gov-card {
-      background: rgba(255,255,255,0.02);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 20px;
-      padding: 28px 24px;
-      transition: border-color 0.3s;
-    }
-
-    .c-gov-card:hover {
-      border-color: rgba(96,165,250,0.3);
-    }
-
-    .c-gov-icon {
-      font-size: 1.8rem;
-      margin-bottom: 16px;
-    }
-
-    .c-gov-title {
-      font-size: 1.1rem;
-      font-weight: 800;
-      color: #fff;
-      margin-bottom: 10px;
-    }
-
-    .c-gov-desc {
-      font-size: 0.85rem;
-      color: rgba(148,163,184,0.75);
-      line-height: 1.7;
-    }
-
-    /* ─── Stats section ─── */
-    .c-stats {
-      background: var(--white);
-      padding: 80px 0;
-      color: var(--text-dark);
-      border-top: 1px solid var(--border-light);
-    }
-
-    .c-stats-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-      text-align: center;
-    }
-
-    .c-stat-number {
-      font-size: clamp(2.4rem, 6vw, 4rem);
-      font-weight: 900;
-      color: var(--primary);
-      line-height: 1;
-      margin-bottom: 8px;
-    }
-
-    .c-stat-number span {
-      color: var(--accent);
-    }
-
-    .c-stat-title {
-      font-size: 1.05rem;
-      font-weight: 800;
-      color: var(--text-dark);
-      margin-bottom: 6px;
-    }
-
-    .c-stat-desc {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-      max-width: 280px;
-      margin: 0 auto;
-    }
-
-    /* ─── CTA section ─── */
+    /* ─── CTA ─── */
     .c-cta {
       background: var(--navy);
+      background-image: radial-gradient(ellipse 60% 60% at 50% 0%, rgba(37,99,235,0.15) 0%, transparent 60%);
       padding: 100px 0;
-      position: relative;
     }
-
     .c-cta-inner {
       max-width: 700px;
       margin: 0 auto;
       text-align: center;
       padding: 0 24px;
     }
-
     .c-cta-title {
       font-size: clamp(2rem, 5vw, 3rem);
       font-weight: 900;
@@ -486,63 +646,52 @@
       line-height: 1.2;
       margin-bottom: 20px;
     }
-
-    .c-cta-title span {
-      color: var(--accent-light);
-    }
-
+    .c-cta-title span { color: var(--accent-light); }
     .c-cta-desc {
-      font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
       color: rgba(148,163,184,0.85);
       line-height: 1.8;
       margin-bottom: 40px;
     }
-
     .c-cta-actions {
       display: flex;
       justify-content: center;
       gap: 16px;
     }
 
-    /* ─── Responsive adaptations ─── */
+    /* ─── RESPONSIVE ─── */
     @media (max-width: 992px) {
       .c-hero-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
       .c-hero-text { display: flex; flex-direction: column; align-items: center; }
+      .c-hero-card { max-width: 420px; margin: 0 auto; }
       .c-hero-actions { width: 100%; max-width: 400px; justify-content: center; }
-      .c-hero-actions .btn { flex: 1; justify-content: center; }
 
-      .c-platform-grid { grid-template-columns: 1fr; gap: 40px; }
-      .c-investor-grid { grid-template-columns: 1fr; gap: 20px; }
-      .c-suites-grid { grid-template-columns: 1fr; gap: 24px; }
-      .c-gov-grid { grid-template-columns: 1fr; gap: 20px; }
+      .c-vision-grid { grid-template-columns: 1fr; gap: 20px; }
+      .c-flagship-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+      .c-flagship-grid .c-flagship-text { display: flex; flex-direction: column; align-items: center; }
+      .c-feature-list { align-items: center; }
+      .c-flagship-actions { justify-content: center; }
+      .c-app-mockup { margin: 0 auto; }
+
+      .c-platform-grid { grid-template-columns: 1fr; gap: 20px; }
+      .c-moat-grid { grid-template-columns: 1fr; gap: 20px; }
+      .c-advisory-grid { grid-template-columns: 1fr; gap: 20px; }
     }
 
     @media (max-width: 576px) {
       .c-hero-actions { flex-direction: column; gap: 12px; }
-      .c-cta-actions { flex-direction: column; gap: 12px; align-items: stretch; max-width: 320px; margin: 0 auto; }
-      .c-stats-grid { grid-template-columns: 1fr; gap: 40px; }
-      .c-suite-card { padding: 24px; }
-      .c-platform-card { padding: 24px; }
-      
-      /* Dashboard optimizations on mobile */
-      .l-dash-grid { grid-template-columns: 1fr; gap: 16px; }
-      .l-dash-sidebar { flex-direction: row; flex-wrap: wrap; gap: 10px; justify-content: center; }
-      .l-dash-stat-card { flex: 1 1 80px; min-width: 70px; }
-    }
+      .c-hero-actions .btn { justify-content: center; }
+      .c-hero-card { padding: 28px 20px; }
+      .c-pillar-item { padding: 12px; }
 
-    @media (max-width: 480px) {
-      .l-sim-control {
-        border-radius: 16px;
-        flex-direction: column;
-        gap: 6px;
-        padding: 6px;
-        max-width: 280px;
-      }
-      .l-sim-tab-btn {
-        font-size: 0.78rem;
-        padding: 8px 12px;
-        border-radius: 10px;
-      }
+      .c-flagship-actions { flex-direction: column; gap: 12px; align-items: stretch; }
+      .c-mockup-stats { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+      .c-mockup-stat { padding: 10px 6px; }
+
+      .c-cta-actions { flex-direction: column; gap: 12px; align-items: stretch; max-width: 320px; margin: 0 auto; }
+
+      .c-vision-card { padding: 28px 20px; }
+      .c-tech-card { padding: 28px 20px; }
     }
   </style>
 </head>
@@ -552,342 +701,291 @@
   <div id="navbar-placeholder"></div>
 
   <!-- ══════════════════════════════════════
-       HERO SECTION WITH INTERACTIVE SIMULATOR
+       1. HERO SECTION
   ══════════════════════════════════════ -->
   <section class="c-hero" id="hero" aria-label="الرئيسية">
+    <div id="heroParticles" class="hero-particles"></div>
     <div class="c-hero-grid">
 
       <div class="c-hero-text reveal">
-        <div class="c-badge-premium" style="background:rgba(96,165,250,0.08); border-color:rgba(96,165,250,0.2); color:#93C5FD;">
+        <div class="c-hero-badge">
           <span class="c-pulse-dot"></span>
-          البنية التحتية البرمجية للقرار السريري السيادي والربط الطبي
+          منصات صحية ذكية · Smart Health Platforms
         </div>
         <h1 class="c-hero-title">
-          محركات الاستدلال و<br>
-          <span>التشغيل البيني السريري</span>
+          نبني التقنيات الصحية<br>
+          <span>التي تُمكّن الممارس</span>
         </h1>
         <p class="c-hero-sub">
-          نُمكّن المستشفيات والمجموعات الطبية الكبرى من تشغيل وإدارة عملياتها الإكلينيكية بأعلى درجات الأمان المعرفي من خلال بنية الحوسبة الطرفية (Edge Computing) اللامركزية والربط الطبي المشترك.
+          نُطوّر منصات رقمية ذكية تمنح أخصائيي التغذية والممارسين الصحيين أدوات إدارية متقدمة، وحاسبات موضعية عالية الدقة، وتقنيات استخلاص بصري ذكي — كل ذلك مع حماية مطلقة لبيانات المراجعين.
         </p>
-        <div class="c-hero-actions" style="margin-bottom: 24px;">
-          <a href="#suites" class="btn btn-primary btn-lg">الأنظمة والأجنحة السريرية</a>
-          <a href="pages/contact.html" class="btn btn-outline btn-lg">طلب ربط وتكامل مؤسسي</a>
+        <div class="c-hero-actions">
+          <a href="#flagship" class="btn btn-primary btn-lg">🚀 استكشف منصة مرشد</a>
+          <a href="pages/contact.html" class="btn btn-outline btn-lg">✉️ تواصل معنا</a>
         </div>
       </div>
 
-      <!-- Interactive Platform Simulator Widget -->
+      <!-- Hero Visual: Pillar Card -->
       <div class="c-hero-visual reveal delay-1">
-        
-        <!-- Simulator Controls -->
-        <div class="l-sim-control">
-          <button class="l-sim-tab-btn active" data-target="sim-clinician">🩺 عيادة الطبيب</button>
-          <button class="l-sim-tab-btn" data-target="sim-ai">🧠 نواة AI</button>
-          <button class="l-sim-tab-btn" data-target="sim-patient">📱 تطبيق المريض</button>
+        <div class="c-hero-card">
+          <div class="c-hero-card-header">
+            <div class="c-hero-card-logo">F</div>
+            <div class="c-hero-card-brand">
+              FES HealthTech
+              <small>Smart Health Platforms</small>
+            </div>
+          </div>
+          <div class="c-pillar-list">
+            <div class="c-pillar-item">
+              <div class="c-pillar-icon blue">🏥</div>
+              <div class="c-pillar-text">
+                <h4>إدارة العيادات الذكية</h4>
+                <p>منصات تنظيمية شاملة للممارسين الصحيين</p>
+              </div>
+            </div>
+            <div class="c-pillar-item">
+              <div class="c-pillar-icon green">🔒</div>
+              <div class="c-pillar-text">
+                <h4>خصوصية مطلقة · Zero-Knowledge</h4>
+                <p>تشفير محلي AES-256 وسيادة تامة على البيانات</p>
+              </div>
+            </div>
+            <div class="c-pillar-item">
+              <div class="c-pillar-icon amber">📡</div>
+              <div class="c-pillar-text">
+                <h4>يعمل بدون إنترنت · Offline-First</h4>
+                <p>حوسبة محلية مستقلة تماماً عن الاتصال</p>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div class="l-sim-views">
-          
-          <!-- VIEW 1: Clinician Hub (Laptop frame) -->
-          <div class="l-sim-view active" id="sim-clinician">
-            <div class="l-laptop-frame l-glow-border-animate">
-              <div class="l-dash-container" style="background:transparent;box-shadow:none;border:none;padding:0;">
-                <div class="l-dash-header">
-                  <div class="l-dash-dot-group">
-                    <span class="l-dash-dot"></span>
-                    <span class="l-dash-dot"></span>
-                    <span class="l-dash-dot"></span>
-                  </div>
-                  <div class="l-dash-title">FES Clinician Dashboard v2.4</div>
-                </div>
-                
-                <div style="background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);border-radius:10px;padding:8px 12px;margin-bottom:12px;font-size:0.75rem;display:flex;justify-content:space-between;">
-                  <span>المريض: <strong>سارة أحمد</strong> (42 سنة)</span>
-                  <span style="color:#F59E0B;">تشخيص: القصور الكلوي (Stage 3 CKD)</span>
-                </div>
-
-                <div class="l-dash-grid">
-                  <!-- Left side: OCR Lab report analysis simulator -->
-                  <div class="l-dash-main l-scan-container" style="min-height:150px;">
-                    <div class="l-scan-line"></div>
-                    <div style="font-size:0.65rem;color:rgba(255,255,255,0.4);border-bottom:1px solid rgba(255,255,255,0.05);padding-bottom:4px;margin-bottom:6px;">
-                      ورقة التحاليل المخبرية (OCR Scan)
-                    </div>
-                    <div style="font-size:0.58rem;color:rgba(255,255,255,0.5);line-height:1.4;">
-                      [Serum Creatinine: 1.8 mg/dL]<br>
-                      [Serum Potassium: 5.4 mEq/L] ⚠️<br>
-                      [Estimated GFR: 42 mL/min]
-                    </div>
-                    <div style="text-align:center;font-size:0.55rem;color:#10B981;font-weight:700;margin-top:8px;">
-                      ✓ تم التعرف على البيانات وتعبئتها تلقائياً
-                    </div>
-                  </div>
-
-                  <!-- Right side: Quick stats -->
-                  <div class="l-dash-sidebar">
-                    <div class="l-dash-stat-card" style="padding:6px;">
-                      <span class="l-dash-stat-num" style="font-size:0.8rem;color:#EF4444;">5.4 <span>mEq/L</span></span>
-                      <span class="l-dash-stat-label">البوتاسيوم</span>
-                    </div>
-                    <div class="l-dash-stat-card" style="padding:6px;">
-                      <span class="l-dash-stat-num" style="font-size:0.8rem;color:#F59E0B;">42 <span>mL/min</span></span>
-                      <span class="l-dash-stat-label">eGFR (CKD-EPI)</span>
-                    </div>
-                    <div class="l-dash-stat-card" style="padding:6px;">
-                      <span class="l-dash-stat-num" style="font-size:0.8rem;color:#10B981;">✓ آمن</span>
-                      <span class="l-dash-stat-label">مراجعة التعارضات</span>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-          <!-- VIEW 2: AI Core -->
-          <div class="l-sim-view" id="sim-ai">
-            <div class="l-laptop-frame l-glow-border-animate">
-              <div class="l-dash-container" style="background:transparent;box-shadow:none;border:none;padding:0;">
-                <div class="l-dash-header">
-                  <div class="l-dash-dot-group">
-                    <span class="l-dash-dot"></span>
-                    <span class="l-dash-dot"></span>
-                    <span class="l-dash-dot"></span>
-                  </div>
-                  <div class="l-dash-title">FES Clinical Reasoning Protocol</div>
-                </div>
-                
-                <div style="display:flex;flex-direction:column;gap:10px;padding:8px 0;">
-                  <div style="display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);padding:8px 12px;border-radius:8px;font-size:0.7rem;">
-                    <span style="color:#60A5FA;">1. المدخلات الطبية للمريض</span>
-                    <span style="color:rgba(255,255,255,0.4);">[العمر، التحاليل، الأدوية]</span>
-                  </div>
-                  <div style="display:flex;align-items:center;justify-content:space-between;background:rgba(16,185,129,0.05);border:1px solid rgba(16,185,129,0.15);padding:8px 12px;border-radius:8px;font-size:0.7rem;">
-                    <span style="color:#10B981;font-weight:700;">2. فلتر تعمية الهوية الشخصية</span>
-                    <span style="color:#10B981;">[حذف الاسم، الهاتف، والعنوان] ✓</span>
-                  </div>
-                  <div style="display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);padding:8px 12px;border-radius:8px;font-size:0.7rem;">
-                    <span style="color:#60A5FA;">3. تشفير محلي وتخزين بقاعدة Isar</span>
-                    <span style="color:rgba(255,255,255,0.4);">[AES-256 Edge Encryption]</span>
-                  </div>
-                  <div style="display:flex;align-items:center;justify-content:space-between;background:rgba(245,158,11,0.05);border:1px solid rgba(245,158,11,0.15);padding:8px 12px;border-radius:8px;font-size:0.7rem;">
-                    <span style="color:#F59E0B;font-weight:700;">4. استدعاء المساعد السريري</span>
-                    <span style="color:#F59E0B;">[Gemini Health API Node]</span>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-          <!-- VIEW 3: Patient Companion (Phone frame) -->
-          <div class="l-sim-view" id="sim-patient">
-            <div class="l-phone-frame l-glow-border-animate">
-              <div style="font-family:var(--font-english);direction:ltr;height:100%;display:flex;flex-direction:column;justify-content:space-between;color:#fff;padding-top:12px;padding-bottom:8px;box-sizing:border-box;">
-                
-                <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.08);padding-bottom:6px;margin-top:6px;">
-                  <span style="font-size:0.68rem;font-weight:800;color:#60A5FA;">FES Renal Care</span>
-                  <span style="font-size:0.5rem;background:rgba(16,185,129,0.15);color:#10B981;padding:1px 5px;border-radius:99px;font-weight:700;">Offline Sync</span>
-                </div>
-
-                <!-- Circular water progress simulator -->
-                <div style="text-align:center;margin:8px 0;">
-                  <div style="width:76px;height:76px;border-radius:50%;border:5px solid rgba(37,99,235,0.15);border-top-color:#2563EB;margin:0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;">
-                    <span style="font-size:0.85rem;font-weight:800;">1400 ml</span>
-                    <span style="font-size:0.45rem;color:rgba(255,255,255,0.4);line-height:1;">الهدف: 1800ml</span>
-                  </div>
-                  <span style="font-size:0.55rem;color:rgba(255,255,255,0.5);margin-top:4px;display:block;">تتبع السوائل اليومي</span>
-                </div>
-
-                <!-- Alerts -->
-                <div style="background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.15);border-radius:8px;padding:6px 8px;font-size:0.55rem;text-align:right;direction:rtl;margin-bottom:6px;line-height:1.4;">
-                  <strong style="color:#EF4444;display:block;margin-bottom:1px;font-size:0.58rem;">⚠️ تنبيه الملصق الغذائي</strong>
-                  تم اكتشاف فوسفات الصوديوم (مضاف فوسفور ممنوع) بالملصق.
-                </div>
-
-                <!-- Chat recommendation -->
-                <div style="background:rgba(37,99,235,0.06);border:1px solid rgba(37,99,235,0.15);border-radius:8px;padding:6px 8px;font-size:0.55rem;text-align:right;direction:rtl;line-height:1.4;">
-                  <strong style="color:#60A5FA;display:block;margin-bottom:1px;font-size:0.58rem;">🤖 توصية مرشد AI</strong>
-                  تجنب تناول السبانخ أو اللحوم المصنعة اليوم بسبب ارتفاع البوتاسيوم.
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-        </div>
-
       </div>
 
     </div>
   </section>
 
   <!-- ══════════════════════════════════════
-       SOLUTION SEGMENTS SECTION
+       2. TRUST STRIP (Marquee)
   ══════════════════════════════════════ -->
-  <section class="c-segment-section" id="segments" aria-label="شرائح الحلول السريرية">
+  <section class="marquee-section c-trust" aria-label="مؤشرات الثقة">
+    <div class="marquee-track" id="marqueeTrack">
+      <div class="marquee-item"><span class="mi-icon">🔐</span> تشفير AES-256 محلي</div>
+      <span class="marquee-sep">✦</span>
+      <div class="marquee-item"><span class="mi-icon">📡</span> يعمل 100% بدون إنترنت</div>
+      <span class="marquee-sep">✦</span>
+      <div class="marquee-item"><span class="mi-icon">🧮</span> حاسبات موضعية معتمدة</div>
+      <span class="marquee-sep">✦</span>
+      <div class="marquee-item"><span class="mi-icon">📷</span> استخلاص بصري ذكي OCR</div>
+      <span class="marquee-sep">✦</span>
+      <div class="marquee-item"><span class="mi-icon">🛡️</span> سيادة كاملة على البيانات</div>
+      <span class="marquee-sep">✦</span>
+      <div class="marquee-item"><span class="mi-icon">⚡</span> أداء فائق وتجربة سلسة</div>
+      <span class="marquee-sep">✦</span>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       3. VISION & MISSION
+  ══════════════════════════════════════ -->
+  <section class="c-vision" id="vision" aria-label="الرؤية والرسالة">
     <div class="c-sec-header">
-      <span class="c-sec-eyebrow">شرائح الحلول السريرية</span>
-      <h2 class="c-sec-title">أنظمة مصممة لـ <span>كافة مستويات الرعاية</span></h2>
-      <p class="c-sec-desc">سواء كنت تدير مجموعة مستشفيات كبرى أو تمارس رعاية المرضى في عيادتك الخاصة، منصة FES توفر لك البنية التحتية الملائمة.</p>
+      <span class="c-sec-eyebrow">من نحن</span>
+      <h2 class="c-sec-title">رؤية تقنية <span>تخدم الممارس الصحي</span></h2>
+      <p class="c-sec-desc">نؤمن بأن التكنولوجيا الجيدة تخدم الممارس الصحي ولا تُعقّد عمله — بل تمنحه الأدوات الأذكى لإدارة عيادته وحماية بيانات مراجعيه.</p>
     </div>
-    <div class="c-segment-grid">
-      <!-- المستشفيات -->
-      <div class="c-segment-card c-clinical-glass reveal">
-        <div>
-          <span class="c-segment-icon">🏢</span>
-          <h3 class="c-segment-title">المؤسسات الصحية والمستشفيات</h3>
-          <p class="c-segment-desc">حلول ربط وتكامل برمجية سريرية مصممة للحد من مخاطر التداخلات الكيميائية الدوائية-الغذائية، وتخفيض فترات إقامة المرضى ومعدلات إعادة الإدخال (Readmission Rates).</p>
-          <div class="c-segment-points">
-            <div class="c-segment-point">🔹 <span>التكامل السيادي:</span> ربط ديناميكي مباشر ومأمون مع أنظمة EMR/EHR عبر FHIR Protocol.</div>
-            <div class="c-segment-point">🔹 <span>الحوكمة الوقائية:</span> حماية تامة ضد الأخطاء التشخيصية والوصفات الطبية الحرجة.</div>
-            <div class="c-segment-point">🔹 <span>الامتثال للأنظمة:</span> تطابق مطلق مع لوائح حماية بيانات المرضى والسياسات الصحية الدولية.</div>
-          </div>
-        </div>
-        <a href="pages/contact.html?segment=enterprise" class="btn btn-primary">طلب دراسة جدوى مؤسسية</a>
+    <div class="c-vision-grid">
+      <div class="c-vision-card reveal">
+        <div class="c-vision-icon">🔭</div>
+        <h3 class="c-vision-title">رؤيتنا</h3>
+        <p class="c-vision-text">
+          نسعى لأن نكون المنصة الرقمية الأولى عالمياً التي يعتمد عليها كل ممارس صحي لتنظيم عمله، وتبسيط عملياته اليومية، وحماية بيانات مراجعيه بأعلى معايير الخصوصية والأمان.
+        </p>
       </div>
-      <!-- العيادات -->
-      <div class="c-segment-card c-clinical-glass reveal delay-1">
-        <div>
-          <span class="c-segment-icon">🩺</span>
-          <h3 class="c-segment-title">العيادات والممارسين الأخصائيين</h3>
-          <p class="c-segment-desc">بيئة تشغيل سريرية متكاملة تمنح الممارس الصحي أولوية التحكم السريري وأتمتة مراجعة التقارير والخطط الطبية بدقة وسرعة مطلقة.</p>
-          <div class="c-segment-points">
-            <div class="c-segment-point">🔹 <span>استقلالية تامة (Offline):</span> تشغيل كامل وإدارة السجلات الطبية دون الحاجة لربط شبكة الإنترنت.</div>
-            <div class="c-segment-point">🔹 <span>التقارير السريرية المخصصة:</span> استخراج تقارير إكلينيكية فخمة مهيأة للطباعة بشعار وتوقيع الممارس.</div>
-            <div class="c-segment-point">🔹 <span>الاستدلال المعرفي المحلي:</span> مساعد ذكاء اصطناعي سريري محلي يؤمن استشارات آمنة تماماً.</div>
-          </div>
-        </div>
-        <a href="pages/contact.html?segment=practitioner" class="btn btn-outline">تواصل معنا كأخصائي</a>
+      <div class="c-vision-card reveal delay-1">
+        <div class="c-vision-icon">🎯</div>
+        <h3 class="c-vision-title">رسالتنا</h3>
+        <p class="c-vision-text">
+          نبني أدوات رقمية إدارية وتشغيلية ذكية تضع القرار الكامل بيد الممارس المعتمد، وتُسهّل عليه إدارة عيادته بأعلى كفاءة — مع حاسبات موضعية دقيقة وتقنيات استخلاص بصري متقدمة.
+        </p>
       </div>
+    </div>
+    <div style="text-align:center; margin-top:40px;">
+      <a href="pages/about.html" class="btn btn-outline">اقرأ المزيد عن قصتنا ←</a>
     </div>
   </section>
 
   <!-- ══════════════════════════════════════
-       THE FES OS SECTION
+       4. FLAGSHIP PRODUCT — MURSHID
   ══════════════════════════════════════ -->
-  <section class="c-platform" id="platform" aria-label="منصة FES OS">
+  <section class="c-flagship" id="flagship" aria-label="المنتج الرئيسي — مرشد">
+    <div class="c-flagship-grid">
+
+      <div class="c-flagship-text reveal-right">
+        <div class="c-flagship-badge">
+          <span class="c-pulse-dot"></span>
+          🩺 المنتج الرئيسي · FLAGSHIP PRODUCT
+        </div>
+        <h2 class="c-flagship-title">
+          منصة مرشد<br>
+          <span>المنصة الذكية لإدارة عيادات التغذية</span>
+        </h2>
+        <p class="c-flagship-desc">
+          منصة إدارية وتنظيمية شاملة مصممة خصيصاً لأخصائيي التغذية. تجمع بين إدارة ملفات المراجعين، والحاسبات الموضعية عالية الدقة، وتقنيات الاستخلاص البصري الذكي — مع تخزين محلي مشفر بالكامل.
+        </p>
+        <div class="c-feature-list">
+          <div class="c-feature-item">
+            <span class="fi-icon">📋</span>
+            إدارة كاملة لملفات المراجعين والمواعيد والزيارات
+          </div>
+          <div class="c-feature-item">
+            <span class="fi-icon">📷</span>
+            قارئ OCR ذكي لاستخلاص نصوص التحاليل المخبرية
+          </div>
+          <div class="c-feature-item">
+            <span class="fi-icon">🧮</span>
+            حاسبات موضعية دقيقة: ماكروز، BMI، Z-Score للأطفال
+          </div>
+          <div class="c-feature-item">
+            <span class="fi-icon">💊</span>
+            قاعدة بيانات التداخلات الغذائية-الدوائية (147+ مادة فعالة)
+          </div>
+          <div class="c-feature-item">
+            <span class="fi-icon">📊</span>
+            تقارير مهنية فاخرة بشعار وتوقيع الأخصائي
+          </div>
+          <div class="c-feature-item">
+            <span class="fi-icon">🔒</span>
+            تخزين محلي مشفر بالكامل — AES-256 + Isar DB
+          </div>
+          <div class="c-feature-item">
+            <span class="fi-icon">📡</span>
+            يعمل 100% بدون إنترنت — Offline-First Architecture
+          </div>
+        </div>
+        <div class="c-flagship-actions">
+          <a href="https://murshid-app.feshealthtech.com" class="btn btn-primary btn-lg">🚀 زيارة موقع مرشد</a>
+          <a href="pages/contact.html" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,0.2);color:#fff;">✉️ تواصل معنا</a>
+        </div>
+      </div>
+
+      <!-- Murshid App Mockup -->
+      <div class="c-flagship-visual reveal-left">
+        <div class="c-app-mockup">
+          <div class="c-mockup-bar">
+            <span class="c-mockup-bar-title">Murshid — مرشد</span>
+            <span class="c-mockup-bar-dot"></span>
+          </div>
+          <div class="c-mockup-body">
+            <div class="c-mockup-stats">
+              <div class="c-mockup-stat">
+                <span class="c-mockup-stat-num">128</span>
+                <span class="c-mockup-stat-label">مراجع نشط</span>
+              </div>
+              <div class="c-mockup-stat">
+                <span class="c-mockup-stat-num" style="color:#10B981;">7</span>
+                <span class="c-mockup-stat-label">مواعيد اليوم</span>
+              </div>
+              <div class="c-mockup-stat">
+                <span class="c-mockup-stat-num" style="color:#F59E0B;">94%</span>
+                <span class="c-mockup-stat-label">نسبة الإنجاز</span>
+              </div>
+            </div>
+            <div class="c-mockup-row">
+              <span class="c-mockup-row-icon">📷</span>
+              <span><strong>OCR Scanner</strong> — جاهز لاستخلاص نتائج التحاليل</span>
+            </div>
+            <div class="c-mockup-row">
+              <span class="c-mockup-row-icon">🧮</span>
+              <span><strong>الحاسبات</strong> — BMR · TDEE · BMI · Z-Score</span>
+            </div>
+            <div class="c-mockup-row">
+              <span class="c-mockup-row-icon">💊</span>
+              <span><strong>التداخلات</strong> — 147+ مادة فعالة مُراجعة طبياً</span>
+            </div>
+            <div style="text-align:center;padding:8px 0 4px;font-size:0.6rem;color:rgba(255,255,255,0.25);">
+              🔒 جميع البيانات مُشفّرة ومُخزّنة محلياً على جهازك
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       5. PLATFORM CORE — TECHNOLOGY
+  ══════════════════════════════════════ -->
+  <section class="c-platform" id="platform" aria-label="البنية التقنية">
+    <div class="c-sec-header">
+      <span class="c-sec-eyebrow">البنية التقنية</span>
+      <h2 class="c-sec-title">ركائز تقنية <span>تضمن الأمان والدقة</span></h2>
+      <p class="c-sec-desc">
+        تقوم منصاتنا على ثلاث ركائز تقنية أساسية تضمن أعلى مستويات الأمان، والدقة الحسابية، والاستقلالية التشغيلية.
+      </p>
+    </div>
     <div class="c-platform-grid">
 
-      <div class="reveal-right">
-        <span class="c-sec-eyebrow">البنية البرمجية الموحدة</span>
-        <h2 class="c-sec-title">نظام تشغيل سريري موحد<br><span>FES Clinical OS</span></h2>
-        <p class="c-sec-desc">
-          لسنا مجرد شركة تصنع برامج صغيرة. كافة حلولنا السريرية قائمة على نواة برمجية مركزية موحدة صممتها FES لضمان ثبات وسلامة العمليات وحماية بيانات المرضى.
+      <div class="c-tech-card reveal">
+        <div class="c-tech-icon">🔒</div>
+        <h3 class="c-tech-title">بنية Zero-Knowledge</h3>
+        <p class="c-tech-desc">
+          بيانات المراجعين تُخزّن حصرياً على جهاز الممارس بتشفير AES-256 عبر قاعدة بيانات Isar المحلية. لا نملك مفاتيح التشفير ولا نصل لأي بيانات شخصية — سيادة مطلقة للممارس على بيانات عيادته.
         </p>
-
-        <div class="c-os-list">
-          <div class="c-os-item">
-            <div class="c-os-icon">🧠</div>
-            <div>
-              <h3 class="c-os-title">محرك الذكاء الاصطناعي المعرفي</h3>
-              <p class="c-os-desc">خوارزميات ذكاء اصطناعي سريرية مدعومة بنظام حث سياقي ومحاذاة بروتوكولية دقيقة مع تصفية الهويات لحماية خصوصية المريض تماماً.</p>
-            </div>
-          </div>
-          <div class="c-os-item">
-            <div class="c-os-icon">💾</div>
-            <div>
-              <h3 class="c-os-title">بنية التخزين المحلي والعمل بدون إنترنت</h3>
-              <p class="c-os-desc">نواة تخزين مشفرة بالكامل على هاتف الممارس، تضمن استمرار تقديم الرعاية وتصفح المراجع الطبية بشكل مستقل تام عن الاتصال بالإنترنت.</p>
-            </div>
-          </div>
-          <div class="c-os-item">
-            <div class="c-os-icon">📷</div>
-            <div>
-              <h3 class="c-os-title">نظام التحليل البصري للأوراق الطبية</h3>
-              <p class="c-os-desc">محرك OCR عالي الدقة يقرأ مستندات التحاليل والأوراق الطبية ويعالج القيم الطبية رقمياً لدعم القرارات وتقليل معدل الخطأ البشري.</p>
-            </div>
-          </div>
-        </div>
       </div>
 
-      <div class="c-platform-card c-clinical-glass reveal-left">
-        <h3 style="font-size:1.25rem;font-weight:900;color:var(--text-dark);margin-bottom:16px;border-bottom:1px solid var(--border-light);padding-bottom:12px;">المعايير الهندسية للنواة</h3>
-        <p style="font-size:0.92rem;color:var(--text-body);line-height:1.7;margin-bottom:20px;">
-          أنظمة FES السريرية مبنية وفق منهجيات برمجية شديدة الصرامة لضمان التوافق وقابلية التوسع الأفقي في المؤسسات الصحية الكبرى:
+      <div class="c-tech-card reveal delay-1">
+        <div class="c-tech-icon">📷</div>
+        <h3 class="c-tech-title">محرك الاستخلاص البصري (OCR)</h3>
+        <p class="c-tech-desc">
+          محرك قراءة ذكي يستخلص أرقام ونصوص التحاليل المخبرية من الصور آنياً عبر API مشفر (HTTPS/TLS 1.3)، دون تخزين أو تدريب على البيانات — معالجة فورية في الذاكرة ثم حذف تلقائي.
         </p>
-        <ul style="display:flex;flex-direction:column;gap:12px;font-size:0.88rem;color:var(--text-body);list-style:none;padding-right:0;">
-          <li><strong style="color:var(--primary-dark)">✓ Clean Architecture:</strong> فصل صارم بين منطق العمل السريري والواجهات لضمان الأمان والمرونة.</li>
-          <li><strong style="color:var(--primary-dark)">✓ Riverpod State Management:</strong> إدارة حالة قوية وموثوقة تضمن خلو الأنظمة من أي سلوكيات مفاجئة.</li>
-          <li><strong style="color:var(--primary-dark)">✓ Secure Syncing Protocol:</strong> تشفير كامل للمزامنة السحابية الاحتياطية بمفاتيح ملك للمستخدم وحده.</li>
-        </ul>
+      </div>
+
+      <div class="c-tech-card reveal delay-2">
+        <div class="c-tech-icon">🧮</div>
+        <h3 class="c-tech-title">حاسبات موضعية أوفلاين</h3>
+        <p class="c-tech-desc">
+          محركات حسابية محلية عالية الدقة تعمل بالكامل على الجهاز بدون إنترنت: حاسبات الماكروز الغذائية، مؤشرات نمو الأطفال (Z-Score)، والتداخلات الغذائية-الدوائية — كلها مُوثّقة علمياً ومُراجعة من أخصائيين.
+        </p>
       </div>
 
     </div>
   </section>
 
   <!-- ══════════════════════════════════════
-       EMR/EHR INTEGRATION SECTION
+       6. SECURITY & COMPETITIVE MOAT
   ══════════════════════════════════════ -->
-  <section class="c-integration-section" id="integration" aria-label="التكامل الطبي">
-    <div class="c-integration-grid">
-      <div class="reveal-right">
-        <span class="c-sec-eyebrow" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.15);color:#fff;">الربط السريري المشترك</span>
-        <h2 class="c-sec-title" style="color:#fff;">تكامل سلس مع السجلات الطبية<br><span>EHR & EMR Interoperability</span></h2>
-        <p class="c-sec-desc" style="color:rgba(148,163,184,0.85); margin-bottom:24px;">
-          منصة FES Clinical OS مبنية وفق معايير الربط الطبي العالمية، مما يتيح لها تبادل وتصدير البيانات السريرية بسلاسة مع الأنظمة الصحية الكبرى (Epic, Cerner, Meditech) دون تعقيد.
-        </p>
-        <ul style="display:flex; flex-direction:column; gap:16px; font-size:0.92rem; color:rgba(148,163,184,0.85); list-style:none; padding-right:0;">
-          <li><strong style="color:#60A5FA;">✓ معيار HL7 FHIR Protocol:</strong> تصدير وتبادل التقارير الطبية المهيكلة وصور التحاليل المخبرية.</li>
-          <li><strong style="color:#60A5FA;">✓ موائمة البيانات الطبية:</strong> تحويل المخرجات الطبية إلى أكواد معيارية معتمدة دولياً (LOINC, SNOMED-CT).</li>
-          <li><strong style="color:#60A5FA;">✓ أمان النقل والتشفير:</strong> تشفير البيانات أثناء الانتقال عبر قنوات TLS 1.3 مع دعم التوقيع الرقمي.</li>
-        </ul>
-      </div>
-      <div class="c-integration-visual reveal-left">
-        <div class="c-terminal-box">
-          <div class="c-terminal-header">
-            <div class="c-terminal-dots">
-              <span class="c-terminal-dot red"></span>
-              <span class="c-terminal-dot yellow"></span>
-              <span class="c-terminal-dot green"></span>
-            </div>
-            <div>FHIR Transaction Stream | Active Port 443</div>
-          </div>
-          <div class="c-terminal-body" id="terminalBody">
-            <!-- JSON dynamically typed here by JS -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════
-       INVESTOR & STRATEGIC MOAT SECTION
-  ══════════════════════════════════════ -->
-  <section class="c-investor" id="investor" aria-label="الجدوى الاستثمارية والخندق التقني">
+  <section class="c-moat" id="moat" aria-label="لماذا FES مختلفة">
     <div class="c-sec-header">
-      <span class="c-sec-eyebrow">الجدوى الاستثمارية والخندق التقني</span>
-      <h2 class="c-sec-title">خندق تقني منيع<br><span>يضمن الكفاءة وحماية الملكية</span></h2>
+      <span class="c-sec-eyebrow">لماذا FES مختلفة</span>
+      <h2 class="c-sec-title">مزايا تنافسية <span>فريدة</span></h2>
       <p class="c-sec-desc">
-        نقدم للمستثمرين نموذجاً فريداً يجمع بين الكفاءة المالية القصوى والحصانة القانونية الكاملة، مما يعزز تسارع نمو الشركة وتوسعها العالمي.
+        نموذج تقني فريد يجمع بين الكفاءة التشغيلية القصوى والحماية المطلقة لبيانات المراجعين.
       </p>
     </div>
+    <div class="c-moat-grid">
 
-    <div class="c-investor-grid">
-      
-      <!-- MOAT 1: Zero Server Cost -->
-      <div class="c-investor-card c-clinical-glass reveal">
-        <span class="c-investor-icon">📉</span>
-        <h3 class="c-investor-title">صفر تكاليف تشغيل سحابية (Zero Server Overhead)</h3>
-        <p class="c-investor-desc">
-          كل عمليات حوسبة البيانات والتحاليل الطبية تتم محلياً على أجهزة الممارسين (Edge Computing). نلغي فواتير استدعاء السحابيات وواجهات البرمجة المرتفعة، مما يضمن هوامش ربحية ممتدة تزيد عن 92% وسهولة التوسع الفوري للملايين.
+      <div class="c-moat-card reveal">
+        <div class="c-moat-icon">📉</div>
+        <h3 class="c-moat-title">صفر تكاليف سحابية</h3>
+        <p class="c-moat-desc">
+          كل العمليات الحسابية تتم محلياً على جهاز الممارس (Edge Computing). نلغي فواتير السيرفرات السحابية المرتفعة، مما يضمن هوامش ربحية ممتدة وقابلية توسع فوري.
         </p>
       </div>
 
-      <!-- MOAT 2: Privacy Shield -->
-      <div class="c-investor-card c-clinical-glass reveal delay-1">
-        <span class="c-investor-icon">🛡️</span>
-        <h3 class="c-investor-title">حصانة أمنية وسيادية تامة (Sovereign Security)</h3>
-        <p class="c-investor-desc">
-          الاعتماد الكلي على التخزين اللامركزي المشفر محلياً يلغي تماماً إمكانية اختراق الخوادم أو التعرض لغرامات تسريب البيانات الطبية (GDPR/HIPAA). أمن سيادي يمنح FES خندقاً قانونياً وتنافسياً متيناً.
+      <div class="c-moat-card reveal delay-1">
+        <div class="c-moat-icon">🛡️</div>
+        <h3 class="c-moat-title">سيادة مطلقة على البيانات</h3>
+        <p class="c-moat-desc">
+          الاعتماد الكلي على التخزين المحلي المشفر يلغي تماماً إمكانية اختراق الخوادم أو التعرض لمخاطر تسريب البيانات. أمان سيادي يمنح FES خندقاً تنافسياً متيناً.
         </p>
       </div>
 
-      <!-- MOAT 3: Crisis-Ready Offline AI -->
-      <div class="c-investor-card c-clinical-glass reveal delay-2">
-        <span class="c-investor-icon">📡</span>
-        <h3 class="c-investor-title">استقلالية في البيئات الحرجة (Offline-First Execution)</h3>
-        <p class="c-investor-desc">
-          القدرة الفريدة لتشغيل خوارزميات الاستدلال السريري وإدارة السجلات أوفلاين تجعلنا الخيار الأول والوحيد للمستشفيات الميدانية ومخيمات الإغاثة الدولية والعيادات في المناطق ذات الاتصال الضعيف.
+      <div class="c-moat-card reveal delay-2">
+        <div class="c-moat-icon">📡</div>
+        <h3 class="c-moat-title">استقلالية تامة أوفلاين</h3>
+        <p class="c-moat-desc">
+          القدرة الفريدة لتشغيل الحاسبات الموضعية وإدارة السجلات بدون إنترنت تجعلنا الخيار المثالي للعيادات في المناطق ذات الاتصال الضعيف وأوقات انقطاع الشبكة.
         </p>
       </div>
 
@@ -895,254 +993,53 @@
   </section>
 
   <!-- ══════════════════════════════════════
-       CLINICAL IMPACT SUITES (The Products)
+       7. SCIENTIFIC ADVISORY
   ══════════════════════════════════════ -->
-  <section class="c-suites" id="suites" aria-label="الأجنحة السريرية">
+  <section class="c-advisory-section" id="advisory" aria-label="لجنة المراجعة العلمية">
     <div class="c-sec-header">
-      <span class="c-sec-eyebrow">أجنحة الأنظمة السريرية</span>
-      <h2 class="c-sec-title">أجنحة برمجية متخصصة<br><span>لدعم الممارسة السريرية</span></h2>
+      <span class="c-sec-eyebrow">المراجعة العلمية</span>
+      <h2 class="c-sec-title">خبرة علمية تضمن <span>دقة أدواتنا</span></h2>
       <p class="c-sec-desc">
-        مجموعتنا البرمجية تغطي تخصصات دقيقة ذات احتياج عالٍ للحلول الرقمية الآمنة لرفع الكفاءة التشغيلية وجودة الرعاية.
+        تخضع حاسباتنا الموضعية وقواعد بياناتنا الغذائية والدوائية للمراجعة المستمرة من أخصائيين معتمدين لضمان الدقة والموثوقية.
       </p>
-    </div>
-
-    <div class="c-suites-grid">
-
-      <!-- Metabolic & Nutrition Suite -->
-      <div class="c-suite-card c-clinical-glass reveal">
-        <div class="c-suite-top">
-          <span class="c-suite-icon">🩺</span>
-          <h3 class="c-suite-title">Metabolic & Nutrition Suite</h3>
-          <span class="c-suite-subtitle">منصة مرشد لإدارة العيادات السريرية</span>
-          <p class="c-suite-desc">
-            بيئة عمل سريرية متكاملة لأخصائيي التغذية وإدارة الاستشارات الطبية السريرية. تتميز بنواة استدلال سريري ذكية لمراجعة الخطط وحساب الاحتياجات الطبية وتصدير تقارير مهيكلة فخمة للمرضى.
-          </p>
-          <div class="c-suite-features">
-            <span class="c-tag">CRM السريري</span>
-            <span class="c-tag">تحليل المعاملات الطبية</span>
-            <span class="c-tag">بناء الأنظمة الغذائية</span>
-          </div>
-        </div>
-        <div class="c-suite-action">
-          <span class="c-suite-status"><span class="c-pulse-dot"></span> مرحلة التطوير المتقدم</span>
-          <a href="pages/portfolio.html#murshid" class="btn btn-outline btn-sm">التفاصيل الفنية</a>
-        </div>
-      </div>
-
-      <!-- RenalCare Suite -->
-      <div class="c-suite-card c-clinical-glass reveal delay-1">
-        <div class="c-suite-top">
-          <span class="c-suite-icon">🫘</span>
-          <h3 class="c-suite-title">RenalCare Suite</h3>
-          <span class="c-suite-subtitle">منصة RenalFlow لتتبع الكلى المزمن</span>
-          <p class="c-suite-desc">
-            نظام رعاية وتتبع إكلينيكي متكامل لمرضى القصور الكلوي وتصفية الدم. يقوم بمراقبة النسب الحرجة كالبوتاسيوم والفوسفور بناءً على تحاليلهم المختبرية ومطابقتها لأدلة KDOQI 2024 السريرية.
-          </p>
-          <div class="c-suite-features">
-            <span class="c-tag">بروتوكول KDOQI 2024</span>
-            <span class="c-tag">مراقب مضافات الفوسفور</span>
-            <span class="c-tag">حسابات GFR و eGFR</span>
-          </div>
-        </div>
-        <div class="c-suite-action">
-          <span class="c-suite-status"><span class="c-pulse-dot"></span> مرحلة التطوير المتقدم</span>
-          <a href="pages/portfolio.html#renalflow" class="btn btn-outline btn-sm">التفاصيل الفنية</a>
-        </div>
-      </div>
-
-      <!-- Pharmacology & Drug Safety Engine -->
-      <div class="c-suite-card c-clinical-glass reveal">
-        <div class="c-suite-top">
-          <span class="c-suite-icon">💊</span>
-          <h3 class="c-suite-title">Pharmacology & Safety Engine</h3>
-          <span class="c-suite-subtitle">نواة NutriDrug لكشف التداخلات</span>
-          <p class="c-suite-desc">
-            قاعدة بيانات ونواة برمجية ذكية لكشف التداخلات الدوائية الغذائية للوقاية من الأعراض الجانبية وتدقيق الوصفات الطبية بشكل فوري ومستقل تماماً عن شبكة الإنترنت.
-          </p>
-          <div class="c-suite-features">
-            <span class="c-tag">147+ مادة فعالة</span>
-            <span class="c-tag">توثيق WHO & NHS</span>
-            <span class="c-tag">مراجعة صيدلانية إكلينيكية</span>
-          </div>
-        </div>
-        <div class="c-suite-action">
-          <span class="c-suite-status"><span class="c-pulse-dot"></span> نسخة التجربة العامة (Beta)</span>
-          <a href="pages/portfolio.html#nutridrug" class="btn btn-outline btn-sm">التفاصيل الفنية</a>
-        </div>
-      </div>
-
-      <!-- Bariatric Guide Suite -->
-      <div class="c-suite-card c-clinical-glass reveal delay-1">
-        <div class="c-suite-top">
-          <span class="c-suite-icon">⚖️</span>
-          <h3 class="c-suite-title">Bariatric Recovery Ecosystem</h3>
-          <span class="c-suite-subtitle">تطبيق متابعة جراحات البدانة</span>
-          <p class="c-suite-desc">
-            بيئة توجيه ومتابعة متكاملة لمرضى تكميم المعدة وتحويل المسار، تتضمن الإرشادات التغذوية للمراحل الستة للتعافي بعد الجراحة لضمان سلامة واستقرار المريض وفقاً لتوصيات ASMBS 2024.
-          </p>
-          <div class="c-suite-features">
-            <span class="c-tag">إرشادات ASMBS 2024</span>
-            <span class="c-tag">تتبع الفيتامينات الدقيقة</span>
-            <span class="c-tag">جدولة مراحل التعافي</span>
-          </div>
-        </div>
-        <div class="c-suite-action">
-          <span class="c-suite-status"><span class="c-pulse-dot"></span> نسخة التجربة العامة (Beta)</span>
-          <a href="pages/portfolio.html#bariatric" class="btn btn-outline btn-sm">التفاصيل الفنية</a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════
-       CLINICAL GOVERNANCE & TRUST
-  ══════════════════════════════════════ -->
-  <section class="c-gov" id="governance" aria-label="الحوكمة الطبية">
-    <div class="c-sec-header">
-      <span class="c-sec-eyebrow" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.15);color:#fff;">المعايير الطبية والحوكمة</span>
-      <h2 class="c-sec-title">أنظمة برمجية مبنية على<br><span>أسس علمية راسخة</span></h2>
-      <p class="c-sec-desc">
-        نلتزم بأعلى معايير الحوكمة السريرية وأمن البيانات الدولية لضمان سلامة المرضى والامتثال التام للأنظمة الصحية العالمية.
-      </p>
-    </div>
-
-    <div class="c-gov-grid">
-
-      <!-- HIPAA & Data Safety -->
-      <div class="c-gov-card c-clinical-glass reveal">
-        <div class="c-gov-icon">🔒</div>
-        <h3 class="c-gov-title">حماية خصوصية HIPAA</h3>
-        <p class="c-gov-desc">
-          تعتمد البنية الأساسية لدينا تشفير AES-256 للملفات المخزنة محلياً، مع تجريد وتشفير تام للمعرفات الشخصية للمريض قبل إرسال أي سياق لخدمات الذكاء الاصطناعي.
-        </p>
-      </div>
-
-      <!-- Academic & Clinical Standards -->
-      <div class="c-gov-card c-clinical-glass reveal delay-1">
-        <div class="c-gov-icon">🔬</div>
-        <h3 class="c-gov-title">الامتثال للبروتوكولات الدولية</h3>
-        <p class="c-gov-desc">
-          كافة الحسابات الطبية، والحدود الغذائية، ومراحل التعافي مبرمجة وفقاً للتوصيات والمبادئ التوجيهية للجمعيات الطبية العالمية: KDOQI, ASMBS, WHO, NHS.
-        </p>
-      </div>
-
-      <!-- Peer Review validation -->
-      <div class="c-gov-card c-clinical-glass reveal delay-2">
-        <div class="c-gov-icon">🤝</div>
-        <h3 class="c-gov-title">التدقيق والتحقق السريري</h3>
-        <p class="c-gov-desc">
-          تخضع الخوارزميات وقواعد البيانات السريرية في FES لمراجعة وتدقيق مستمر من قبل استشاريين وصيادلة إكلينيكيين للتحقق من الموثوقية التامة للبيانات الطبية.
-        </p>
-      </div>
-
-      <!-- Compliance Row -->
-      <div class="container" style="margin-top: 64px; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 48px; width: 100%;">
-        <div style="text-align:center; margin-bottom:24px;">
-          <h3 style="font-size:1.15rem; font-weight:800; color:#fff;">الامتثال الأمني والمعايير السيبرانية</h3>
-        </div>
-        <div class="c-compliance-row reveal">
-          <div class="c-compliance-badge">
-            <span class="c-compliance-icon">🛡️</span>
-            <span class="c-compliance-text">HIPAA COMPLIANT</span>
-          </div>
-          <div class="c-compliance-badge">
-            <span class="c-compliance-icon">🇪🇺</span>
-            <span class="c-compliance-text">GDPR READY</span>
-          </div>
-          <div class="c-compliance-badge">
-            <span class="c-compliance-icon">🔒</span>
-            <span class="c-compliance-text">ISO 27001 SECURITIES</span>
-          </div>
-          <div class="c-compliance-badge">
-            <span class="c-compliance-icon">🫘</span>
-            <span class="c-compliance-text">KDOQI PROTOCOLS</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════
-       MEDICAL ADVISORY BOARD
-  ══════════════════════════════════════ -->
-  <section class="c-advisory" id="advisory" aria-label="المجلس الطبي الاستشاري">
-    <div class="c-sec-header">
-      <span class="c-sec-eyebrow">المجلس الطبي الاستشاري</span>
-      <h2 class="c-sec-title">خبرة طبية تشرف على <span>عقولنا الاصطناعية</span></h2>
-      <p class="c-sec-desc">تخضع أنظمتنا السريرية وخوارزمياتها للمراجعة والتنقيح المستمر من لجنة علمية تضم نخبة من الاستشاريين والأخصائيين المعتمدين.</p>
     </div>
     <div class="c-advisory-grid">
-      <!-- مستشار 1 -->
-      <div class="c-advisory-card c-clinical-glass reveal">
-        <div class="c-advisory-icon">🫘</div>
-        <div class="c-advisory-body">
-          <h3 class="c-advisory-title">استشارات أمراض الكلى السريرية</h3>
-          <span class="c-advisory-role">المشرف على بروتوكولات RenalFlow</span>
-          <p class="c-advisory-desc">مراجعة وتوثيق خوارزميات حساب معدلات الفلتر الكلوية (eGFR) والتوصيات الدقيقة لحصوات الكلى وغسيل الكلى.</p>
+
+      <div class="c-adv-card reveal">
+        <div class="c-adv-icon">🩺</div>
+        <div class="c-adv-body">
+          <h3>أخصائيو التغذية المعتمدون</h3>
+          <p>
+            مراجعة دقة الحاسبات الموضعية التغذوية وقواعد البيانات الغذائية والتحقق من مطابقتها للمعايير الأكاديمية والمراجع العلمية المعاصرة.
+          </p>
         </div>
       </div>
-      <!-- مستشار 2 -->
-      <div class="c-advisory-card c-clinical-glass reveal delay-1">
-        <div class="c-advisory-icon">💊</div>
-        <div class="c-advisory-body">
-          <h3 class="c-advisory-title">لجنة الصيدلة الإكلينيكية</h3>
-          <span class="c-advisory-role">المراجعة الدوائية لمحرك NutriDrug</span>
-          <p class="c-advisory-desc">تدقيق ومطابقة التفاعلات الدوائية التغذوية مع أدلة صيدلانية معتمدة من منظمة الصحة العالمية وهيئة الخدمات الصحية البريطانية.</p>
+
+      <div class="c-adv-card reveal delay-1">
+        <div class="c-adv-icon">💊</div>
+        <div class="c-adv-body">
+          <h3>لجنة الصيدلة الإكلينيكية</h3>
+          <p>
+            تدقيق ومطابقة قاعدة بيانات التداخلات الغذائية-الدوائية مع أدلة صيدلانية معتمدة من منظمة الصحة العالمية وهيئة الخدمات الصحية البريطانية.
+          </p>
         </div>
-      </div>
-      <!-- مستشار 3 -->
-      <div class="c-advisory-card c-clinical-glass reveal delay-2">
-        <div class="c-advisory-icon">🩺</div>
-        <div class="c-advisory-body">
-          <h3 class="c-advisory-title">أخصائيي التغذية السريرية</h3>
-          <span class="c-advisory-role">لجنة مراجعة المحتوى والأنظمة لمرشد</span>
-          <p class="c-advisory-desc">التحقق من توازن الخطط الغذائية المولدة بالذكاء الاصطناعي ومطابقتها للمعايير الأكاديمية الطبية المعاصرة.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════
-       CORPORATE IMPACT STATS
-  ══════════════════════════════════════ -->
-  <section class="c-stats" id="stats" aria-label="أرقام وإحصائيات">
-    <div class="c-stats-grid">
-
-      <div class="reveal">
-        <div class="c-stat-number">4<span>+</span></div>
-        <h3 class="c-stat-title">أجنحة سريرية متكاملة</h3>
-        <p class="c-stat-desc">أجنحة تقنية متخصصة تغطي مجالات الكلى، السمنة، التداخلات الدوائية، وإدارة الاستشارات الغذائية.</p>
-      </div>
-
-      <div class="reveal delay-1">
-        <div class="c-stat-number">99.8<span>%</span></div>
-        <h3 class="c-stat-title">دقة التوصيات السريرية</h3>
-        <p class="c-stat-desc">معدل دقة مرتفع للخوارزميات بفضل محاذاة البيانات الصارمة مع التوصيات والبروتوكولات الدولية.</p>
-      </div>
-
-      <div class="reveal delay-2">
-        <div class="c-stat-number">100<span>%</span></div>
-        <h3 class="c-stat-title">أمان وسرية البيانات</h3>
-        <p class="c-stat-desc">تشفير محلي تام وفصل البيانات السريرية عن الهوية لضمان أعلى مستويات الخصوصية الطبية.</p>
       </div>
 
     </div>
   </section>
 
   <!-- ══════════════════════════════════════
-       ENTERPRISE CTA
+       8. CTA — CALL TO ACTION
   ══════════════════════════════════════ -->
   <section class="c-cta" id="cta" aria-label="تواصل معنا">
     <div class="c-cta-inner reveal">
-      <h2 class="c-cta-title">هل تريد <span>طلب عرض توضيحي؟</span></h2>
+      <h2 class="c-cta-title">مستعد <span>لتجربة منصة مرشد؟</span></h2>
       <p class="c-cta-desc">
-        نرحب بالتعاون مع المؤسسات الصحية والمستشفيات، ويسعدنا تقديم عروض توضيحية فنية مفصلة لطريقة عمل ودقة منصاتنا.
+        انضم إلى نخبة أخصائيي التغذية حول العالم الذين يعتمدون على أدوات FES HealthTech لإدارة عياداتهم بكفاءة واحترافية مطلقة.
       </p>
       <div class="c-cta-actions">
-        <a href="pages/contact.html" class="btn btn-accent btn-lg">✉️ طلب تواصل مؤسسي</a>
-        <a href="pages/portfolio.html" class="btn btn-ghost-dark btn-lg">🏢 أجنحة التقنيات</a>
+        <a href="https://murshid-app.feshealthtech.com" class="btn btn-accent btn-lg">🚀 زيارة موقع مرشد</a>
+        <a href="pages/contact.html" class="btn btn-ghost-dark btn-lg">✉️ تواصل معنا</a>
       </div>
     </div>
   </section>
