@@ -178,6 +178,22 @@
   }
 
   // ════════════════════════════════════════
+  // MOUSE SPOTLIGHT GLOW ON CARDS
+  // ════════════════════════════════════════
+  function initSpotlightGlow() {
+    const cards = document.querySelectorAll('.c-tech-card, .c-moat-card, .c-vision-card, .c-adv-card, .c-pipe-node, .c-hero-demo-widget, .c-app-mockup');
+    cards.forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
+      });
+    });
+  }
+
+  // ════════════════════════════════════════
   // INIT
   // ════════════════════════════════════════
   function init() {
@@ -189,7 +205,8 @@
     initHeroWidgetDemo();
     initPipelineNodes();
     initMockupTabs();
-    console.log('🚀 FES HealthTech v3.3 — Murshid Showcase Tabs Loaded');
+    initSpotlightGlow();
+    console.log('🚀 FES HealthTech v3.4 — Masterpiece Homepage Complete');
   }
 
   if (document.readyState === 'loading') {
