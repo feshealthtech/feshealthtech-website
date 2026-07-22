@@ -351,6 +351,103 @@
       line-height: 1.7;
     }
 
+    /* ─── PIPELINE INFRASTRUCTURE (Enhancement #2) ─── */
+    .c-pipeline-section {
+      background: var(--navy-mid);
+      background-image: radial-gradient(ellipse 70% 50% at 50% 50%, rgba(37,99,235,0.12) 0%, transparent 70%);
+      padding: 96px 0;
+      color: #fff;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .c-pipeline-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .c-pipe-nodes {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+    .c-pipe-node {
+      flex: 1;
+      min-width: 180px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      padding: 20px 16px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    .c-pipe-node:hover {
+      border-color: rgba(96,165,250,0.4);
+      background: rgba(255,255,255,0.06);
+      transform: translateY(-4px);
+    }
+    .c-pipe-node.active {
+      background: rgba(37,99,235,0.15);
+      border-color: #60A5FA;
+      box-shadow: 0 0 20px rgba(37,99,235,0.3);
+    }
+    .c-node-icon {
+      font-size: 1.8rem;
+      display: block;
+      margin-bottom: 8px;
+    }
+    .c-node-title {
+      font-size: 0.88rem;
+      font-weight: 800;
+      color: #fff;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .c-node-sub {
+      font-size: 0.65rem;
+      color: #60A5FA;
+      font-weight: 700;
+      display: block;
+    }
+    .c-pipe-connector {
+      width: 24px;
+      height: 2px;
+      background: linear-gradient(90deg, #2563EB, #60A5FA);
+      flex-shrink: 0;
+    }
+    @media (max-width: 992px) {
+      .c-pipe-connector { display: none; }
+    }
+    .c-pipe-inspector {
+      background: rgba(0,0,0,0.35);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      padding: 28px 32px;
+      min-height: 120px;
+    }
+    .c-inspector-content {
+      display: none;
+      animation: fadeIn 0.3s ease;
+    }
+    .c-inspector-content.active {
+      display: block;
+    }
+    .c-inspector-content h4 {
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: #60A5FA;
+      margin-bottom: 10px;
+    }
+    .c-inspector-content p {
+      font-size: 0.9rem;
+      color: rgba(148,163,184,0.9);
+      line-height: 1.8;
+    }
+
     /* ─── VISION & MISSION ─── */
     .c-vision {
       background: var(--bg-page);
@@ -980,6 +1077,70 @@
     </div>
     <div style="text-align:center; margin-top:40px;">
       <a href="pages/about.html" class="btn btn-outline">اقرأ المزيد عن قصتنا ←</a>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       ENHANCEMENT #2: EDGE INFRASTRUCTURE PIPELINE
+  ══════════════════════════════════════ -->
+  <section class="c-pipeline-section" id="pipeline" aria-label="البنية التحتية للحوسبة">
+    <div class="c-sec-header">
+      <span class="c-sec-eyebrow" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.15);color:#fff;">⚡ الحوسبة المستقلة · EDGE PIPELINE</span>
+      <h2 class="c-sec-title" style="color:#fff;">بنية برمجية معزولة بسرعة <span>0ms وسرية مطلقة</span></h2>
+      <p class="c-sec-desc" style="color:rgba(148,163,184,0.85);">
+        صممنا أنظمتنا لتكون مستقلة تماماً عن السحابة في المعالجات الحسابية وتخزين البيانات — سرعة فائقة مع سيادة تامة.
+      </p>
+    </div>
+
+    <div class="c-pipeline-container reveal">
+      
+      <!-- Interactive Pipeline Nodes -->
+      <div class="c-pipe-nodes">
+        <div class="c-pipe-node active" data-node="node-1-desc">
+          <span class="c-node-icon">📱</span>
+          <span class="c-node-title">1. الجهاز المحلي</span>
+          <span class="c-node-sub">Edge Execution</span>
+        </div>
+        <div class="c-pipe-connector"></div>
+        <div class="c-pipe-node" data-node="node-2-desc">
+          <span class="c-node-icon">🧮</span>
+          <span class="c-node-title">2. المحرك الموضعي</span>
+          <span class="c-node-sub">0ms Latency</span>
+        </div>
+        <div class="c-pipe-connector"></div>
+        <div class="c-pipe-node" data-node="node-3-desc">
+          <span class="c-node-icon">📷</span>
+          <span class="c-node-title">3. الـ OCR البصري</span>
+          <span class="c-node-sub">Stateless Memory</span>
+        </div>
+        <div class="c-pipe-connector"></div>
+        <div class="c-pipe-node" data-node="node-4-desc">
+          <span class="c-node-icon">💾</span>
+          <span class="c-node-title">4. التخزين السيادي</span>
+          <span class="c-node-sub">AES-256 Isar DB</span>
+        </div>
+      </div>
+
+      <!-- Node Detail Inspector Box -->
+      <div class="c-pipe-inspector">
+        <div class="c-inspector-content active" id="node-1-desc">
+          <h4>📱 1. الجهاز المحلي (Edge Execution)</h4>
+          <p>تتم كافة العمليات التفاعلية وإدارة الملفات على هاتف الممارس أو التابلت مباشرة. لا توجد خوادم وسطية بين الأخصائي وشاشته، مما يلغي أي إمكانية للتنصت أو التجسس الشبكي.</p>
+        </div>
+        <div class="c-inspector-content" id="node-2-desc">
+          <h4>🧮 2. المحرك الموضعي أوفلاين (0ms Latency)</h4>
+          <p>محرك البرمجة الرياضية والحاسبات التغذوية (BMI, BMR, TDEE, Z-Score) مكتوب بـ Dart/Flutter Native ومدمج في التطبيق، مما يعطي أداءً فورياً بـ 0 ميلي ثانية حتى بدون إنترنت.</p>
+        </div>
+        <div class="c-inspector-content" id="node-3-desc">
+          <h4>📷 3. محرك الـ OCR البصري آني الذاكرة (Stateless Memory)</h4>
+          <p>عند التقاط صور التحاليل، تُرسل الصورة عبر قنوات HTTPS مشفرة لخدمة المعالجة البصرية، وتُفرّغ الصورة فوراً من الذاكرة دون الاحتفاظ بأي سجلات أو التدريب عليها.</p>
+        </div>
+        <div class="c-inspector-content" id="node-4-desc">
+          <h4>💾 4. التخزين السيادي المشفر (AES-256 Isar DB)</h4>
+          <p>قاعدة البيانات المحلية Isar تُشفر مفتاحياً بـ AES-256 وتُحفظ على الذاكرة الداخلية لجهازك فقط. أنت وحدك من يملك مفتاح الفك، ولا تستطيع الشركة نفسها الاطلاع عليها.</p>
+        </div>
+      </div>
+
     </div>
   </section>
 

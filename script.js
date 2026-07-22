@@ -138,6 +138,26 @@
   }
 
   // ════════════════════════════════════════
+  // PIPELINE INFRASTRUCTURE INTERACTIVE NODES
+  // ════════════════════════════════════════
+  function initPipelineNodes() {
+    const nodes = document.querySelectorAll('.c-pipe-node');
+    const inspectors = document.querySelectorAll('.c-inspector-content');
+    if (!nodes.length || !inspectors.length) return;
+
+    nodes.forEach(node => {
+      node.addEventListener('click', () => {
+        const targetId = node.dataset.node;
+        nodes.forEach(n => n.classList.remove('active'));
+        inspectors.forEach(i => i.classList.remove('active'));
+        node.classList.add('active');
+        const targetInspector = document.getElementById(targetId);
+        if (targetInspector) targetInspector.classList.add('active');
+      });
+    });
+  }
+
+  // ════════════════════════════════════════
   // INIT
   // ════════════════════════════════════════
   function init() {
@@ -147,7 +167,8 @@
     initSmoothScroll();
     initCardTilt();
     initHeroWidgetDemo();
-    console.log('🚀 FES HealthTech v3.1 — Homepage with Interactive Hero Demo loaded');
+    initPipelineNodes();
+    console.log('🚀 FES HealthTech v3.2 — Edge Pipeline Infrastructure Loaded');
   }
 
   if (document.readyState === 'loading') {
