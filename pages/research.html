@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="مختبر الأبحاث والتطوير التقني FES HealthTech R&D — الأوراق البحثية، هندسة الحوسبة الطرفية، وتشفير البيانات." />
+  <title>مختبر الأبحاث والتطوير التقني | FES HealthTech</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/png" href="../assets/favicon.png" />
+
+  <style>
+    /* ════════════════════════════════════════
+       RESEARCH PAGE — ACADEMIC LIGHT THEME
+       ════════════════════════════════════════ */
+    body {
+      background-color: #F8FAFC !important;
+      color: #0F172A !important;
+      font-family: var(--font-arabic);
+    }
+
+    .res-hero {
+      padding: calc(var(--nav-height) + 64px) 0 48px;
+      background: #FFFFFF;
+      border-bottom: 1px solid #E2E8F0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .res-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(37,99,235,0.03) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(16,185,129,0.03) 0%, transparent 40%);
+      pointer-events: none;
+    }
+    .res-hero-eyebrow {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+      display: inline-block;
+      background: rgba(37,99,235,0.06);
+      padding: 6px 16px;
+      border-radius: 99px;
+    }
+    .res-hero-title {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 900;
+      color: #0F172A;
+      margin-bottom: 16px;
+      line-height: 1.25;
+    }
+    .res-hero-title span {
+      color: var(--primary);
+    }
+    .res-hero-desc {
+      font-size: 0.95rem;
+      color: #64748B;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .res-section {
+      padding: 80px 0;
+      border-bottom: 1px solid #E2E8F0;
+    }
+    .res-section:last-of-type {
+      border-bottom: none;
+    }
+    .res-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .res-sec-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .res-sec-title {
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: #0F172A;
+      margin-bottom: 12px;
+    }
+    .res-sec-desc {
+      font-size: 0.9rem;
+      color: #64748B;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* Grid layout */
+    .res-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .res-track-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 20px;
+      padding: 32px 24px;
+      box-shadow: 0 4px 6px rgba(15,23,42,0.01);
+      transition: all 0.3s ease;
+    }
+    .res-track-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--primary-light);
+      box-shadow: 0 12px 24px rgba(15,23,42,0.04);
+    }
+    .res-card-icon {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+    .res-card-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #0F172A;
+      margin-bottom: 8px;
+    }
+    .res-card-desc {
+      font-size: 0.85rem;
+      color: #64748B;
+      line-height: 1.7;
+    }
+
+    /* Papers list */
+    .res-papers-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .res-paper-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 16px;
+      padding: 24px 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      transition: all 0.25s ease;
+    }
+    .res-paper-card:hover {
+      border-color: var(--primary-light);
+      box-shadow: 0 6px 12px rgba(15,23,42,0.02);
+    }
+    .res-paper-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .res-paper-tag {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .res-paper-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #0F172A;
+    }
+    .res-paper-authors {
+      font-size: 0.8rem;
+      color: #64748B;
+    }
+    .res-paper-action .btn {
+      white-space: nowrap;
+      font-size: 0.8rem;
+      padding: 10px 16px;
+    }
+
+    /* Partnerships */
+    .res-partner-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 24px;
+      padding: 48px;
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 4px 12px rgba(15,23,42,0.01);
+    }
+    .res-partner-title {
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: #0F172A;
+      margin-bottom: 12px;
+    }
+    .res-partner-desc {
+      font-size: 0.9rem;
+      color: #64748B;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    /* Mobile adaptability */
+    @media (max-width: 992px) {
+      .res-grid-3 { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 576px) {
+      .res-hero { padding: calc(var(--nav-height) + 32px) 0 32px; }
+      .res-grid-3 { grid-template-columns: 1fr; gap: 16px; }
+      .res-paper-card { flex-direction: column; align-items: stretch; text-align: right; }
+      .res-partner-card { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar placeholder -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- Hero Section -->
+  <section class="res-hero" aria-label="مقدمة أبحاث FES">
+    <div class="res-hero-eyebrow">مختبر الأبحاث والتطوير التقني · FES R&D</div>
+    <h1 class="res-hero-title">الابتكار العلمي في <span>الحوسبة الطبية المستقلة</span></h1>
+    <p class="res-hero-desc">
+      نسعى للمساهمة في بناء الأسس البرمجية والرياضية لتمكين الأنظمة الصحية من العمل بكفاءة عالية، وخصوصية مطلقة، وبمعزل تام عن أعباء السحابة.
+    </p>
+  </section>
+
+  <!-- Research Tracks Section -->
+  <section class="res-section" id="tracks" aria-label="مسارات البحث">
+    <div class="res-container">
+      <div class="res-sec-header">
+        <h2 class="res-sec-title">مساراتنا البحثية الرئيسية</h2>
+        <p class="res-sec-desc">
+          تتركز جهودنا البحثية على ثلاثة محاور هندسية رئيسية تضمن تمكين الأنظمة وخصوصية البيانات.
+        </p>
+      </div>
+
+      <div class="res-grid-3">
+        
+        <div class="res-track-card">
+          <div class="res-card-icon">📡</div>
+          <h3 class="res-card-title">الحوسبة الطرفية (Edge Computing)</h3>
+          <p class="res-card-desc">
+            دراسة تحسين خوارزميات الاستعلام لقواعد البيانات الطبية المحلية الكبيرة محلياً، وتحقيق سرعة استجابة 0ms دون استهلاك لطاقة المعالجات في الأجهزة المحمولة.
+          </p>
+        </div>
+
+        <div class="res-track-card">
+          <div class="res-card-icon">🔒</div>
+          <h3 class="res-card-title">أمان البيانات (Zero-Knowledge)</h3>
+          <p class="res-card-desc">
+            تطوير بروتوكولات تشفير محلية وقنوات ربط آمنة تضمن عزل سجلات المرضى والمراجعين بالكامل على مستوى الأجهزة، ومنع إمكانية فك التشفير إلا بواسطة الممارس.
+          </p>
+        </div>
+
+        <div class="res-track-card">
+          <div class="res-card-icon">📷</div>
+          <h3 class="res-card-title">معالجة الصور أوفلاين (Stateless OCR)</h3>
+          <p class="res-card-desc">
+            ابتكار خوارزميات لاستخلاص الجداول المخبرية والبيانات التغذوية وتفسيرها داخل ذاكرة الجهاز المؤقتة، مع إمكانية التدمير التلقائي الفوري للصور الطبية بعد المعالجة.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications Section -->
+  <section class="res-section" id="publications" aria-label="أوراقنا البحثية">
+    <div class="res-container">
+      <div class="res-sec-header">
+        <h2 class="res-sec-title">أوراق بحثية ومستندات فنية</h2>
+        <p class="res-sec-desc">
+          نشارك مجتمع المطورين والمهتمين بالصحة الرقمية خلاصات أبحاثنا الهندسية والتشفيرية.
+        </p>
+      </div>
+
+      <div class="res-papers-list">
+        
+        <div class="res-paper-card">
+          <div class="res-paper-meta">
+            <span class="res-paper-tag">Technical Whitepaper</span>
+            <h3 class="res-paper-title">Optimization of Distributed Relational Databases for Edge Computing Healthcare Systems</h3>
+            <span class="res-paper-authors">FES R&D Engineering Team · Published: 2025</span>
+          </div>
+          <div class="res-paper-action">
+            <a href="#" class="btn btn-outline" onclick="alert('سيتم إطلاق المستند قريباً'); return false;">📄 قراءة المستند</a>
+          </div>
+        </div>
+
+        <div class="res-paper-card">
+          <div class="res-paper-meta">
+            <span class="res-paper-tag">Security & Privacy Study</span>
+            <h3 class="res-paper-title">Zero-Knowledge Cryptographic Architectures for Localized EMR and Patient Sourced Data</h3>
+            <span class="res-paper-authors">FES Cryptography Lab · Published: 2025</span>
+          </div>
+          <div class="res-paper-action">
+            <a href="#" class="btn btn-outline" onclick="alert('سيتم إطلاق المستند قريباً'); return false;">📄 قراءة المستند</a>
+          </div>
+        </div>
+
+        <div class="res-paper-card">
+          <div class="res-paper-meta">
+            <span class="res-paper-tag">Pattern Recognition</span>
+            <h3 class="res-paper-title">Stateless Optical Character Recognition Algorithms for Mobile Medical Lab Reports Parsing</h3>
+            <span class="res-paper-authors">FES AI Research Division · Published: 2026</span>
+          </div>
+          <div class="res-paper-action">
+            <a href="#" class="btn btn-outline" onclick="alert('سيتم إطلاق المستند قريباً'); return false;">📄 قراءة المستند</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Partnerships Section -->
+  <section class="res-section" id="partnerships" aria-label="الشراكات البحثية">
+    <div class="res-container">
+      <div class="res-partner-card">
+        <div class="res-card-icon" style="font-size:2.5rem;margin-bottom:8px;">🎓</div>
+        <h2 class="res-partner-title">التعاون الأكاديمي والبحثي</h2>
+        <p class="res-partner-desc">
+          نرحب بالتعاون مع أقسام علوم الحاسوب وهندسة البرمجيات بالجامعات والمؤسسات البحثية للمشاركة في إعداد أطروحات التخرج والدراسات العلمية حول الحوسبة الصحية المستقلة وتشفير البيانات السيادية.
+        </p>
+        <a href="contact.html" class="btn btn-primary">✉️ تواصل معنا لبدء تعاون بحثي</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Shared Scripts -->
+  <script src="../components/components.js"></script>
+</body>
+</html>
