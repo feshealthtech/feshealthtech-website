@@ -194,6 +194,40 @@
   }
 
   // ════════════════════════════════════════
+  // CORPORATE B2B FAQ COLLAPSIBLE TOGGLES
+  // ════════════════════════════════════════
+  function initCorpFaq() {
+    const faqItems = document.querySelectorAll('.c-faq-item');
+    if (!faqItems.length) return;
+
+    faqItems.forEach(item => {
+      const question = item.querySelector('.c-faq-question');
+      const answer = item.querySelector('.c-faq-answer');
+      if (!question || !answer) return;
+
+      question.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        
+        // Close all other items
+        faqItems.forEach(i => {
+          i.classList.remove('active');
+          const ans = i.querySelector('.c-faq-answer');
+          if (ans) ans.style.maxHeight = null;
+        });
+
+        // Toggle current item
+        if (!isActive) {
+          item.classList.add('active');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        } else {
+          item.classList.remove('active');
+          answer.style.maxHeight = null;
+        }
+      });
+    });
+  }
+
+  // ════════════════════════════════════════
   // INIT
   // ════════════════════════════════════════
   function init() {
@@ -206,7 +240,8 @@
     initPipelineNodes();
     initMockupTabs();
     initSpotlightGlow();
-    console.log('🚀 FES HealthTech v3.4 — Masterpiece Homepage Complete');
+    initCorpFaq();
+    console.log('🚀 FES HealthTech v3.5 — B2B FAQ and Testimonials Added');
   }
 
   if (document.readyState === 'loading') {

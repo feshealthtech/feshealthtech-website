@@ -25,25 +25,25 @@
     <a href="${R}index.html" class="nav-logo" aria-label="FES HealthTech — الصفحة الرئيسية">
       <img src="${R}assets/logo.png" alt="شعار FES HealthTech" />
     </a>
-
+ 
     <ul class="nav-links" role="list">
       <li><a href="${R}index.html">الرئيسية</a></li>
       <li><a href="${R}pages/about.html">من نحن</a></li>
-      <li><a href="${R}pages/portfolio.html">أعمالنا</a></li>
+      <li><a href="${R}index.html#flagship">أعمالنا</a></li>
       <li><a href="${R}pages/contact.html">تواصل معنا</a></li>
     </ul>
-
+ 
     <div class="nav-cta">
-      <a href="${R}pages/portfolio.html" class="btn btn-outline btn-sm">استكشف منتجاتنا</a>
+      <a href="${R}index.html#flagship" class="btn btn-outline btn-sm">استكشف منتجاتنا</a>
       <a href="${R}pages/contact.html" class="btn btn-primary btn-sm">تواصل معنا</a>
     </div>
-
+ 
     <button class="hamburger" id="hamburger" aria-label="فتح القائمة" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
-
+ 
 <!-- Mobile Drawer -->
 <div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-label="القائمة المتنقلة">
   <div class="drawer-overlay" id="drawerOverlay"></div>
@@ -54,23 +54,23 @@
     </div>
     <a href="${R}index.html" class="drawer-link">🏠 الرئيسية</a>
     <a href="${R}pages/about.html" class="drawer-link">🏢 من نحن</a>
-    <a href="${R}pages/portfolio.html" class="drawer-link">📱 أعمالنا</a>
+    <a href="${R}index.html#flagship" class="drawer-link">📱 أعمالنا</a>
     <a href="${R}pages/contact.html" class="drawer-link">✉️ تواصل معنا</a>
     <div class="drawer-cta">
-      <a href="${R}pages/portfolio.html" class="btn btn-outline">استكشف منتجاتنا</a>
+      <a href="${R}index.html#flagship" class="btn btn-outline">استكشف منتجاتنا</a>
       <a href="${R}pages/contact.html" class="btn btn-primary">تواصل معنا</a>
     </div>
   </div>
 </div>`;
   }
-
+ 
   // ── Footer HTML ─────────────────────────────────
   function getFooterHTML() {
     return `
 <footer class="footer" id="footer" role="contentinfo">
   <div class="container">
     <div class="footer-grid">
-
+ 
       <!-- Brand -->
       <div class="footer-brand">
         <img src="${R}assets/logo.png" alt="FES HealthTech" class="footer-logo" />
@@ -85,27 +85,27 @@
           <div class="footer-social-link" title="YouTube" role="button">▶️</div>
         </div>
       </div>
-
+ 
       <!-- Company Links -->
       <div>
         <h4 class="footer-col-title">الشركة</h4>
         <ul class="footer-links">
           <li><a href="${R}index.html">الرئيسية</a></li>
           <li><a href="${R}pages/about.html">من نحن</a></li>
-          <li><a href="${R}pages/portfolio.html">أعمالنا</a></li>
+          <li><a href="${R}index.html#flagship">أعمالنا</a></li>
           <li><a href="${R}pages/contact.html">تواصل معنا</a></li>
           <li><a href="${R}pages/contact.html">الوظائف</a></li>
         </ul>
       </div>
-
+ 
       <!-- Products Links -->
       <div>
         <h4 class="footer-col-title">منتجاتنا</h4>
         <ul class="footer-links">
-          <li><a href="${R}pages/portfolio.html#murshid">مرشد — إدارة عيادات التغذية</a></li>
+          <li><a href="${R}index.html#flagship">مرشد — إدارة عيادات التغذية</a></li>
         </ul>
       </div>
-
+ 
       <!-- Newsletter -->
       <div>
         <h4 class="footer-col-title">ابقَ على اطلاع</h4>
@@ -122,12 +122,12 @@
           </button>
         </div>
       </div>
-
+ 
     </div>
-
+ 
     <div class="footer-bottom">
       <p class="footer-copy">
-        © 2026 FES Medical Software Technology. جميع الحقوق محفوظة.
+        © <span id="footerYear">2026</span> FES Medical Software Technology. جميع الحقوق محفوظة.
       </p>
       <div class="footer-bottom-links">
         <a href="${R}pages/privacy.html">سياسة الخصوصية</a>
@@ -368,10 +368,10 @@
   function init() {
     // 1. Inject navbar HTML
     inject('navbar-placeholder', getNavbarHTML());
-
+ 
     // 2. Inject footer HTML
     inject('footer-placeholder', getFooterHTML());
-
+ 
     // 3. Wire up behaviours (DOM is now ready)
     initNavbarScroll();
     initAnnounceBar();
@@ -380,7 +380,13 @@
     initNewsletter();
     initReveal();
     initCookieBanner();
-
+ 
+    // 4. Update footer year dynamically
+    const yearEl = document.getElementById('footerYear');
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
+ 
     console.log('[FES] Components injected. Root prefix:', R || '(root)');
   }
 
