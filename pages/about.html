@@ -675,133 +675,193 @@
         font-size: 1.25rem !important;
       }
     }
-    /* Standards & Tech Alliance Bar */
-    .res-alliance-bar {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 24px;
-      margin-top: 36px;
-      padding: 0 16px;
-    }
-    .res-alliance-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.8rem;
-      font-weight: 700;
-      color: #475569;
-      background: rgba(37, 99, 235, 0.04);
-      border: 1px solid rgba(37, 99, 235, 0.08);
-      padding: 8px 18px;
-      border-radius: 99px;
-      transition: all 0.3s ease;
-    }
-    .res-alliance-item:hover {
-      background: rgba(37, 99, 235, 0.08);
-      border-color: rgba(37, 99, 235, 0.15);
-      transform: translateY(-2px);
-      color: var(--primary);
-    }
-    .res-all-icon {
-      font-size: 1.1rem;
-    }
+    /* ════════════════════════════════════════
+       NEW HIGH-FIDELITY & PREMIUM SECTIONS CSS
+       ════════════════════════════════════════ */
 
-    /* Vision & Mission Sections */
+    /* Vision & Mission premium layout */
+    .v-m-section {
+      background: linear-gradient(180deg, #F8FAFF 0%, #EFF6FF 100%) !important;
+    }
     .v-m-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
+      gap: 32px;
       max-width: 1200px;
       margin: 0 auto;
     }
     .v-m-card {
-      background: rgba(255, 255, 255, 0.75);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
+      background: #ffffff;
       border: 1px solid rgba(37, 99, 235, 0.08);
-      border-radius: 28px;
-      padding: 40px;
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      border-radius: 32px;
+      padding: 48px;
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
       position: relative;
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(13, 27, 42, 0.01);
+      box-shadow: 0 10px 40px rgba(13, 27, 42, 0.02);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .v-m-card.vision-card {
+      background: linear-gradient(135deg, #ffffff 60%, rgba(37, 99, 235, 0.02) 100%);
+    }
+    .v-m-card.mission-card {
+      background: linear-gradient(135deg, #ffffff 60%, rgba(13, 148, 136, 0.02) 100%);
     }
     .v-m-card::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0; height: 4px;
-      background: linear-gradient(90deg, var(--primary), var(--accent));
-      opacity: 0;
-      transition: opacity 0.3s ease;
+      top: 0; left: 0; right: 0; height: 5px;
+      transition: all 0.4s ease;
+      opacity: 0.8;
+    }
+    .v-m-card.vision-card::before {
+      background: linear-gradient(90deg, #3B82F6, #60A5FA);
+    }
+    .v-m-card.mission-card::before {
+      background: linear-gradient(90deg, #0D9488, #14B8A6);
     }
     .v-m-card:hover {
-      transform: translateY(-6px);
-      border-color: transparent;
-      box-shadow: 0 30px 60px rgba(37, 99, 235, 0.06);
-      background: var(--white);
-    }
-    .v-m-card:hover::before {
-      opacity: 1;
+      transform: translateY(-8px);
+      box-shadow: 0 30px 60px rgba(37, 99, 235, 0.07);
+      border-color: rgba(37, 99, 235, 0.15);
     }
     .v-m-icon {
-      width: 52px; height: 52px;
-      background: rgba(37, 99, 235, 0.06);
-      border-radius: 16px;
+      width: 60px; height: 60px;
+      border-radius: 20px;
       display: flex; align-items: center; justify-content: center;
-      font-size: 1.6rem;
-      margin-bottom: 24px;
+      font-size: 1.8rem;
+      margin-bottom: 28px;
+      box-shadow: 0 4px 12px rgba(13, 27, 42, 0.02);
+    }
+    .vision-card .v-m-icon {
+      background: rgba(37, 99, 235, 0.06);
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      color: #2563EB;
+    }
+    .mission-card .v-m-icon {
+      background: rgba(13, 148, 136, 0.06);
+      border: 1px solid rgba(13, 148, 136, 0.12);
+      color: #0D9488;
     }
     .v-m-title {
-      font-size: 1.3rem;
+      font-size: 1.45rem;
       font-weight: 900;
       color: #0D1B2A;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
     .v-m-desc {
-      font-size: 0.92rem;
-      line-height: 1.8;
+      font-size: 0.96rem;
+      line-height: 1.9;
       color: #475569;
     }
 
-    /* Values Section */
-    .values-grid {
+    /* Technology Alliances & Integration Section */
+    .alliance-section {
+      background: #FFFFFF !important;
+    }
+    .alliance-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
+      gap: 24px;
       max-width: 1200px;
       margin: 0 auto;
     }
-    .val-card {
-      background: rgba(255, 255, 255, 0.6);
-      border: 1px solid rgba(37, 99, 235, 0.06);
-      border-radius: 20px;
-      padding: 28px 20px;
+    .alliance-card {
+      background: rgba(248, 250, 255, 0.7);
+      border: 1px solid rgba(37, 99, 235, 0.05);
+      border-radius: 24px;
+      padding: 32px 24px;
       text-align: center;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(13, 27, 42, 0.01);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
     }
-    .val-card:hover {
-      background: var(--white);
-      border-color: var(--primary-light);
+    .alliance-card:hover {
+      background: #ffffff;
+      border-color: rgba(37, 99, 235, 0.18);
       transform: translateY(-4px);
-      box-shadow: 0 12px 24px rgba(37, 99, 235, 0.04);
+      box-shadow: 0 20px 40px rgba(37, 99, 235, 0.04);
     }
-    .val-icon {
-      font-size: 1.8rem;
-      margin-bottom: 16px;
+    .alliance-icon {
+      width: 56px; height: 56px;
+      background: #ffffff;
+      border: 1px solid rgba(37, 99, 235, 0.08);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(13, 27, 42, 0.02);
     }
-    .val-title {
+    .alliance-title {
       font-size: 0.98rem;
       font-weight: 800;
       color: #0D1B2A;
       margin-bottom: 8px;
     }
-    .val-desc {
-      font-size: 0.8rem;
+    .alliance-desc {
+      font-size: 0.78rem;
       line-height: 1.6;
       color: #64748B;
+    }
+
+    /* Core Values premium layout */
+    .values-section {
+      background: linear-gradient(180deg, #F8FAFF 0%, #FFFFFF 100%) !important;
+    }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .val-card {
+      background: #ffffff;
+      border: 1px solid rgba(37, 99, 235, 0.05);
+      border-radius: 24px;
+      padding: 36px 24px;
+      position: relative;
+      transition: all 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(13, 27, 42, 0.01);
+    }
+    .val-card:hover {
+      border-color: rgba(37, 99, 235, 0.15);
+      transform: translateY(-5px);
+      box-shadow: 0 25px 50px rgba(37, 99, 235, 0.06);
+    }
+    .val-badge {
+      position: absolute;
+      top: 20px; right: 20px;
+      font-size: 0.72rem;
+      font-weight: 900;
+      color: rgba(37, 99, 235, 0.15);
+      font-family: var(--font-english);
+    }
+    .val-icon {
+      width: 52px; height: 52px;
+      background: rgba(37, 99, 235, 0.04);
+      border-radius: 16px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+    .val-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #0D1B2A;
+      margin-bottom: 10px;
+    }
+    .val-desc {
+      font-size: 0.82rem;
+      line-height: 1.65;
+      color: #475569;
     }
 
     @media (max-width: 992px) {
@@ -813,6 +873,10 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;
       }
+      .alliance-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
     }
 
     @media (max-width: 576px) {
@@ -820,13 +884,9 @@
         grid-template-columns: 1fr;
         gap: 12px;
       }
-      .res-alliance-bar {
+      .alliance-grid {
+        grid-template-columns: 1fr;
         gap: 12px;
-        margin-top: 24px;
-      }
-      .res-alliance-item {
-        font-size: 0.72rem;
-        padding: 6px 12px;
       }
     }
   </style>
@@ -834,8 +894,6 @@
 <body class="about-page">
 
   <div id="navbar-placeholder"></div>
-
-  <!-- Page Hero -->
   <section class="about-hero">
     <div class="container page-hero-content">
       <nav class="page-breadcrumb" aria-label="مسار التنقل">
@@ -851,50 +909,10 @@
       <p class="page-hero-subtitle">
         مؤسسة رائدة في تطوير أنظمة إدارة العيادات والتخطيط الغذائي وحلول المتابعة اللامركزية. نلتزم بأعلى معايير الأمان والدقة التقنية لتمكين الممارسين وتسهيل سير العمل اليومي.
       </p>
-
-      <!-- Standards & Alliance Bar -->
-      <div class="res-alliance-bar">
-        <div class="res-alliance-item">
-          <span class="res-all-icon">🔒</span>
-          <span>متوافق مع معايير HIPAA و GDPR</span>
-        </div>
-        <div class="res-alliance-item">
-          <span class="res-all-icon">🌐</span>
-          <span>معايير التبادل HL7 & FHIR APIs</span>
-        </div>
-        <div class="res-alliance-item">
-          <span class="res-all-icon">📋</span>
-          <span>توصيات الجمعيات الأكاديمية ASMBS / KDOQI</span>
-        </div>
-      </div>
     </div>
   </section>
 
-  <!-- Vision & Mission -->
-  <section class="about-section" aria-label="الرؤية والرسالة">
-    <div class="container">
-      <div class="v-m-grid">
-        <!-- Vision -->
-        <div class="v-m-card reveal">
-          <div class="v-m-icon">👁️</div>
-          <h2 class="v-m-title">رؤيتنا</h2>
-          <p class="v-m-desc">
-            أن نكون الشريك البرمجي والتكنولوجي الأول عالمياً للعيادات والمنشآت الصحية في تقديم حلول إدارة المراجعين والتخطيط الغذائي اللامركزي، ممهدين الطريق لعصر جديد من سيادة البيانات الفردية وسرية السجلات الصحية دون التضحية بالسرعة والابتكار التقني.
-          </p>
-        </div>
-        <!-- Mission -->
-        <div class="v-m-card reveal">
-          <div class="v-m-icon">🎯</div>
-          <h2 class="v-m-title">رسالتنا</h2>
-          <p class="v-m-desc">
-            تمكين أخصائيي التغذية والمؤسسات الصحية بالأدوات الذكية والآمنة التي تمنحهم الكفاءة المطلقة أوفلاين. نسعى إلى تبسيط إدارة المراجعات وأتمتة التقارير وتوفير الوقت للتركيز على رعاية المراجعين، مع الالتزام التام بعدم المساس بخصوصية البيانات الطبية.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Company Story -->
+  <!-- Company Story (About Us) -->
   <section class="about-section" aria-label="قصتنا">
     <div class="container">
       <div class="about-grid-2">
@@ -950,8 +968,72 @@
     </div>
   </section>
 
+  <!-- Technology Alliances & Integration -->
+  <section class="about-section alliance-section" aria-label="التحالفات والشراكات التقنية">
+    <div class="container">
+      <div class="section-header-dark">
+        <span class="section-label">التحالفات والربط التقني</span>
+        <h2 class="section-title">التكامل البيني <span>والتوافقية البرمجية</span></h2>
+        <p class="section-subtitle">
+          تعتمد أنظمتنا على معايير تشغيل وبنية تحتية سحابية ومحلية موحدة تضمن الأمان والتكامل مع المؤسسات الصحية الكبرى.
+        </p>
+      </div>
+
+      <div class="alliance-grid">
+        <!-- Alliance 1 -->
+        <div class="alliance-card reveal">
+          <div class="alliance-icon">☁️</div>
+          <h3 class="alliance-title">البنية السحابية من Google</h3>
+          <p class="alliance-desc">نستخدم خدمات Google Cloud الآمنة لإدارة بيانات Firestore والمصادقة والذكاء الاصطناعي مع عزل الهويات.</p>
+        </div>
+        <!-- Alliance 2 -->
+        <div class="alliance-card reveal">
+          <div class="alliance-icon">🔑</div>
+          <h3 class="alliance-title">التشفير اللامركزي السيادي</h3>
+          <p class="alliance-desc">بنية تشفير موضعية مشفرة بـ AES-256 محلياً على هاتف الأخصائي والمراجع دون مشاركتها خارج الجهاز.</p>
+        </div>
+        <!-- Alliance 3 -->
+        <div class="alliance-card reveal">
+          <div class="alliance-icon">🌐</div>
+          <h3 class="alliance-title">تكامل FHIR & HL7 APIs</h3>
+          <p class="alliance-desc">جاهزية برمجية تامة للربط وتبادل البيانات مع السجلات الطبية المركزية للمستشفيات والمنشآت.</p>
+        </div>
+        <!-- Alliance 4 -->
+        <div class="alliance-card reveal">
+          <div class="alliance-icon">🔍</div>
+          <h3 class="alliance-title">معالجة Stateless OCR</h3>
+          <p class="alliance-desc">استخلاص البيانات والتحاليل المخبرية فورياً من الصور دون حفظ أي نسخة منها على الخوادم.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision & Mission -->
+  <section class="about-section v-m-section" aria-label="الرؤية والرسالة">
+    <div class="container">
+      <div class="v-m-grid">
+        <!-- Vision -->
+        <div class="v-m-card vision-card reveal">
+          <div class="v-m-icon">👁️</div>
+          <h2 class="v-m-title">رؤيتنا</h2>
+          <p class="v-m-desc">
+            أن نكون الشريك البرمجي والتكنولوجي الأول عالمياً للعيادات والمنشآت الصحية في تقديم حلول إدارة المراجعين والتخطيط الغذائي اللامركزي، ممهدين الطريق لعصر جديد من سيادة البيانات الفردية وسرية السجلات الصحية دون التضحية بالسرعة والابتكار التقني.
+          </p>
+        </div>
+        <!-- Mission -->
+        <div class="v-m-card mission-card reveal">
+          <div class="v-m-icon">🎯</div>
+          <h2 class="v-m-title">رسالتنا</h2>
+          <p class="v-m-desc">
+            تمكين أخصائيي التغذية والمؤسسات الصحية بالأدوات الذكية والآمنة التي تمنحهم الكفاءة المطلقة أوفلاين. نسعى إلى تبسيط إدارة المراجعات وأتمتة التقارير وتوفير الوقت للتركيز على رعاية المراجعين، مع الالتزام التام بعدم المساس بخصوصية البيانات الطبية.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Corporate Values -->
-  <section class="about-section" aria-label="قيمنا المؤسسية">
+  <section class="about-section values-section" aria-label="قيمنا المؤسسية">
     <div class="container">
       <div class="section-header-dark">
         <span class="section-label">قيمنا المؤسسية</span>
@@ -964,24 +1046,28 @@
       <div class="values-grid">
         <!-- Value 1: Integrity -->
         <div class="val-card reveal">
+          <span class="val-badge">01</span>
           <div class="val-icon">🤝</div>
           <h3 class="val-title">النزاهة والشفافية</h3>
           <p class="val-desc">نلتزم بالصدق والوضوح التام في كافة خدماتنا وقدرات برامجنا، دون مبالغة تسويقية أو تضليل.</p>
         </div>
         <!-- Value 2: Scientific Rigor -->
         <div class="val-card reveal">
+          <span class="val-badge">02</span>
           <div class="val-icon">🔬</div>
           <h3 class="val-title">الرصانة والتدقيق العلمي</h3>
           <p class="val-desc">لا ندرج ميزة حسابية أو توصية إلا بعد فحصها وتدقيقها علمياً لضمان توافقها مع البروتوكولات الموثوقة.</p>
         </div>
         <!-- Value 3: Client Sovereignty -->
         <div class="val-card reveal">
+          <span class="val-badge">03</span>
           <div class="val-icon">👑</div>
           <h3 class="val-title">سيادة وحرمة البيانات</h3>
           <p class="val-desc">نؤمن بأن بيانات العيادات والمراجعين ملك خالص لهم، ونمتنع تماماً عن استخدامها لأي أغراض ربحية.</p>
         </div>
         <!-- Value 4: Continuous Innovation -->
         <div class="val-card reveal">
+          <span class="val-badge">04</span>
           <div class="val-icon">💡</div>
           <h3 class="val-title">الابتكار المستمر</h3>
           <p class="val-desc">نسعى باستمرار لتطوير خوارزمياتنا وأدواتنا لتبسيط العمليات الإدارية وتقديم حلول عصرية متكاملة.</p>
