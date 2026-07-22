@@ -73,7 +73,7 @@
       border-bottom: none;
     }
     .res-container {
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 0 auto;
       padding: 0 24px;
     }
@@ -96,7 +96,7 @@
     }
 
     /* Grid layout */
-    .res-grid-3 {
+    .res-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
@@ -104,15 +104,28 @@
     .res-track-card {
       background: #FFFFFF;
       border: 1px solid #E2E8F0;
-      border-radius: 20px;
-      padding: 32px 24px;
+      border-radius: 24px;
+      padding: 36px 28px;
       box-shadow: 0 4px 6px rgba(15,23,42,0.01);
       transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .res-track-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      opacity: 0;
+      transition: opacity 0.3s ease;
     }
     .res-track-card:hover {
-      transform: translateY(-6px);
-      border-color: var(--primary-light);
-      box-shadow: 0 12px 24px rgba(15,23,42,0.04);
+      transform: translateY(-8px) scale(1.02);
+      border-color: transparent;
+      box-shadow: 0 20px 40px rgba(15,23,42,0.05);
+    }
+    .res-track-card:hover::before {
+      opacity: 1;
     }
     .res-card-icon {
       font-size: 2rem;
@@ -135,6 +148,8 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
     }
     .res-paper-card {
       background: #FFFFFF;
@@ -159,9 +174,12 @@
     .res-paper-tag {
       font-size: 0.68rem;
       font-weight: 700;
-      color: var(--primary);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
+      color: #D97706;
+      background: #FEF3C7;
+      padding: 3px 8px;
+      border-radius: 4px;
+      display: inline-block;
+      align-self: flex-start;
     }
     .res-paper-title {
       font-size: 1.05rem;
@@ -204,11 +222,11 @@
 
     /* Mobile adaptability */
     @media (max-width: 992px) {
-      .res-grid-3 { grid-template-columns: 1fr 1fr; }
+      .res-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 576px) {
       .res-hero { padding: calc(var(--nav-height) + 32px) 0 32px; }
-      .res-grid-3 { grid-template-columns: 1fr; gap: 16px; }
+      .res-grid { grid-template-columns: 1fr; gap: 16px; }
       .res-paper-card { flex-direction: column; align-items: stretch; text-align: right; }
       .res-partner-card { padding: 24px 20px; }
     }
@@ -221,10 +239,10 @@
 
   <!-- Hero Section -->
   <section class="res-hero" aria-label="مقدمة أبحاث FES">
-    <div class="res-hero-eyebrow">مختبر الأبحاث والتطوير التقني · FES R&D</div>
+    <div class="res-hero-eyebrow">مختبر الأبحاث والتطوير التقني · FES Labs</div>
     <h1 class="res-hero-title">الابتكار العلمي في <span>الحوسبة الطبية المستقلة</span></h1>
     <p class="res-hero-desc">
-      نسعى للمساهمة في بناء الأسس البرمجية والرياضية لتمكين الأنظمة الصحية من العمل بكفاءة عالية، وخصوصية مطلقة، وبمعزل تام عن أعباء السحابة.
+      نسعى لتطوير الأسس الهندسية والرياضية لتمكين الأنظمة الطبية والصحية من العمل بكفاءة عالية، وخصوصية مطلقة، وبمعزل تام عن خوادم التخزين السحابية المركزية.
     </p>
   </section>
 
@@ -232,13 +250,13 @@
   <section class="res-section" id="tracks" aria-label="مسارات البحث">
     <div class="res-container">
       <div class="res-sec-header">
-        <h2 class="res-sec-title">مساراتنا البحثية الرئيسية</h2>
+        <h2 class="res-sec-title">مساراتنا البحثية النشطة</h2>
         <p class="res-sec-desc">
-          تتركز جهودنا البحثية على ثلاثة محاور هندسية رئيسية تضمن تمكين الأنظمة وخصوصية البيانات.
+          نقود حالياً 6 مسارات بحثية هندسية معقدة بالكامل داخل أقسام FES Labs لضمان سيادة البيانات واستقلالية التشغيل.
         </p>
       </div>
 
-      <div class="res-grid-3">
+      <div class="res-grid">
         
         <div class="res-track-card">
           <div class="res-card-icon">📡</div>
@@ -260,7 +278,31 @@
           <div class="res-card-icon">📷</div>
           <h3 class="res-card-title">معالجة الصور أوفلاين (Stateless OCR)</h3>
           <p class="res-card-desc">
-            ابتكار خوارزميات لاستخلاص الجداول المخبرية والبيانات التغذوية وتفسيرها داخل ذاكرة الجهاز المؤقتة، مع إمكانية التدمير التلقائي الفوري للصور الطبية بعد المعالجة.
+            ابتكار خوارزميات لاستخلاص الجداول المخبرية والبيانات الرقمية وتفسيرها داخل ذاكرة الجهاز المؤقتة (RAM) مع الحذف الفوري والتلقائي للملفات المرفوعة.
+          </p>
+        </div>
+
+        <div class="res-track-card">
+          <div class="res-card-icon">🧠</div>
+          <h3 class="res-card-title">توطين نماذج الذكاء الاصطناعي (On-Device SLMs)</h3>
+          <p class="res-card-desc">
+            أبحاث لتطوير نماذج ذكاء اصطناعي لغوية مصغرة (أقل من 1 مليار معامل) تعمل محلياً بالكامل لتلخيص تقارير المراجعين دون إرسال أي حرف لخوادم خارجية.
+          </p>
+        </div>
+
+        <div class="res-track-card">
+          <div class="res-card-icon">🔄</div>
+          <h3 class="res-card-title">المزامنة الشبكية المعزولة (P2P Local Sync)</h3>
+          <p class="res-card-desc">
+            دراسة بروتوكولات المزامنة الفورية الآمنة للسجلات الطبية بين أجهزة العيادة المتعددة (كالآيباد والكمبيوتر) عبر شبكة Wi-Fi محلية مشفرة بالكامل دون وسيط سحابي.
+          </p>
+        </div>
+
+        <div class="res-track-card">
+          <div class="res-card-icon">⚡</div>
+          <h3 class="res-card-title">البحث فائق السرعة (Local Search Indexing)</h3>
+          <p class="res-card-desc">
+            تطوير هياكل بيانات مضغوطة وفهارس متطورة لتوفير سرعة استعلام تقل عن 5ms عند البحث في 600,000 عنصر غذائي أوفلاين على الأجهزة المحمولة القديمة.
           </p>
         </div>
 
@@ -272,9 +314,9 @@
   <section class="res-section" id="publications" aria-label="أوراقنا البحثية">
     <div class="res-container">
       <div class="res-sec-header">
-        <h2 class="res-sec-title">أوراق بحثية ومستندات فنية</h2>
+        <h2 class="res-sec-title">أوراق بحثية ومستندات فنية (جاري العمل عليها)</h2>
         <p class="res-sec-desc">
-          نشارك مجتمع المطورين والمهتمين بالصحة الرقمية خلاصات أبحاثنا الهندسية والتشفيرية.
+          مسودات بحثية ودراسات فنية نشطة لعام 2026 نقودها بالكامل داخل مختبرات وأقسام FES Labs.
         </p>
       </div>
 
@@ -282,34 +324,67 @@
         
         <div class="res-paper-card">
           <div class="res-paper-meta">
-            <span class="res-paper-tag">Technical Whitepaper</span>
+            <span class="res-paper-tag">Active Research (2026)</span>
             <h3 class="res-paper-title">Optimization of Distributed Relational Databases for Edge Computing Healthcare Systems</h3>
-            <span class="res-paper-authors">FES R&D Engineering Team · Published: 2025</span>
+            <span class="res-paper-authors">FES Systems & Architecture Division · Status: Active / In-Progress</span>
           </div>
           <div class="res-paper-action">
-            <a href="#" class="btn btn-outline" onclick="alert('سيتم إطلاق المستند قريباً'); return false;">📄 قراءة المستند</a>
+            <a href="#" class="btn btn-outline" onclick="alert('هذا البحث قيد التطوير والعمل النشط حالياً لعام 2026 وسيتم نشره فور اكتماله.'); return false;">⏳ قيد المراجعة</a>
           </div>
         </div>
 
         <div class="res-paper-card">
           <div class="res-paper-meta">
-            <span class="res-paper-tag">Security & Privacy Study</span>
+            <span class="res-paper-tag">Active Research (2026)</span>
             <h3 class="res-paper-title">Zero-Knowledge Cryptographic Architectures for Localized EMR and Patient Sourced Data</h3>
-            <span class="res-paper-authors">FES Cryptography Lab · Published: 2025</span>
+            <span class="res-paper-authors">FES Cryptography & Security Labs · Status: Active / In-Progress</span>
           </div>
           <div class="res-paper-action">
-            <a href="#" class="btn btn-outline" onclick="alert('سيتم إطلاق المستند قريباً'); return false;">📄 قراءة المستند</a>
+            <a href="#" class="btn btn-outline" onclick="alert('هذا البحث قيد التطوير والعمل النشط حالياً لعام 2026 وسيتم نشره فور اكتماله.'); return false;">⏳ قيد المراجعة</a>
           </div>
         </div>
 
         <div class="res-paper-card">
           <div class="res-paper-meta">
-            <span class="res-paper-tag">Pattern Recognition</span>
+            <span class="res-paper-tag">Active Research (2026)</span>
             <h3 class="res-paper-title">Stateless Optical Character Recognition Algorithms for Mobile Medical Lab Reports Parsing</h3>
-            <span class="res-paper-authors">FES AI Research Division · Published: 2026</span>
+            <span class="res-paper-authors">FES AI & Pattern Recognition Division · Status: Active / In-Progress</span>
           </div>
           <div class="res-paper-action">
-            <a href="#" class="btn btn-outline" onclick="alert('سيتم إطلاق المستند قريباً'); return false;">📄 قراءة المستند</a>
+            <a href="#" class="btn btn-outline" onclick="alert('هذا البحث قيد التطوير والعمل النشط حالياً لعام 2026 وسيتم نشره فور اكتماله.'); return false;">⏳ قيد المراجعة</a>
+          </div>
+        </div>
+
+        <div class="res-paper-card">
+          <div class="res-paper-meta">
+            <span class="res-paper-tag">Active Research (2026)</span>
+            <h3 class="res-paper-title">On-Device Small Language Models (SLMs) for Clinical Summary Generation at the Edge</h3>
+            <span class="res-paper-authors">FES Deep Learning & NLP Group · Status: Active / In-Progress</span>
+          </div>
+          <div class="res-paper-action">
+            <a href="#" class="btn btn-outline" onclick="alert('هذا البحث قيد التطوير والعمل النشط حالياً لعام 2026 وسيتم نشره فور اكتماله.'); return false;">⏳ قيد المراجعة</a>
+          </div>
+        </div>
+
+        <div class="res-paper-card">
+          <div class="res-paper-meta">
+            <span class="res-paper-tag">Active Research (2026)</span>
+            <h3 class="res-paper-title">Decentralized Peer-to-Peer Synchronisation Protocols for Clinical Sovereignty Networks</h3>
+            <span class="res-paper-authors">FES Distributed Systems Lab · Status: Active / In-Progress</span>
+          </div>
+          <div class="res-paper-action">
+            <a href="#" class="btn btn-outline" onclick="alert('هذا البحث قيد التطوير والعمل النشط حالياً لعام 2026 وسيتم نشره فور اكتماله.'); return false;">⏳ قيد المراجعة</a>
+          </div>
+        </div>
+
+        <div class="res-paper-card">
+          <div class="res-paper-meta">
+            <span class="res-paper-tag">Active Research (2026)</span>
+            <h3 class="res-paper-title">Compressed Prefix Trees (Tries) for Memory-Constrained Offline Food Informatics Indexes</h3>
+            <span class="res-paper-authors">FES Computational Biology & Algorithms Division · Status: Active / In-Progress</span>
+          </div>
+          <div class="res-paper-action">
+            <a href="#" class="btn btn-outline" onclick="alert('هذا البحث قيد التطوير والعمل النشط حالياً لعام 2026 وسيتم نشره فور اكتماله.'); return false;">⏳ قيد المراجعة</a>
           </div>
         </div>
 
