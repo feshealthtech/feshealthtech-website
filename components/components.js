@@ -29,14 +29,14 @@
     <ul class="nav-links" role="list">
       <li><a href="${R}index.html">الرئيسية</a></li>
       <li><a href="${R}pages/about.html">من نحن</a></li>
-      <li><a href="${R}index.html#flagship">أعمالنا</a></li>
+      <li><a href="${R}pages/portfolio.html">منتجاتنا</a></li>
       <li><a href="${R}pages/faq.html">الأسئلة الشائعة</a></li>
       <li><a href="${R}pages/research.html">الأبحاث</a></li>
       <li><a href="${R}pages/contact.html">تواصل معنا</a></li>
     </ul>
  
     <div class="nav-cta">
-      <a href="${R}index.html#flagship" class="btn btn-outline btn-sm">استكشف منتجاتنا</a>
+      <a href="${R}pages/portfolio.html" class="btn btn-outline btn-sm">استكشف منتجاتنا</a>
       <a href="${R}pages/contact.html" class="btn btn-primary btn-sm">تواصل معنا</a>
     </div>
  
@@ -56,12 +56,12 @@
     </div>
     <a href="${R}index.html" class="drawer-link">🏠 الرئيسية</a>
     <a href="${R}pages/about.html" class="drawer-link">🏢 من نحن</a>
-    <a href="${R}index.html#flagship" class="drawer-link">📱 أعمالنا</a>
+    <a href="${R}pages/portfolio.html" class="drawer-link">📱 منتجاتنا</a>
     <a href="${R}pages/faq.html" class="drawer-link">❓ الأسئلة الشائعة</a>
     <a href="${R}pages/research.html" class="drawer-link">🧪 الأبحاث</a>
     <a href="${R}pages/contact.html" class="drawer-link">✉️ تواصل معنا</a>
     <div class="drawer-cta">
-      <a href="${R}index.html#flagship" class="btn btn-outline">استكشف منتجاتنا</a>
+      <a href="${R}pages/portfolio.html" class="btn btn-outline">استكشف منتجاتنا</a>
       <a href="${R}pages/contact.html" class="btn btn-primary">تواصل معنا</a>
     </div>
   </div>
@@ -96,7 +96,7 @@
         <ul class="footer-links">
           <li><a href="${R}index.html">الرئيسية</a></li>
           <li><a href="${R}pages/about.html">من نحن</a></li>
-          <li><a href="${R}index.html#flagship">أعمالنا</a></li>
+          <li><a href="${R}pages/portfolio.html">منتجاتنا</a></li>
           <li><a href="${R}pages/faq.html">الأسئلة الشائعة</a></li>
           <li><a href="${R}pages/research.html">الأبحاث</a></li>
           <li><a href="${R}pages/contact.html">تواصل معنا</a></li>
@@ -107,7 +107,8 @@
       <div>
         <h4 class="footer-col-title">منتجاتنا</h4>
         <ul class="footer-links">
-          <li><a href="${R}index.html#flagship">مرشد — إدارة عيادات التغذية</a></li>
+          <li><a href="${R}pages/portfolio.html#murshid">مرشد — إدارة عيادات التغذية</a></li>
+          <li><a href="${R}pages/portfolio.html#bariatric">مساعد جراحات السمنة</a></li>
         </ul>
       </div>
  
