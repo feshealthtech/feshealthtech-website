@@ -100,6 +100,44 @@
   }
 
   // ════════════════════════════════════════
+  // HERO INTERACTIVE DEMO WIDGET
+  // ════════════════════════════════════════
+  function initHeroWidgetDemo() {
+    const tabs = document.querySelectorAll('.c-demo-tab');
+    const panels = document.querySelectorAll('.c-demo-panel');
+    if (!tabs.length || !panels.length) return;
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const targetId = tab.dataset.tab;
+        tabs.forEach(t => t.classList.remove('active'));
+        panels.forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        const targetPanel = document.getElementById(targetId);
+        if (targetPanel) targetPanel.classList.add('active');
+      });
+    });
+
+    // Slider demo calculation
+    const slider = document.getElementById('demoWeightInput');
+    const textVal = document.getElementById('weightValText');
+    const bmrVal = document.getElementById('demoBmrVal');
+    const tdeeVal = document.getElementById('demoTdeeVal');
+
+    if (slider && textVal && bmrVal && tdeeVal) {
+      slider.addEventListener('input', (e) => {
+        const weight = parseInt(e.target.value, 10);
+        textVal.textContent = weight + ' كجم';
+        // Mifflin-St Jeor estimate
+        const bmr = Math.round(10 * weight + 6.25 * 175 - 5 * 30 + 5);
+        const tdee = Math.round(bmr * 1.375);
+        bmrVal.textContent = bmr.toLocaleString('en-US');
+        tdeeVal.textContent = tdee.toLocaleString('en-US');
+      });
+    }
+  }
+
+  // ════════════════════════════════════════
   // INIT
   // ════════════════════════════════════════
   function init() {
@@ -108,7 +146,8 @@
     initReveal();
     initSmoothScroll();
     initCardTilt();
-    console.log('🚀 FES HealthTech v3.0 — Homepage loaded');
+    initHeroWidgetDemo();
+    console.log('🚀 FES HealthTech v3.1 — Homepage with Interactive Hero Demo loaded');
   }
 
   if (document.readyState === 'loading') {

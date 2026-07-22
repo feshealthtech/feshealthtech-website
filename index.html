@@ -41,8 +41,8 @@
     .c-hero {
       background: var(--navy);
       background-image:
-        radial-gradient(ellipse 100% 70% at 50% -10%, rgba(37,99,235,0.18) 0%, transparent 60%),
-        radial-gradient(ellipse 60% 50% at 0% 100%, rgba(30,58,138,0.12) 0%, transparent 60%);
+        radial-gradient(ellipse 100% 70% at 50% -10%, rgba(37,99,235,0.22) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 0% 100%, rgba(30,58,138,0.15) 0%, transparent 60%);
       padding: calc(var(--nav-height) + 72px) 0 100px;
       position: relative;
       overflow: hidden;
@@ -58,7 +58,7 @@
     .c-hero-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 56px;
+      gap: 48px;
       align-items: center;
       max-width: 1200px;
       margin: 0 auto;
@@ -69,17 +69,17 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(96,165,250,0.08);
-      border: 1px solid rgba(96,165,250,0.2);
+      background: rgba(96,165,250,0.1);
+      border: 1px solid rgba(96,165,250,0.25);
       color: #93C5FD;
       font-size: clamp(0.68rem, 2vw, 0.78rem);
-      font-weight: 700;
+      font-weight: 800;
       padding: 7px 18px;
       border-radius: 99px;
       margin-bottom: 28px;
     }
     .c-hero-title {
-      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      font-size: clamp(2.1rem, 4.8vw, 3.6rem);
       font-weight: 900;
       color: #fff;
       line-height: 1.18;
@@ -104,40 +104,145 @@
       margin-bottom: 24px;
     }
 
-    /* Hero Visual — Glassmorphism Pillar Card */
+    /* Hero Visual — Interactive Live Demo Widget */
     .c-hero-visual {
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
     }
-    .c-hero-card {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
+    .c-hero-demo-widget {
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.12);
       border-radius: 28px;
-      padding: 40px 32px;
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      position: relative;
+      padding: 24px;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
       width: 100%;
-      max-width: 480px;
-      box-shadow: 0 32px 64px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.06);
+      max-width: 500px;
+      box-shadow: 0 32px 80px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      position: relative;
     }
-    .c-hero-card::before {
+    .c-hero-demo-widget::before {
       content: '';
       position: absolute;
       inset: -1px;
       border-radius: 29px;
       padding: 1px;
-      background: linear-gradient(135deg, rgba(96,165,250,0.3), transparent 40%, transparent 60%, rgba(37,99,235,0.2));
+      background: linear-gradient(135deg, rgba(96,165,250,0.4), transparent 40%, transparent 60%, rgba(16,185,129,0.3));
       -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
       -webkit-mask-composite: xor;
       mask-composite: exclude;
       pointer-events: none;
     }
-    .c-hero-card-header {
+    .c-demo-nav {
       display: flex;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 4px;
+      gap: 4px;
+      margin-bottom: 20px;
+    }
+    .c-demo-tab {
+      flex: 1;
+      background: transparent;
+      border: none;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 8px 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      font-family: inherit;
+      white-space: nowrap;
+    }
+    .c-demo-tab:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .c-demo-tab.active {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+    }
+    .c-demo-panel {
+      display: none;
+      animation: fadeIn 0.35s ease;
+    }
+    .c-demo-panel.active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .c-ocr-sim-box {
+      position: relative;
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 18px;
+      padding: 18px;
+      overflow: hidden;
+    }
+    .c-ocr-scan-bar {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #60A5FA, #10B981, transparent);
+      box-shadow: 0 0 15px #60A5FA;
+      animation: ocrScan 3s ease-in-out infinite;
+    }
+    @keyframes ocrScan {
+      0% { top: 0; opacity: 0.2; }
+      50% { top: 95%; opacity: 1; }
+      100% { top: 0; opacity: 0.2; }
+    }
+    .c-ocr-header {
+      display: flex;
+      justify-content: space-between;
       align-items: center;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .c-ocr-badge { font-size: 0.72rem; font-weight: 800; color: #60A5FA; }
+    .c-ocr-status { font-size: 0.62rem; color: #10B981; background: rgba(16, 185, 129, 0.1); padding: 2px 8px; border-radius: 99px; font-weight: 700; }
+    .c-ocr-data-grid { display: flex; flex-direction: column; gap: 10px; }
+    .c-ocr-row { display: flex; align-items: center; justify-content: space-between; background: rgba(255, 255, 255, 0.03); padding: 10px 12px; border-radius: 10px; font-size: 0.75rem; }
+    .c-ocr-label { color: rgba(255, 255, 255, 0.7); }
+    .c-ocr-val { font-weight: 800; }
+    .c-ocr-val.highlight { color: #60A5FA; }
+    .c-ocr-val.warning { color: #F59E0B; }
+    .c-ocr-tag { font-size: 0.65rem; font-weight: 700; }
+    .c-ocr-tag.ok { color: #10B981; }
+    .c-ocr-tag.alert { color: #EF4444; }
+    .c-ocr-footer { margin-top: 14px; font-size: 0.6rem; color: rgba(255, 255, 255, 0.4); text-align: center; }
+
+    .c-calc-sim-box { background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 18px; padding: 18px; }
+    .c-calc-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+    .c-calc-badge { font-size: 0.72rem; font-weight: 800; color: #FCD34D; }
+    .c-calc-status { font-size: 0.62rem; color: #60A5FA; font-weight: 700; }
+    .c-calc-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 16px; }
+    .c-metric-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 12px; padding: 10px 6px; text-align: center; }
+    .c-metric-num { font-size: 1.15rem; font-weight: 900; color: #60A5FA; display: block; }
+    .c-metric-lbl { font-size: 0.58rem; color: rgba(255, 255, 255, 0.45); margin-top: 2px; display: block; }
+    .c-calc-sliders { background: rgba(255, 255, 255, 0.02); padding: 10px; border-radius: 10px; }
+    .c-slider-lbl { font-size: 0.72rem; color: rgba(255, 255, 255, 0.8); margin-bottom: 6px; display: flex; justify-content: space-between; }
+    .c-range-slider { width: 100%; accent-color: var(--primary); cursor: pointer; }
+
+    .c-enc-sim-box { background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 18px; padding: 18px; }
+    .c-enc-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+    .c-enc-badge { font-size: 0.72rem; font-weight: 800; color: #10B981; }
+    .c-enc-status { font-size: 0.62rem; color: #93C5FD; font-weight: 700; }
+    .c-enc-pipeline { display: flex; flex-direction: column; gap: 10px; font-size: 0.7rem; }
+    .c-enc-step { background: rgba(255, 255, 255, 0.03); padding: 10px; border-radius: 10px; }
+    .c-enc-step-lbl { display: block; color: rgba(255, 255, 255, 0.5); font-size: 0.6rem; margin-bottom: 4px; }
+    .c-enc-step code { color: #60A5FA; font-family: monospace; word-break: break-all; }
+    .c-enc-step.encrypted code { color: #10B981; }
+    .c-enc-arrow { text-align: center; color: #F59E0B; font-size: 0.65rem; font-weight: 700; }
+    .c-enc-footer { text-align: center; font-size: 0.65rem; color: #10B981; font-weight: 700; margin-top: 12px; }
       gap: 12px;
       margin-bottom: 32px;
       padding-bottom: 20px;
@@ -710,53 +815,117 @@
       <div class="c-hero-text reveal">
         <div class="c-hero-badge">
           <span class="c-pulse-dot"></span>
-          منصات صحية ذكية · Smart Health Platforms
+          ⚡ الجيل القادم من التقنيات الصحية · NEXT-GEN HEALTHTECH
         </div>
         <h1 class="c-hero-title">
-          نبني التقنيات الصحية<br>
-          <span>التي تُمكّن الممارس</span>
+          نُحدث ثورة في<br>
+          <span>الرعاية التغذوية والحوسبة الصحّية</span>
         </h1>
         <p class="c-hero-sub">
-          نُطوّر منصات رقمية ذكية تمنح أخصائيي التغذية والممارسين الصحيين أدوات إدارية متقدمة، وحاسبات موضعية عالية الدقة، وتقنيات استخلاص بصري ذكي — كل ذلك مع حماية مطلقة لبيانات المراجعين.
+          نُطوّر منصات رقمية ذكية تُعيد تعريف الممارسة الصحية — تجمع بين تقنيات الاستخلاص البصري الذكي OCR، الحاسبات الموضعية الفائقة، والحماية المطلقة لبيانات المراجعين بـ Zero-Knowledge Architecture.
         </p>
         <div class="c-hero-actions">
           <a href="#flagship" class="btn btn-primary btn-lg">🚀 استكشف منصة مرشد</a>
-          <a href="pages/contact.html" class="btn btn-outline btn-lg">✉️ تواصل معنا</a>
+          <a href="#platform" class="btn btn-outline btn-lg">⚡ تجربة التقنيات الحية</a>
         </div>
       </div>
 
-      <!-- Hero Visual: Pillar Card -->
+      <!-- Hero Visual: Interactive Live Demo Widget -->
       <div class="c-hero-visual reveal delay-1">
-        <div class="c-hero-card">
-          <div class="c-hero-card-header">
-            <div class="c-hero-card-logo">F</div>
-            <div class="c-hero-card-brand">
-              FES HealthTech
-              <small>Smart Health Platforms</small>
-            </div>
+        <div class="c-hero-demo-widget">
+          
+          <!-- Widget Header / Tab Switchers -->
+          <div class="c-demo-nav">
+            <button class="c-demo-tab active" data-tab="demo-ocr">📷 الـ OCR الذكي</button>
+            <button class="c-demo-tab" data-tab="demo-calc">🧮 الحاسبات الدقيقة</button>
+            <button class="c-demo-tab" data-tab="demo-enc">🔒 تشفير البيانات</button>
           </div>
-          <div class="c-pillar-list">
-            <div class="c-pillar-item">
-              <div class="c-pillar-icon blue">🏥</div>
-              <div class="c-pillar-text">
-                <h4>إدارة العيادات الذكية</h4>
-                <p>منصات تنظيمية شاملة للممارسين الصحيين</p>
+
+          <div class="c-demo-content-wrap">
+            
+            <!-- TAB 1: OCR SCANNER SIMULATOR -->
+            <div class="c-demo-panel active" id="demo-ocr">
+              <div class="c-ocr-sim-box">
+                <div class="c-ocr-scan-bar"></div>
+                <div class="c-ocr-header">
+                  <span class="c-ocr-badge">📷 OCR Live Parser</span>
+                  <span class="c-ocr-status">✓ معالجة آنية بالذاكرة</span>
+                </div>
+                <div class="c-ocr-data-grid">
+                  <div class="c-ocr-row">
+                    <span class="c-ocr-label">فحص Creatinine:</span>
+                    <span class="c-ocr-val highlight">1.1 mg/dL</span>
+                    <span class="c-ocr-tag ok">طبيعي ✓</span>
+                  </div>
+                  <div class="c-ocr-row">
+                    <span class="c-ocr-label">فحص Potassium:</span>
+                    <span class="c-ocr-val warning">5.2 mEq/L</span>
+                    <span class="c-ocr-tag alert">مرتفع ⚠️</span>
+                  </div>
+                  <div class="c-ocr-row">
+                    <span class="c-ocr-label">معدل eGFR:</span>
+                    <span class="c-ocr-val highlight">88 mL/min</span>
+                    <span class="c-ocr-tag ok">طبيعي ✓</span>
+                  </div>
+                </div>
+                <div class="c-ocr-footer">
+                  <span>🔒 معالجة مشفرة HTTPS دون تخزين على الخوادم</span>
+                </div>
               </div>
             </div>
-            <div class="c-pillar-item">
-              <div class="c-pillar-icon green">🔒</div>
-              <div class="c-pillar-text">
-                <h4>خصوصية مطلقة · Zero-Knowledge</h4>
-                <p>تشفير محلي AES-256 وسيادة تامة على البيانات</p>
+
+            <!-- TAB 2: PRECISION CALCULATOR SIMULATOR -->
+            <div class="c-demo-panel" id="demo-calc">
+              <div class="c-calc-sim-box">
+                <div class="c-calc-header">
+                  <span class="c-calc-badge">🧮 Precision Nutrition Engine</span>
+                  <span class="c-calc-status">⚡ 0ms أوفلاين</span>
+                </div>
+                <div class="c-calc-metrics">
+                  <div class="c-metric-card">
+                    <span class="c-metric-num" id="demoBmrVal">1,650</span>
+                    <span class="c-metric-lbl">BMR (سعرة/يوم)</span>
+                  </div>
+                  <div class="c-metric-card">
+                    <span class="c-metric-num" id="demoTdeeVal">2,268</span>
+                    <span class="c-metric-lbl">TDEE (سعرة/يوم)</span>
+                  </div>
+                  <div class="c-metric-card">
+                    <span class="c-metric-num" style="color:#10B981;">22.9</span>
+                    <span class="c-metric-lbl">BMI (طبيعي)</span>
+                  </div>
+                </div>
+                <div class="c-calc-sliders">
+                  <div class="c-slider-lbl">الوزن التفاعلي (كجم): <strong id="weightValText">70 كجم</strong></div>
+                  <input type="range" class="c-range-slider" id="demoWeightInput" min="40" max="140" value="70">
+                </div>
               </div>
             </div>
-            <div class="c-pillar-item">
-              <div class="c-pillar-icon amber">📡</div>
-              <div class="c-pillar-text">
-                <h4>يعمل بدون إنترنت · Offline-First</h4>
-                <p>حوسبة محلية مستقلة تماماً عن الاتصال</p>
+
+            <!-- TAB 3: ZERO-KNOWLEDGE ENCRYPTION VISUALIZER -->
+            <div class="c-demo-panel" id="demo-enc">
+              <div class="c-enc-sim-box">
+                <div class="c-enc-header">
+                  <span class="c-enc-badge">🔒 AES-256 Edge Encryption</span>
+                  <span class="c-enc-status">🛡️ Zero-Knowledge</span>
+                </div>
+                <div class="c-enc-pipeline">
+                  <div class="c-enc-step">
+                    <span class="c-enc-step-lbl">بيانات المراجع (المحلية):</span>
+                    <code>{ "name": "مراجع عيادة #48", "bmi": 22.9 }</code>
+                  </div>
+                  <div class="c-enc-arrow">⬇️ تشفير مفتاحي محلي (Local Key)</div>
+                  <div class="c-enc-step encrypted">
+                    <span class="c-enc-step-lbl">البيانات المشفرة (على الجهاز):</span>
+                    <code>e8f9a2c4b7d1e0f3a5c8e2b4d9a1f7c3...</code>
+                  </div>
+                </div>
+                <div class="c-enc-footer">
+                  ✓ لا يستطيع أحد قراءة البيانات سوى الأخصائي نفسه
+                </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>
