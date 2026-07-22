@@ -30,6 +30,7 @@
       <li><a href="${R}index.html">الرئيسية</a></li>
       <li><a href="${R}pages/about.html">من نحن</a></li>
       <li><a href="${R}index.html#flagship">أعمالنا</a></li>
+      <li><a href="${R}pages/faq.html">الأسئلة الشائعة</a></li>
       <li><a href="${R}pages/contact.html">تواصل معنا</a></li>
     </ul>
  
@@ -55,6 +56,7 @@
     <a href="${R}index.html" class="drawer-link">🏠 الرئيسية</a>
     <a href="${R}pages/about.html" class="drawer-link">🏢 من نحن</a>
     <a href="${R}index.html#flagship" class="drawer-link">📱 أعمالنا</a>
+    <a href="${R}pages/faq.html" class="drawer-link">❓ الأسئلة الشائعة</a>
     <a href="${R}pages/contact.html" class="drawer-link">✉️ تواصل معنا</a>
     <div class="drawer-cta">
       <a href="${R}index.html#flagship" class="btn btn-outline">استكشف منتجاتنا</a>
@@ -93,8 +95,8 @@
           <li><a href="${R}index.html">الرئيسية</a></li>
           <li><a href="${R}pages/about.html">من نحن</a></li>
           <li><a href="${R}index.html#flagship">أعمالنا</a></li>
+          <li><a href="${R}pages/faq.html">الأسئلة الشائعة</a></li>
           <li><a href="${R}pages/contact.html">تواصل معنا</a></li>
-          <li><a href="${R}pages/contact.html">الوظائف</a></li>
         </ul>
       </div>
  

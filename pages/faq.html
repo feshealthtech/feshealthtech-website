@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="الأسئلة الشائعة والأجوبة التقنية لشركة FES HealthTech — الخصوصية، البنية التحتية، طريقة العمل، والتراخيص." />
+  <title>الأسئلة الشائعة التقنية والمؤسسية | FES HealthTech</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/png" href="../assets/favicon.png" />
+
+  <style>
+    /* ════════════════════════════════════════
+       FAQ PAGE — LUXURIOUS LIGHT CYBER THEME
+       ════════════════════════════════════════ */
+    body {
+      background-color: #F8FAFC !important;
+      color: #0F172A !important;
+      font-family: var(--font-arabic);
+    }
+
+    .faq-hero {
+      padding: calc(var(--nav-height) + 64px) 0 48px;
+      background: #FFFFFF;
+      border-bottom: 1px solid #E2E8F0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .faq-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(37,99,235,0.03) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(16,185,129,0.03) 0%, transparent 40%);
+      pointer-events: none;
+    }
+    .faq-hero-eyebrow {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+      display: inline-block;
+      background: rgba(37,99,235,0.06);
+      padding: 6px 16px;
+      border-radius: 99px;
+    }
+    .faq-hero-title {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 900;
+      color: #0F172A;
+      margin-bottom: 16px;
+      line-height: 1.25;
+    }
+    .faq-hero-title span {
+      color: var(--primary);
+    }
+    .faq-hero-desc {
+      font-size: 0.95rem;
+      color: #64748B;
+      max-width: 600px;
+      margin: 0 auto 28px;
+      line-height: 1.7;
+    }
+
+    /* Search Box */
+    .faq-search-wrap {
+      max-width: 480px;
+      margin: 0 auto;
+      position: relative;
+      padding: 0 20px;
+    }
+    .faq-search-input {
+      width: 100%;
+      background: #F1F5F9;
+      border: 1px solid #CBD5E1;
+      color: #0F172A;
+      font-size: 0.9rem;
+      padding: 14px 44px 14px 20px;
+      border-radius: 14px;
+      outline: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(15,23,42,0.02);
+      text-align: right;
+    }
+    .faq-search-input:focus {
+      background: #FFFFFF;
+      border-color: var(--primary);
+      box-shadow: 0 8px 24px rgba(37,99,235,0.08);
+    }
+    .faq-search-icon {
+      position: absolute;
+      top: 50%;
+      right: 36px;
+      transform: translateY(-50%);
+      font-size: 1.1rem;
+      color: #94A3B8;
+      pointer-events: none;
+    }
+
+    /* Filter Tabs */
+    .faq-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 40px auto 0;
+      max-width: 800px;
+      padding: 0 20px;
+      flex-wrap: wrap;
+    }
+    .faq-tab-btn {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      color: #475569;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 10px 20px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .faq-tab-btn:hover {
+      background: #F8FAFC;
+      border-color: #CBD5E1;
+      color: #0F172A;
+    }
+    .faq-tab-btn.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #FFFFFF;
+      box-shadow: 0 4px 12px rgba(37,99,235,0.25);
+    }
+
+    /* FAQ Content Grid */
+    .faq-content-section {
+      padding: 60px 0 100px;
+    }
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .faq-group {
+      display: none;
+      flex-direction: column;
+      gap: 16px;
+      animation: faqFadeIn 0.4s ease;
+    }
+    .faq-group.active {
+      display: flex;
+    }
+    @keyframes faqFadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .faq-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(15,23,42,0.01);
+    }
+    .faq-card:hover {
+      border-color: #CBD5E1;
+      box-shadow: 0 8px 16px rgba(15,23,42,0.03);
+    }
+    .faq-card.active {
+      border-color: var(--primary-light);
+      box-shadow: 0 10px 25px rgba(37,99,235,0.04);
+    }
+    .faq-question {
+      padding: 20px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #0F172A;
+      user-select: none;
+      background: transparent;
+      transition: background 0.2s ease;
+    }
+    .faq-question:hover {
+      background: rgba(37,99,235,0.01);
+    }
+    .faq-toggle {
+      font-size: 1.25rem;
+      color: var(--primary);
+      transition: transform 0.3s ease;
+      font-weight: 400;
+    }
+    .faq-card.active .faq-toggle {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      background: #F8FAFC;
+    }
+    .faq-answer-inner {
+      padding: 20px 24px;
+      font-size: 0.88rem;
+      color: #475569;
+      line-height: 1.8;
+      border-top: 1px solid #E2E8F0;
+    }
+
+    /* Mobile Adaptability */
+    @media (max-width: 576px) {
+      .faq-hero { padding: calc(var(--nav-height) + 32px) 0 32px; }
+      .faq-tabs { gap: 6px; }
+      .faq-tab-btn { font-size: 0.72rem; padding: 8px 14px; border-radius: 10px; }
+      .faq-question { padding: 16px 20px; font-size: 0.88rem; }
+      .faq-answer-inner { padding: 16px 20px; font-size: 0.82rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar placeholder -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- Hero Section -->
+  <section class="faq-hero" aria-label="مقدمة الأسئلة الشائعة">
+    <div class="faq-hero-eyebrow">مركز المساعدة والأسئلة الشائعة</div>
+    <h1 class="faq-hero-title">إجابات تقنية <span>ومهنية دقيقة</span></h1>
+    <p class="faq-hero-desc">
+      تصفّح تفاصيل البنية التحتية البرمجية لشركة FES HealthTech، وتعرّف على آلية حفظ خصوصية البيانات وتكامل الأنظمة.
+    </p>
+
+    <!-- Search Bar -->
+    <div class="faq-search-wrap">
+      <span class="faq-search-icon">🔍</span>
+      <input type="text" class="faq-search-input" id="faqSearchInput" placeholder="ابحث عن سؤالك هنا..." aria-label="البحث في الأسئلة الشائعة" />
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="faq-tabs">
+      <button class="faq-tab-btn active" data-group="all">✨ الكل</button>
+      <button class="faq-tab-btn" data-group="about">🏢 الشركة والمنصات</button>
+      <button class="faq-tab-btn" data-group="security">🔒 الخصوصية والأمان</button>
+      <button class="faq-tab-btn" data-group="tech">🧮 التقنية والحوسبة</button>
+      <button class="faq-tab-btn" data-group="license">💼 الاشتراك والتراخيص</button>
+    </div>
+  </section>
+
+  <!-- FAQ List Section -->
+  <section class="faq-content-section" aria-label="تفاصيل الأسئلة">
+    <div class="faq-container">
+      
+      <!-- ALL FAQ GROUP wrapper -->
+      <div class="faq-group active" id="faqGroup">
+        
+        <!-- Category 1: About -->
+        <div class="faq-card" data-cat="about">
+          <div class="faq-question">
+            <span>ما هي رؤية شركة FES HealthTech؟</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              نسعى لتقديم البنية التحتية الرقمية الأكثر أماناً وسلاسة للممارسين الصحيين ومراكز التغذية على مستوى العالم، مع التركيز على حماية البيانات بالكامل (Zero-Knowledge) والأداء المحلي الفائق (Edge Computing).
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-card" data-cat="about">
+          <div class="faq-question">
+            <span>هل منصة مرشد هي المنتج الوحيد لـ FES HealthTech؟</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              تعتبر منصة مرشد (Murshid App) هي منصتنا الرئيسية المعتمدة حالياً والمخصصة لإدارة عيادات التغذية بدقة متناهية. نعمل باستمرار على توسيع وتطوير حلول جديدة متوافقة مع التوجه الإداري والأمني الصارم.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-card" data-cat="about">
+          <div class="faq-question">
+            <span>كيف تساهم تكنولوجيا FES في تحسين أداء العيادة؟</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              من خلال أتمتة المهام التشغيلية، وسرعة استخلاص نصوص التحاليل الطبية بـ OCR الذكي، وحساب المقاييس التغذوية المعقدة محلياً، مما يقلل الوقت الإداري بنسبة 45% ويسمح بالتركيز على جودة الخدمة.
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Security -->
+        <div class="faq-card" data-cat="security">
+          <div class="faq-question">
+            <span>ماذا يعني مفهوم الحوسبة السيادية (Zero-Knowledge Architecture)؟</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              يعني أن جميع بيانات مراجعيك تُشفر وتُخزن محلياً على جهازك فقط. لا تستطيع خوادمنا أو أي طرف خارجي الوصول إلى أسماء المرضى، أو أرقام هواتفهم، أو سجلاتهم الطبية. مفاتيح التشفير يمتلكها الأخصائي فقط.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-card" data-cat="security">
+          <div class="faq-question">
+            <span>هل منصة مرشد متوافقة مع الأنظمة العالمية لحماية البيانات؟</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              نعم، نلتزم بالمعايير الفنية الصارمة لحماية خصوصية البيانات الصحية (مثل مبادئ التشفير والتأمين المتوافقة مع اللائحة العامة لحماية البيانات GDPR وحماية السجلات الطبية).
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-card" data-cat="security">
+          <div class="faq-question">
+            <span>هل يتم حفظ صور التحاليل الطبية عند استخدام الـ OCR؟</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              مطلقاً. تتم عملية قراءة البيانات واستخلاصها داخل الذاكرة المؤقتة (Stateless RAM Processing) للخدمة عبر اتصال مشفر وآمن بالكامل، وتُحذف الصورة نهائياً وتلقائياً فور اكتمال الاستخلاص.
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Technology -->
+        <div class="faq-card" data-cat="tech">
+          <div class="faq-question">
+            <span>هل تعمل الحاسبات والمقاييس دون إنترنت؟</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              نعم، 100% من الحاسبات والمقاييس التغذوية مدمجة محلياً في كود المنصة وتعمل بسرعة 0ms وبدقة تامة أوفلاين دون الحاجة لأي اتصال بالشبكة.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-card" data-cat="tech">
+          <div class="faq-question">
+            <span>ما مدى دقة حاسبات مؤشرات النمو للأطفال (Z-Scores)؟</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              تمت برمجة حاسبات مؤشرات النمو وتدقيقها استناداً إلى الجداول والمعايير المعتمدة رسمياً من منظمة الصحة العالمية (WHO Growth Standards 0-19 Years)، مما يوفر نتائج دقيقة للممارس.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-card" data-cat="tech">
+          <div class="faq-question">
+            <span>كيف تتكامل قاعدة بيانات الأغذية مع وزارة الزراعة الأمريكية (USDA)؟</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              توفر المنصة قاعدة بيانات محلية (أوفلاين) بأكثر من 14,000 صنف غذائي معتاد، وعند توفر الإنترنت، يتكامل محرك البحث ديناميكياً مع USDA API للوصول المباشر لأكثر من 600,000 صنف إضافي.
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4: Licensing -->
+        <div class="faq-card" data-cat="license">
+          <div class="faq-question">
+            <span>كيف يتم ترخيص المنصة واستخدامها للمراكز الكبرى؟</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              نوفر باقات مرنة تناسب العيادات الفردية والمراكز الكبرى متعددة الفروع. يمكنكم التواصل مع قسم المبيعات لترتيب اشتراك مؤسسي متكامل يلائم احتياجاتكم.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-card" data-cat="license">
+          <div class="faq-question">
+            <span>هل تدعم المنصة تخصيص التقارير بالشعار والهوية البصرية للعيادة؟</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              نعم، يتيح التطبيق للأخصائي رفع شعاره الخاص وإدخال بيانات عيادته وتوقيعه، لتظهر تلقائياً على كافة التقارير الطبية والأنظمة المصدّرة بصيغة PDF بشكل فاخر وجذاب.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-card" data-cat="license">
+          <div class="faq-question">
+            <span>ما هي طرق النسخ الاحتياطي المتاحة؟</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              توفر المنصة خاصية النسخ الاحتياطي المشفر على حسابك الخاص في Google Drive (Sovereign Cloud Backup)، حيث يتم تشفير قاعدة البيانات المحلية بالكامل قبل رفعها لضمان الخصوصية.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Shared Scripts -->
+  <script src="../components/components.js"></script>
+  <script>
+    // ════════════════════════════════════════
+    // FAQ PAGE LOGIC
+    // ════════════════════════════════════════
+    document.addEventListener('DOMContentLoaded', () => {
+      
+      const cards = document.querySelectorAll('.faq-card');
+      const tabs = document.querySelectorAll('.faq-tab-btn');
+      const searchInput = document.getElementById('faqSearchInput');
+
+      // Collapsible functionality
+      cards.forEach(card => {
+        const question = card.querySelector('.faq-question');
+        const answer = card.querySelector('.faq-answer');
+        
+        question.addEventListener('click', () => {
+          const isActive = card.classList.contains('active');
+          
+          // Close all cards
+          cards.forEach(c => {
+            c.classList.remove('active');
+            c.querySelector('.faq-answer').style.maxHeight = null;
+          });
+
+          // Toggle current
+          if (!isActive) {
+            card.classList.add('active');
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+          }
+        });
+      });
+
+      // Filter tabs functionality
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+
+          const group = tab.dataset.group;
+          
+          cards.forEach(card => {
+            const cat = card.dataset.cat;
+            if (group === 'all' || cat === group) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // Search functionality
+      searchInput.addEventListener('input', (e) => {
+        const term = e.target.value.toLowerCase().trim();
+        
+        // Reset active tab to 'all' when searching
+        tabs.forEach(t => t.classList.remove('active'));
+        tabs[0].classList.add('active');
+
+        cards.forEach(card => {
+          const questionText = card.querySelector('.faq-question span').textContent.toLowerCase();
+          const answerText = card.querySelector('.faq-answer-inner').textContent.toLowerCase();
+
+          if (questionText.includes(term) || answerText.includes(term)) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+
+    });
+  </script>
+</body>
+</html>
