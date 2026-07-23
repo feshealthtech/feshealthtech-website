@@ -586,11 +586,19 @@
                   </div>
                 </div>
 
-                <div class="form-group">
-                  <label class="form-label" for="email">البريد الإلكتروني *</label>
-                  <input class="form-input" type="email" id="email" name="email"
-                    placeholder="name@example.com" required autocomplete="email" />
-                  <div class="form-error" id="emailError">يرجى إدخال بريد إلكتروني صحيح</div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="email">البريد الإلكتروني *</label>
+                    <input class="form-input" type="email" id="email" name="email"
+                      placeholder="name@example.com" required autocomplete="email" />
+                    <div class="form-error" id="emailError">يرجى إدخال بريد إلكتروني صحيح</div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="phone">رقم الهاتف (اختياري)</label>
+                    <input class="form-input" type="tel" id="phone" name="phone"
+                      placeholder="+966 50 000 0000" autocomplete="tel" />
+                    <div class="form-error" id="phoneError">يرجى إدخال رقم هاتف صحيح (أرقام فقط)</div>
+                  </div>
                 </div>
 
                 <div class="form-group">
@@ -663,11 +671,13 @@
 
       const fullName = document.getElementById('fullName');
       const email = document.getElementById('email');
+      const phone = document.getElementById('phone');
       const subject = document.getElementById('subject');
       const message = document.getElementById('message');
 
       const fullNameError = document.getElementById('fullNameError');
       const emailError = document.getElementById('emailError');
+      const phoneError = document.getElementById('phoneError');
       const subjectError = document.getElementById('subjectError');
       const messageError = document.getElementById('messageError');
 
@@ -675,12 +685,17 @@
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
       }
 
+      function validatePhone(val) {
+        if (val.trim() === '') return true;
+        return /^[+]?[0-9\s\-]{7,18}$/.test(val.trim());
+      }
+
       form.addEventListener('submit', (e) => {
         e.preventDefault();
         let isValid = true;
 
-        [fullName, email, subject, message].forEach(el => el.classList.remove('invalid'));
-        [fullNameError, emailError, subjectError, messageError].forEach(el => el.style.display = 'none');
+        [fullName, email, phone, subject, message].forEach(el => el.classList.remove('invalid'));
+        [fullNameError, emailError, phoneError, subjectError, messageError].forEach(el => el.style.display = 'none');
 
         if (fullName.value.trim().length < 3) {
           fullName.classList.add('invalid');
@@ -691,6 +706,12 @@
         if (!validateEmail(email.value.trim())) {
           email.classList.add('invalid');
           emailError.style.display = 'block';
+          isValid = false;
+        }
+
+        if (!validatePhone(phone.value)) {
+          phone.classList.add('invalid');
+          phoneError.style.display = 'block';
           isValid = false;
         }
 
@@ -716,6 +737,7 @@
           fullName: fullName.value.trim(),
           organization: document.getElementById('organization').value.trim() || 'غير محدد',
           email: email.value.trim(),
+          phone: phone.value.trim() || 'غير محدد',
           subject: subject.options[subject.selectedIndex].text,
           message: message.value.trim()
         };
