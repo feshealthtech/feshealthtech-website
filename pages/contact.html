@@ -643,9 +643,16 @@
 
   <div id="footer-placeholder"></div>
 
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="../components/components.js"></script>
   <script>
     (function () {
+      // Initialize EmailJS with Public Key
+      emailjs.init({
+        publicKey: "GRhnKzi6GMcVvCjb3",
+      });
+
       const form = document.getElementById('contactForm');
       const formContainer = document.getElementById('contactFormContainer');
       const successState = document.getElementById('contactSuccessState');
@@ -704,12 +711,29 @@
         submitBtn.disabled = true;
         submitBtn.innerHTML = '⚡ جاري إرسال الرسالة...';
 
-        setTimeout(() => {
-          formContainer.style.display = 'none';
-          successState.style.display = 'flex';
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = '📨 إرسال الرسالة';
-        }, 1000);
+        // Prepare parameters
+        const templateParams = {
+          fullName: fullName.value.trim(),
+          organization: document.getElementById('organization').value.trim() || 'غير محدد',
+          email: email.value.trim(),
+          subject: subject.options[subject.selectedIndex].text,
+          message: message.value.trim()
+        };
+
+        // Send via EmailJS
+        emailjs.send('service_2gtw1uc', 'template_2tggiv7', templateParams)
+          .then(() => {
+            formContainer.style.display = 'none';
+            successState.style.display = 'flex';
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '📨 إرسال الرسالة';
+          })
+          .catch((error) => {
+            console.error('EmailJS Error:', error);
+            alert('عذراً، حدث خطأ أثناء إرسال الرسالة. يرجى المحاولة مرة أخرى لاحقاً أو التواصل معنا عبر البريد المباشر.');
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '📨 إرسال الرسالة';
+          });
       });
 
       resetBtn.addEventListener('click', () => {
