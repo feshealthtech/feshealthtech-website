@@ -304,6 +304,88 @@
       color: #0D1B2A !important;
     }
 
+    /* Wrap emails and long links to prevent mobile overflow */
+    .legal-text, .legal-highlight {
+      overflow-wrap: break-word !important;
+      word-wrap: break-word !important;
+    }
+
+    /* Premium Alert and Highlights */
+    .legal-alert-box {
+      background: rgba(239, 68, 68, 0.03) !important;
+      border: 1px solid rgba(239, 68, 68, 0.1) !important;
+      border-radius: 16px;
+      padding: 18px 24px;
+      margin: 16px 0;
+      display: flex;
+      gap: 12px;
+      align-items: start;
+      color: #991B1B !important;
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+    
+    /* App Policies Links Layout */
+    .app-policies-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .app-policy-card {
+      background: rgba(37, 99, 235, 0.02) !important;
+      border: 1px solid rgba(37, 99, 235, 0.08) !important;
+      border-radius: 16px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-decoration: none !important;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .app-policy-card:hover {
+      background: #FFFFFF !important;
+      border-color: rgba(37, 99, 235, 0.2) !important;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.05) !important;
+    }
+    .app-policy-icon {
+      width: 44px; height: 44px;
+      background: rgba(37, 99, 235, 0.06);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      color: #2563EB;
+      font-size: 1.25rem;
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+    }
+    .app-policy-card:hover .app-policy-icon {
+      background: rgba(37, 99, 235, 0.1);
+      color: #1D4ED8;
+    }
+    .app-policy-info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      text-align: right;
+    }
+    .app-policy-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #0D1B2A !important;
+    }
+    .app-policy-desc {
+      font-size: 0.78rem;
+      color: #64748B !important;
+      line-height: 1.4;
+    }
+    @media (max-width: 768px) {
+      .app-policies-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+    }
+
     /* ════════════════════════════════════════
        RESPONSIVE DESIGN & MOBILE OPTIMIZATIONS
        ════════════════════════════════════════ */
@@ -403,12 +485,15 @@
         <div class="toc-title">المحتويات</div>
         <nav class="toc-links">
           <a href="#sec-1" class="toc-link active"><span class="toc-num">1.</span> القبول والموافقة</a>
-          <a href="#sec-2" class="toc-link"><span class="toc-num">2.</span> طبيعة المحتوى</a>
+          <a href="#sec-2" class="toc-link"><span class="toc-num">2.</span> إخلاء المسؤولية الطبية</a>
           <a href="#sec-3" class="toc-link"><span class="toc-num">3.</span> الملكية الفكرية</a>
-          <a href="#sec-4" class="toc-link"><span class="toc-num">4.</span> حدود المسؤولية</a>
-          <a href="#sec-5" class="toc-link"><span class="toc-num">5.</span> الروابط الخارجية</a>
-          <a href="#sec-6" class="toc-link"><span class="toc-num">6.</span> التعديلات والمراجعة</a>
-          <a href="#sec-7" class="toc-link"><span class="toc-num">7.</span> معلومات التواصل</a>
+          <a href="#sec-4" class="toc-link"><span class="toc-num">4.</span> الاستخدام المقبول والمحظور</a>
+          <a href="#sec-5" class="toc-link"><span class="toc-num">5.</span> شروط استخدام تطبيقات الجوال</a>
+          <a href="#sec-6" class="toc-link"><span class="toc-num">6.</span> حدود المسؤولية</a>
+          <a href="#sec-7" class="toc-link"><span class="toc-num">7.</span> الروابط الخارجية</a>
+          <a href="#sec-8" class="toc-link"><span class="toc-num">8.</span> القانون المطبق وتسوية النزاعات</a>
+          <a href="#sec-9" class="toc-link"><span class="toc-num">9.</span> التعديلات والمراجعة</a>
+          <a href="#sec-10" class="toc-link"><span class="toc-num">10.</span> معلومات التواصل</a>
         </nav>
       </aside>
 
@@ -420,12 +505,15 @@
         </button>
         <div class="mobile-toc-dropdown" id="mobileTocDropdown">
           <a href="#sec-1" class="mobile-toc-item">1. القبول والموافقة</a>
-          <a href="#sec-2" class="mobile-toc-item">2. طبيعة المحتوى</a>
+          <a href="#sec-2" class="mobile-toc-item">2. إخلاء المسؤولية الطبية</a>
           <a href="#sec-3" class="mobile-toc-item">3. الملكية الفكرية</a>
-          <a href="#sec-4" class="mobile-toc-item">4. حدود المسؤولية</a>
-          <a href="#sec-5" class="mobile-toc-item">5. الروابط الخارجية</a>
-          <a href="#sec-6" class="mobile-toc-item">6. التعديلات والمراجعة</a>
-          <a href="#sec-7" class="mobile-toc-item">7. معلومات التواصل</a>
+          <a href="#sec-4" class="mobile-toc-item">4. الاستخدام المقبول والمحظور</a>
+          <a href="#sec-5" class="mobile-toc-item">5. شروط استخدام تطبيقات الجوال</a>
+          <a href="#sec-6" class="mobile-toc-item">6. حدود المسؤولية</a>
+          <a href="#sec-7" class="mobile-toc-item">7. الروابط الخارجية</a>
+          <a href="#sec-8" class="mobile-toc-item">8. القانون المطبق وتسوية النزاعات</a>
+          <a href="#sec-9" class="mobile-toc-item">9. التعديلات والمراجعة</a>
+          <a href="#sec-10" class="mobile-toc-item">10. معلومات التواصل</a>
         </div>
       </div>
 
@@ -433,8 +521,7 @@
       <div class="legal-content-wrap">
 
         <div class="legal-highlight">
-          📋 هذه الشروط تنظّم استخدامك لموقع <strong>feshealthtech.com</strong> فقط.
-          لكل تطبيق من تطبيقاتنا شروط استخدام مستقلة.
+          📋 هذه الشروط تنظّم استخدامك لموقع <strong>feshealthtech.com</strong> فقط. لكل تطبيق من تطبيقاتنا شروط استخدام مستقلة ووثائق قانونية خاصة به.
         </div>
 
         <div class="legal-section" id="sec-1">
@@ -443,24 +530,22 @@
             القبول والموافقة
           </h2>
           <p class="legal-text">
-            باستخدامك لموقع feshealthtech.com، فإنك توافق على الالتزام بهذه الشروط والأحكام.
-            إن كنت لا توافق على أي جزء منها، يُرجى التوقف عن استخدام الموقع.
+            باستخدامك لموقع feshealthtech.com، فإنك توافق على الالتزام بهذه الشروط والأحكام بالكامل. إن كنت لا توافق على أي جزء منها، يُرجى التوقف عن استخدام الموقع والخدمات فوراً.
           </p>
         </div>
 
         <div class="legal-section" id="sec-2">
           <h2 class="legal-section-title">
             <span class="legal-section-num">2</span>
-            طبيعة المحتوى
+            إخلاء المسؤولية الطبية والسريرية (Clinical Disclaimer)
           </h2>
           <p class="legal-text">
-            موقع FES HealthTech هو موقع تعريفي بالشركة ومنتجاتها. المحتوى المُقدَّم هو لأغراض
-            <strong>معلوماتية وتسويقية فقط</strong> وليس استشارة طبية أو دواءً أو علاجاً.
+            إن كافة المواد، الحسابات التغذوية، والمعلومات المنشورة على هذا الموقع أو البرمجيات والأنظمة التابعة لـ FES HealthTech (مثل تطبيق مرشد) هي <strong>لأغراض تعليمية وإدارية مساعدة فقط</strong>.
           </p>
-          <p class="legal-text">
-            جميع المعلومات الطبية المذكورة هي لأغراض التعريف بمنتجاتنا فقط. 
-            القرارات الطبية تقع على عاتق المختصين الصحيين المؤهلين.
-          </p>
+          <div class="legal-alert-box">
+            <span style="font-size: 1.2rem; line-height: 1;">⚠️</span>
+            <span><strong>إخلاء مسؤولية سريري هام:</strong> لا تشكل برمجياتنا نظاماً لاتخاذ القرارات السريرية التلقائية أو التشخيصية (CDSS). تقع المسؤولية الكاملة والنهائية لمراجعة وتدقيق واعتماد الجداول الغذائية، وتتبع مراحل التدرج الغذائي لمرضى جراحات السمنة، ووصف الأغذية، على عاتق الطبيب المختص أو أخصائي التغذية المؤهل بشكل مستقل.</span>
+          </div>
         </div>
 
         <div class="legal-section" id="sec-3">
@@ -469,58 +554,129 @@
             الملكية الفكرية
           </h2>
           <p class="legal-text">
-            جميع محتويات الموقع من نصوص، صور، شعارات، تصاميم، وكود برمجي هي ملكية حصرية لـ
-            <strong>FES Medical Software Technology</strong> ومحمية بموجب قوانين حقوق الملكية الفكرية.
+            جميع محتويات الموقع من نصوص، صور، شعارات، تصاميم، قواعد بيانات الأغذية والمجموعات الهرمية، وكود برمجي هي ملكية حصرية لـ 
+            <strong>FES Medical Software Technology</strong> ومحمية بموجب قوانين حقوق الملكية الفكرية والعلامات التجارية الدولية.
           </p>
           <p class="legal-text">
-            يُحظر نسخ، توزيع، أو إعادة نشر أي محتوى من الموقع دون إذن كتابي مسبق.
+            يُحظر نسخ، أو توزيع، أو تعديل، أو إعادة نشر أي جزء من محتوى الموقع دون إذن كتابي رسمي ومسبق من إدارة الشركة.
           </p>
         </div>
 
         <div class="legal-section" id="sec-4">
           <h2 class="legal-section-title">
             <span class="legal-section-num">4</span>
-            حدود المسؤولية
+            الاستخدام المقبول والمحظور
           </h2>
-          <p class="legal-text">
-            يُقدَّم الموقع "كما هو" دون ضمانات صريحة أو ضمنية. لا تتحمل FES HealthTech
-            أي مسؤولية عن أي أضرار ناتجة عن استخدام أو عدم القدرة على استخدام الموقع.
-          </p>
+          <p class="legal-text">عند تصفحك للموقع أو استخدام خدماتنا، تلتزم بعدم القيام بالآتي:</p>
+          <p class="legal-text">• استخدام أي أدوات آلية أو برامج (مثل Crawlers أو Scrapers) لكشط أو تجميع البيانات والمحتوى من صفحات الموقع.</p>
+          <p class="legal-text">• محاولة فك الشفرة المصدرية للموقع، أو الهندسة العكسية للمميزات والأنظمة التابعة لنا.</p>
+          <p class="legal-text">• تنفيذ هجمات برمجية ضارة (مثل DDoS) أو تعطيل خوادم الاستضافة والشبكة الخاصة بالشركة.</p>
         </div>
 
         <div class="legal-section" id="sec-5">
           <h2 class="legal-section-title">
             <span class="legal-section-num">5</span>
-            الروابط الخارجية
+            شروط استخدام تطبيقات الجوال (Mobile Apps Terms)
           </h2>
           <p class="legal-text">
-            قد يحتوي الموقع على روابط لمواقع خارجية. لا تتحمل FES HealthTech أي مسؤولية
-            عن محتوى أو ممارسات الخصوصية لهذه المواقع الخارجية.
+            لكل تطبيق جوال مستقل ننشره (مثل تطبيق مرشد) شروط استخدام وسياسات مالية مخصصة تنظم استخدامه داخل العيادة. يمكنك الوصول المباشر لوثائق التطبيقات عبر الروابط التالية:
           </p>
+          
+          <div class="app-policies-grid">
+            <!-- Link 1: Terms of Use -->
+            <a href="../../murshid/terms-of-use.html" class="app-policy-card">
+              <div class="app-policy-icon">
+                <svg class="fes-svg-icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+              </div>
+              <div class="app-policy-info">
+                <span class="app-policy-title">شروط استخدام تطبيق مرشد</span>
+                <span class="app-policy-desc">اتفاقية الترخيص المهنية وشروط استخدام النقاط والمحفظة.</span>
+              </div>
+            </a>
+            <!-- Link 2: Refund Policy -->
+            <a href="../../murshid/refund-policy.html" class="app-policy-card">
+              <div class="app-policy-icon">
+                <svg class="fes-svg-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+              </div>
+              <div class="app-policy-info">
+                <span class="app-policy-title">سياسة الاسترداد والفوترة لمرشد</span>
+                <span class="app-policy-desc">سياسات استرداد قيمة النقاط الذهبية واشتراكات Pro.</span>
+              </div>
+            </a>
+            <!-- Link 3: Privacy Policy -->
+            <a href="../../murshid/privacy-policy.html" class="app-policy-card">
+              <div class="app-policy-icon">
+                <svg class="fes-svg-icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 11 2 2 4-4"/></svg>
+              </div>
+              <div class="app-policy-info">
+                <span class="app-policy-title">سياسة خصوصية تطبيق مرشد</span>
+                <span class="app-policy-desc">وثيقة حماية البيانات الطبية المشفرة محلياً للمرضى.</span>
+              </div>
+            </a>
+            <!-- Link 4: Data Deletion -->
+            <a href="../../murshid/data-deletion.html" class="app-policy-card">
+              <div class="app-policy-icon">
+                <svg class="fes-svg-icon" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </div>
+              <div class="app-policy-info">
+                <span class="app-policy-title">طلب حذف بيانات حساب مرشد</span>
+                <span class="app-policy-desc">تقديم طلب رسمي لمسح حساب الممارس نهائياً من خوادمنا.</span>
+              </div>
+            </a>
+          </div>
         </div>
 
         <div class="legal-section" id="sec-6">
           <h2 class="legal-section-title">
             <span class="legal-section-num">6</span>
-            التعديلات والمراجعة
+            حدود المسؤولية
           </h2>
           <p class="legal-text">
-            نحتفظ بحق تعديل هذه الشروط في أي وقت. التعديلات تسري فور نشرها على الموقع.
-            يُنصح بمراجعة هذه الشروط دورياً.
+            يُقدَّم هذا الموقع ومحتوياته "كما هو" و "كما هو متاح" دون أي ضمانات من أي نوع، سواءً كانت صريحة أو ضمنية. لا تتحمل FES HealthTech أي مسؤولية قانونية عن أي أضرار مباشرة، غير مباشرة، عرضية، أو تبعية تنتج عن استخدامك للموقع أو الاعتماد على محتواه.
           </p>
         </div>
 
         <div class="legal-section" id="sec-7">
           <h2 class="legal-section-title">
             <span class="legal-section-num">7</span>
-            التواصل
+            الروابط الخارجية
           </h2>
           <p class="legal-text">
-            للاستفسار عن هذه الشروط أو أي شؤون قانونية:
+            قد يحتوي موقعنا على روابط تشعبية لمواقع خارجية تديرها أطراف مستقلة. إدراج هذه الروابط لا يعني مصادقتنا على محتواها، ولا تتحمل FES HealthTech أي مسؤولية عن سياسات الخصوصية أو دقة المحتوى في تلك المواقع.
           </p>
+        </div>
+
+        <div class="legal-section" id="sec-8">
+          <h2 class="legal-section-title">
+            <span class="legal-section-num">8</span>
+            القانون المطبق وتسوية النزاعات
+          </h2>
           <p class="legal-text">
-            <strong>البريد الإلكتروني:</strong> legal@feshealthtech.com<br />
-            <strong>الموقع:</strong> <a href="contact.html" style="color:var(--primary); font-weight:700;">صفحة التواصل</a>
+            تخضع هذه الشروط والأحكام وتُفسَّر بموجب القوانين والأنظمة السارية في <strong>المملكة العربية السعودية</strong>. في حال حدوث أي نزاع ينشأ عن أو يتعلق بزيارة هذا الموقع أو استخدام خدماتنا، يتم حله ودياً، وفي حال عدم التوصل لاتفاق، يتم إحالة النزاع حصرياً للجهات القضائية المختصة بمدينة الرياض.
+          </p>
+        </div>
+
+        <div class="legal-section" id="sec-9">
+          <h2 class="legal-section-title">
+            <span class="legal-section-num">9</span>
+            التعديلات والمراجعة
+          </h2>
+          <p class="legal-text">
+            نحتفظ بكامل الحق في تعديل، أو تحديث، أو تغيير هذه الشروط في أي وقت دون إشعار مسبق. تسري التعديلات فور نشرها على هذه الصفحة. استمرار استخدامك للموقع بعد نشر التعديلات يُعد موافقة والتزاماً صريحاً منك بالشروط المعدلة.
+          </p>
+        </div>
+
+        <div class="legal-section" id="sec-10">
+          <h2 class="legal-section-title">
+            <span class="legal-section-num">10</span>
+            معلومات التواصل
+          </h2>
+          <p class="legal-text">
+            لأي استفسارات قانونية أو شؤون تتعلق باتفاقية الاستخدام، يُرجى التواصل معنا عبر القنوات التالية:
+          </p>
+          <p class="legal-text" style="background: rgba(37,99,235,0.03); border: 1px dashed rgba(37,99,235,0.15); padding: 20px; border-radius: 16px; margin-top: 16px;">
+            📧 <strong>البريد الإلكتروني القانوني:</strong> legal@feshealthtech.com<br />
+            🌐 <strong>صفحة التواصل الرسمية:</strong> <a href="contact.html" style="color:var(--primary); font-weight:800; text-decoration: underline;">نموذج الدعم والاتصال المؤسسي</a>
           </p>
         </div>
 
