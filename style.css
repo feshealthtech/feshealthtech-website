@@ -359,11 +359,18 @@ input, textarea, select { font-family: inherit; }
   padding: 8px 14px;
   border-radius: var(--radius-full);
   transition: var(--transition);
+  white-space: nowrap !important; /* Prevent text wrapping */
 }
 
 .nav-links a:hover {
   color: var(--primary);
   background: var(--primary-pale);
+}
+
+.nav-links a.active {
+  color: var(--primary) !important;
+  background: var(--primary-pale) !important;
+  font-weight: 700 !important;
 }
 
 .nav-cta {
@@ -417,7 +424,8 @@ input, textarea, select { font-family: inherit; }
 .drawer-panel {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
+  left: auto;
   width: 80%;
   max-width: 320px;
   height: 100%;
@@ -426,7 +434,7 @@ input, textarea, select { font-family: inherit; }
   display: flex;
   flex-direction: column;
   gap: 8px;
-  transform: translateX(-100%);
+  transform: translateX(100%);
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   overflow-y: auto;
 }
@@ -473,6 +481,12 @@ input, textarea, select { font-family: inherit; }
 .drawer-panel a:hover {
   background: var(--primary-pale);
   color: var(--primary);
+}
+
+.drawer-panel a.active {
+  background: var(--primary-pale) !important;
+  color: var(--primary) !important;
+  font-weight: 700 !important;
 }
 
 .drawer-cta { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--gray-200); }
@@ -2086,6 +2100,22 @@ input, textarea, select { font-family: inherit; }
   .hero-content { gap: 60px; }
   .flagship-card { padding: 48px; gap: 48px; }
   .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Navbar scaling for desktop viewports */
+  .nav-inner {
+    gap: 12px;
+  }
+  .nav-links a {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+  .nav-cta {
+    gap: 8px;
+  }
+  .nav-cta .btn {
+    font-size: 0.8rem;
+    padding: 8px 14px;
+  }
 }
 
 /* ─── 1024px — Tablet Landscape ────────────────────── */
@@ -2095,6 +2125,10 @@ input, textarea, select { font-family: inherit; }
   .container { padding: 0 24px; }
   .section-pad { padding: 80px 0; }
   .section-pad-sm { padding: 56px 0; }
+
+  /* Navbar collapse */
+  .nav-links, .nav-cta { display: none !important; }
+  .hamburger { display: flex !important; }
 
   /* Hero */
   .hero-content { grid-template-columns: 1fr; gap: 48px; text-align: center; }

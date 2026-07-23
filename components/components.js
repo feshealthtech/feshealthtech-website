@@ -54,12 +54,12 @@
       <img src="${R}assets/logo.png" alt="FES HealthTech" style="height:28px;" />
       <button class="drawer-close" id="drawerClose" aria-label="إغلاق القائمة">✕</button>
     </div>
-    <a href="${R}index.html" class="drawer-link">🏠 الرئيسية</a>
-    <a href="${R}pages/about.html" class="drawer-link">🏢 من نحن</a>
-    <a href="${R}pages/portfolio.html" class="drawer-link">📱 منتجاتنا</a>
-    <a href="${R}pages/faq.html" class="drawer-link">❓ الأسئلة الشائعة</a>
-    <a href="${R}pages/research.html" class="drawer-link">🧪 الأبحاث</a>
-    <a href="${R}pages/contact.html" class="drawer-link">✉️ تواصل معنا</a>
+    <a href="${R}index.html" class="drawer-link">الرئيسية</a>
+    <a href="${R}pages/about.html" class="drawer-link">من نحن</a>
+    <a href="${R}pages/portfolio.html" class="drawer-link">منتجاتنا</a>
+    <a href="${R}pages/faq.html" class="drawer-link">الأسئلة الشائعة</a>
+    <a href="${R}pages/research.html" class="drawer-link">الأبحاث</a>
+    <a href="${R}pages/contact.html" class="drawer-link">تواصل معنا</a>
     <div class="drawer-cta">
       <a href="${R}pages/portfolio.html" class="btn btn-outline">استكشف منتجاتنا</a>
       <a href="${R}pages/contact.html" class="btn btn-primary">تواصل معنا</a>
