@@ -310,6 +310,82 @@
       word-wrap: break-word !important;
     }
 
+    /* Premium Alert and Highlights */
+    .legal-alert-box {
+      background: rgba(239, 68, 68, 0.03) !important;
+      border: 1px solid rgba(239, 68, 68, 0.1) !important;
+      border-radius: 16px;
+      padding: 18px 24px;
+      margin: 16px 0;
+      display: flex;
+      gap: 12px;
+      align-items: start;
+      color: #991B1B !important;
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+    
+    /* App Policies Links Layout */
+    .app-policies-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .app-policy-card {
+      background: rgba(37, 99, 235, 0.02) !important;
+      border: 1px solid rgba(37, 99, 235, 0.08) !important;
+      border-radius: 16px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-decoration: none !important;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .app-policy-card:hover {
+      background: #FFFFFF !important;
+      border-color: rgba(37, 99, 235, 0.2) !important;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.05) !important;
+    }
+    .app-policy-icon {
+      width: 44px; height: 44px;
+      background: rgba(37, 99, 235, 0.06);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      color: #2563EB;
+      font-size: 1.25rem;
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+    }
+    .app-policy-card:hover .app-policy-icon {
+      background: rgba(37, 99, 235, 0.1);
+      color: #1D4ED8;
+    }
+    .app-policy-info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      text-align: right;
+    }
+    .app-policy-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #0D1B2A !important;
+    }
+    .app-policy-desc {
+      font-size: 0.78rem;
+      color: #64748B !important;
+      line-height: 1.4;
+    }
+    @media (max-width: 768px) {
+      .app-policies-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+    }
+
     /* ════════════════════════════════════════
        RESPONSIVE DESIGN & MOBILE OPTIMIZATIONS
        ════════════════════════════════════════ */
@@ -415,8 +491,9 @@
           <a href="#sec-5" class="toc-link"><span class="toc-num">5.</span> حماية البيانات وأمانها</a>
           <a href="#sec-6" class="toc-link"><span class="toc-num">6.</span> حقوقك القانونية</a>
           <a href="#sec-7" class="toc-link"><span class="toc-num">7.</span> سياسات التطبيقات</a>
-          <a href="#sec-8" class="toc-link"><span class="toc-num">8.</span> تحديثات السياسة</a>
-          <a href="#sec-9" class="toc-link"><span class="toc-num">9.</span> معلومات التواصل</a>
+          <a href="#sec-8" class="toc-link"><span class="toc-num">8.</span> خصوصية القاصرين</a>
+          <a href="#sec-9" class="toc-link"><span class="toc-num">9.</span> تحديثات السياسة</a>
+          <a href="#sec-10" class="toc-link"><span class="toc-num">10.</span> معلومات التواصل</a>
         </nav>
       </aside>
 
@@ -434,8 +511,9 @@
           <a href="#sec-5" class="mobile-toc-item">5. حماية البيانات وأمانها</a>
           <a href="#sec-6" class="mobile-toc-item">6. حقوقك القانونية</a>
           <a href="#sec-7" class="mobile-toc-item">7. سياسات التطبيقات</a>
-          <a href="#sec-8" class="mobile-toc-item">8. تحديثات السياسة</a>
-          <a href="#sec-9" class="mobile-toc-item">9. معلومات التواصل</a>
+          <a href="#sec-8" class="mobile-toc-item">8. خصوصية القاصرين</a>
+          <a href="#sec-9" class="mobile-toc-item">9. تحديثات السياسة</a>
+          <a href="#sec-10" class="mobile-toc-item">10. معلومات التواصل</a>
         </div>
       </div>
 
@@ -530,35 +608,92 @@
         <div class="legal-section" id="sec-7">
           <h2 class="legal-section-title">
             <span class="legal-section-num">7</span>
-            سياسات خصوصية التطبيقات
+            سياسات خصوصية التطبيقات (Application Legal Policies)
           </h2>
-          <div class="legal-highlight">
-            📱 لكل تطبيق سياسة خصوصية مستقلة ومفصّلة تتناول بياناته الخاصة. هذه السياسة تخص الموقع المؤسسي فحسب.
+          <p class="legal-text">
+            لكل تطبيق جوال ننشره سياسة خصوصية وشروط استخدام مستقلة ومفصلة تتوافق مع طبيعة البيانات التي يعالجها محلياً وسحابياً. يمكنك تصفح الوثائق القانونية لتطبيقاتنا النشطة أدناه:
+          </p>
+          
+          <div class="app-policies-grid">
+            <!-- Link 1: Privacy Policy -->
+            <a href="../../murshid/privacy-policy.html" class="app-policy-card">
+              <div class="app-policy-icon">
+                <svg class="fes-svg-icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 11 2 2 4-4"/></svg>
+              </div>
+              <div class="app-policy-info">
+                <span class="app-policy-title">سياسة خصوصية تطبيق مرشد</span>
+                <span class="app-policy-desc">تفاصيل معالجة وأمان بيانات الأخصائيين والمرضى.</span>
+              </div>
+            </a>
+            <!-- Link 2: Terms of Use -->
+            <a href="../../murshid/terms-of-use.html" class="app-policy-card">
+              <div class="app-policy-icon">
+                <svg class="fes-svg-icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+              </div>
+              <div class="app-policy-info">
+                <span class="app-policy-title">شروط استخدام تطبيق مرشد</span>
+                <span class="app-policy-desc">حقوق الملكية الفكرية والالتزامات وإخلاء المسؤولية.</span>
+              </div>
+            </a>
+            <!-- Link 3: Refund Policy -->
+            <a href="../../murshid/refund-policy.html" class="app-policy-card">
+              <div class="app-policy-icon">
+                <svg class="fes-svg-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+              </div>
+              <div class="app-policy-info">
+                <span class="app-policy-title">سياسة الاسترداد والفوترة لمرشد</span>
+                <span class="app-policy-desc">شروط استرداد النقاط الذهبية والاشتراكات.</span>
+              </div>
+            </a>
+            <!-- Link 4: Data Deletion -->
+            <a href="../../murshid/data-deletion.html" class="app-policy-card">
+              <div class="app-policy-icon">
+                <svg class="fes-svg-icon" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </div>
+              <div class="app-policy-info">
+                <span class="app-policy-title">طلب حذف الحساب والبيانات</span>
+                <span class="app-policy-desc">النموذج الرسمي لحذف بياناتك وحسابك نهائياً.</span>
+              </div>
+            </a>
           </div>
         </div>
 
         <div class="legal-section" id="sec-8">
           <h2 class="legal-section-title">
             <span class="legal-section-num">8</span>
-            تحديثات السياسة
+            خصوصية القاصرين (Minors Privacy)
           </h2>
           <p class="legal-text">
-            قد نُحدّث هذه السياسة من وقت لآخر. سنُعلن عن أي تغييرات جوهرية على الموقع.
-            استمرار استخدامك للموقع بعد أي تعديل يعني موافقتك على السياسة الجديدة.
+            إن موقعنا وخدماتنا وتطبيقاتنا موجهة حصرياً للأخصائيين والممارسين الصحيين البالغين (فوق سن 18 عاماً). 
+            <strong>نحن لا نجمع، ولا نطلب، ولا نحتفظ</strong> بمعلومات شخصية عن قاصرين دون سن الثامنة عشرة عن علم أو قصد.
           </p>
+          <div class="legal-alert-box">
+            <span style="font-size: 1.2rem; line-height: 1;">⚠️</span>
+            <span>إذا تبيّن لنا أننا قمنا بجمع بيانات مستخدم قاصر دون سن 18 عاماً عن طريق الخطأ أو نموذج اتصال غير معتمد، فإننا نتعهد باتخاذ الإجراءات التقنية الفورية لمسح هذه السجلات بالكامل من خوادمنا بشكل نهائي وآمن.</span>
+          </div>
         </div>
 
         <div class="legal-section" id="sec-9">
           <h2 class="legal-section-title">
             <span class="legal-section-num">9</span>
-            التواصل
+            تحديثات السياسة
           </h2>
           <p class="legal-text">
-            لأي استفسار حول هذه السياسة أو لممارسة حقوقك، تواصل معنا:
+            قد نُحدّث هذه السياسة من وقت لآخر لمواكبة التغيرات التقنية أو التنظيمية. سنُعلن عن أي تغييرات جوهرية عبر نشر إشعار بارز على الموقع أو تحديث تاريخ التحديث في أعلى الصفحة. استمرار استخدامك للموقع بعد نشر التعديلات يُعد موافقة ضمنية منك عليها.
           </p>
+        </div>
+
+        <div class="legal-section" id="sec-10">
+          <h2 class="legal-section-title">
+            <span class="legal-section-num">10</span>
+            معلومات التواصل
+          </h2>
           <p class="legal-text">
-            <strong>البريد الإلكتروني:</strong> privacy@feshealthtech.com<br />
-            <strong>الموقع:</strong> <a href="contact.html" style="color:var(--primary); font-weight:700;">صفحة التواصل</a>
+            لأي استفسار أو لتقديم طلبات ممارسة حقوق الخصوصية الخاصة بك، يُرجى التواصل مع مسؤول حماية البيانات عبر القنوات التالية:
+          </p>
+          <p class="legal-text" style="background: rgba(37,99,235,0.03); border: 1px dashed rgba(37,99,235,0.15); padding: 20px; border-radius: 16px; margin-top: 16px;">
+            📧 <strong>البريد الإلكتروني:</strong> privacy@feshealthtech.com<br />
+            🌐 <strong>صفحة التواصل الرسمية:</strong> <a href="contact.html" style="color:var(--primary); font-weight:800; text-decoration: underline;">رابط نموذج الدعم والربط الفني</a>
           </p>
         </div>
 
