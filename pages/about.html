@@ -247,201 +247,217 @@
       line-height: 1.4;
     }
 
-    /* Core Pillars Section */
-    .section-header-dark {
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto 56px;
-    }
-    .section-header-dark .section-title {
-      color: #0D1B2A !important;
-    }
-    .section-header-dark .section-subtitle {
-      color: #475569 !important;
-      margin: 12px auto 0;
-    }
-
-    .pillars-grid {
+    /* Core Pillars Section - Split Asymmetric Layout */
+    .pillars-grid-split {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
+      grid-template-columns: 350px 1fr;
+      gap: 48px;
       max-width: 1200px;
       margin: 0 auto;
     }
-
-    .pillar-card {
-      background: rgba(255, 255, 255, 0.65) !important;
-      backdrop-filter: blur(20px) !important;
-      -webkit-backdrop-filter: blur(20px) !important;
-      border: 1px solid rgba(37, 99, 235, 0.08) !important;
+    .pillars-sidebar {
+      position: sticky;
+      top: 120px;
+      height: fit-content;
+    }
+    .pillars-sidebar .section-label {
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+    .pillars-sidebar .section-title {
+      font-size: 2.1rem;
+      font-weight: 900;
+      line-height: 1.4;
+      color: #0D1B2A;
+      margin-bottom: 20px;
+      text-align: right;
+    }
+    .pillars-sidebar .section-subtitle {
+      font-size: 0.96rem;
+      line-height: 1.8;
+      color: #475569;
+      text-align: right;
+    }
+    .pillars-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .pillar-row-card {
+      background: #ffffff;
+      border: 1px solid rgba(37, 99, 235, 0.05);
       border-radius: 24px;
       padding: 32px;
+      display: grid;
+      grid-template-columns: 60px 1fr;
+      gap: 24px;
+      align-items: start;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 10px 30px rgba(13, 27, 42, 0.01);
+    }
+    .pillar-row-card:hover {
+      border-color: rgba(37, 99, 235, 0.15);
+      transform: translateX(-8px);
+      box-shadow: 0 20px 45px rgba(37, 99, 235, 0.05);
+    }
+    .pillar-row-icon {
+      width: 60px; height: 60px;
+      background: rgba(37, 99, 235, 0.04);
+      border: 1px solid rgba(37, 99, 235, 0.08);
+      border-radius: 18px;
+      display: flex; align-items: center; justify-content: center;
+      color: #2563EB;
+      transition: all 0.3s ease;
+    }
+    .pillar-row-card:hover .pillar-row-icon {
+      background: rgba(37, 99, 235, 0.08);
+      color: #1D4ED8;
+    }
+    .pillar-row-content {
       display: flex;
       flex-direction: column;
-      gap: 16px;
-      box-shadow: 0 20px 40px rgba(13, 27, 42, 0.03) !important;
-      transition: var(--transition);
+      gap: 8px;
+      text-align: right;
     }
-    .pillar-card:hover {
-      border-color: rgba(37, 99, 235, 0.2) !important;
-      transform: translateY(-6px);
-      box-shadow: 0 30px 60px rgba(37, 99, 235, 0.08) !important;
-    }
-    .pillar-icon-box {
-      width: 52px;
-      height: 52px;
-      background: rgba(37, 99, 235, 0.06) !important;
-      border: 1px solid rgba(37, 99, 235, 0.12) !important;
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.6rem;
-      color: var(--primary) !important;
-    }
-    .pillar-title {
-      font-size: 1.25rem;
+    .pillar-row-title {
+      font-size: 1.15rem;
       font-weight: 800;
-      color: #0D1B2A !important;
+      color: #0D1B2A;
     }
-    .pillar-desc {
-      font-size: 0.92rem;
-      line-height: 1.8;
-      color: #475569 !important;
+    .pillar-row-desc {
+      font-size: 0.88rem;
+      line-height: 1.7;
+      color: #475569;
     }
 
-    /* Timelines */
-    .timeline-container {
+    /* Governance Section - Dark Clinical Contrast Layout */
+    .gov-dark-section {
+      background: linear-gradient(135deg, #0B132B 0%, #1C2541 100%) !important;
       position: relative;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px 0;
+      overflow: hidden;
+      padding: 100px 0;
     }
-    
-    .timeline-container::before {
+    .gov-dark-section::before {
       content: '';
       position: absolute;
-      top: 0; bottom: 0;
-      right: 32px;
-      width: 2px;
-      background: linear-gradient(180deg, rgba(37,99,235,0.05) 0%, rgba(37,99,235,0.3) 15%, rgba(96,165,250,0.3) 85%, rgba(37,99,235,0.05) 100%) !important;
-      box-shadow: none !important;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(circle at 70% 30%, rgba(37, 99, 235, 0.08) 0%, transparent 60%);
+      pointer-events: none;
     }
-
-    .t-item {
-      position: relative;
-      margin-bottom: 48px;
-      padding-right: 72px;
-      transition: var(--transition);
+    .gov-dark-section .section-header-dark .section-title {
+      color: #FFFFFF !important;
     }
-    .t-item:last-child {
-      margin-bottom: 0;
+    .gov-dark-section .section-header-dark .section-subtitle {
+      color: #94A3B8 !important;
     }
-
-    .t-dot {
-      position: absolute;
-      top: 4px;
-      right: 21px;
-      width: 24px;
-      height: 24px;
-      background: #FFFFFF !important;
-      border: 4px solid #3B82F6 !important;
-      border-radius: 50%;
-      box-shadow: 0 0 10px rgba(59, 130, 246, 0.2) !important;
-      z-index: 2;
-      transition: var(--transition);
-    }
-    .t-item:hover .t-dot {
-      background: #3B82F6 !important;
-      border-color: #60A5FA !important;
-      transform: scale(1.2);
-      box-shadow: 0 0 15px rgba(59, 130, 246, 0.4) !important;
-    }
-
-    .t-year {
-      font-size: 0.85rem;
-      font-weight: 800;
-      color: #D97706 !important;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-      font-family: var(--font-english);
-      background: rgba(245, 158, 11, 0.06);
-      border: 1px solid rgba(245, 158, 11, 0.15);
-      padding: 4px 12px;
-      border-radius: 99px;
-      display: inline-block;
-    }
-
-    .t-card {
-      background: rgba(255, 255, 255, 0.65) !important;
-      backdrop-filter: blur(20px) !important;
-      -webkit-backdrop-filter: blur(20px) !important;
-      border: 1px solid rgba(37, 99, 235, 0.08) !important;
-      border-radius: 20px;
-      padding: 24px 28px;
-      box-shadow: 0 15px 35px rgba(13, 27, 42, 0.02) !important;
-      transition: var(--transition);
-    }
-    .t-card:hover {
-      border-color: rgba(37, 99, 235, 0.2) !important;
-      box-shadow: 0 20px 45px rgba(37, 99, 235, 0.06) !important;
-      transform: translateY(-2px);
-    }
-
-    .t-title {
-      font-size: 1.2rem;
-      font-weight: 800;
-      color: #0D1B2A !important;
-      margin-bottom: 8px;
-    }
-    .t-text {
-      font-size: 0.92rem;
-      line-height: 1.8;
-      color: #475569 !important;
-    }
-
-    /* Governance Section */
-    .governance-grid {
+    .gov-dark-section .governance-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
+      gap: 20px;
       max-width: 1200px;
       margin: 0 auto;
     }
-    .gov-pill {
-      background: rgba(255, 255, 255, 0.65) !important;
-      border: 1px solid rgba(37, 99, 235, 0.08) !important;
-      border-radius: 20px;
-      padding: 24px 20px;
+    .gov-dark-section .gov-pill {
+      background: rgba(255, 255, 255, 0.03) !important;
+      border: 1px solid rgba(255, 255, 255, 0.06) !important;
+      border-radius: 24px;
+      padding: 32px 24px;
       text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 12px;
-      box-shadow: 0 10px 25px rgba(13, 27, 42, 0.02) !important;
-      transition: var(--transition);
+      gap: 16px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15) !important;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .gov-pill:hover {
-      border-color: rgba(5, 150, 105, 0.25) !important;
-      background: rgba(5, 150, 105, 0.03) !important;
-      transform: translateY(-4px);
-      box-shadow: 0 15px 30px rgba(5, 150, 105, 0.05) !important;
+    .gov-dark-section .gov-pill:hover {
+      border-color: rgba(37, 99, 235, 0.35) !important;
+      background: rgba(37, 99, 235, 0.05) !important;
+      transform: translateY(-5px);
+      box-shadow: 0 25px 50px rgba(37, 99, 235, 0.12) !important;
     }
-    .gov-icon {
-      font-size: 2rem;
-      filter: drop-shadow(0 4px 6px rgba(13, 27, 42, 0.05));
+    .gov-dark-section .gov-icon-box {
+      width: 60px; height: 60px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: #3B82F6;
+      transition: all 0.3s ease;
     }
-    .gov-title {
-      font-size: 0.95rem;
+    .gov-dark-section .gov-pill:hover .gov-icon-box {
+      background: rgba(255, 255, 255, 0.08);
+      color: #60A5FA;
+    }
+    .gov-dark-section .gov-title {
+      font-size: 1.05rem;
       font-weight: 800;
-      color: #0D1B2A !important;
+      color: #FFFFFF !important;
       line-height: 1.4;
     }
-    .gov-desc {
-      font-size: 0.78rem;
-      color: #475569 !important;
-      line-height: 1.6;
+    .gov-dark-section .gov-desc {
+      font-size: 0.82rem;
+      color: #94A3B8 !important;
+      line-height: 1.65;
+    }
+
+    /* Premium Inline SVG Styles */
+    .fes-svg-icon {
+      width: 28px;
+      height: 28px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: transform 0.3s ease;
+    }
+    .val-card:hover .fes-svg-icon,
+    .alliance-card:hover .fes-svg-icon,
+    .pillar-row-card:hover .fes-svg-icon,
+    .gov-pill:hover .fes-svg-icon {
+      transform: scale(1.1) rotate(5deg);
+    }
+    .val-icon, .alliance-icon {
+      color: #2563EB;
+      transition: all 0.3s ease;
+    }
+    .val-card:hover .val-icon {
+      color: #1D4ED8;
+    }
+
+    @media (max-width: 992px) {
+      .pillars-grid-split {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .pillars-sidebar {
+        position: relative;
+        top: 0;
+      }
+      .pillars-sidebar .section-title, .pillars-sidebar .section-subtitle {
+        text-align: center;
+      }
+      .gov-dark-section .governance-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+      .pillar-row-card {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        padding: 24px;
+      }
+      .pillar-row-content {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .gov-dark-section .governance-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
     }
 
     /* CTA Card Premium Dark Contrast */
@@ -982,25 +998,33 @@
       <div class="alliance-grid">
         <!-- Alliance 1 -->
         <div class="alliance-card reveal">
-          <div class="alliance-icon">☁️</div>
+          <div class="alliance-icon">
+            <svg class="fes-svg-icon" viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+          </div>
           <h3 class="alliance-title">البنية السحابية من Google</h3>
           <p class="alliance-desc">نستخدم خدمات Google Cloud الآمنة لإدارة بيانات Firestore والمصادقة والذكاء الاصطناعي مع عزل الهويات.</p>
         </div>
         <!-- Alliance 2 -->
         <div class="alliance-card reveal">
-          <div class="alliance-icon">🔑</div>
-          <h3 class="alliance-title">التشفير اللامركزي السيادي</h3>
+          <div class="alliance-icon">
+            <svg class="fes-svg-icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 class="alliance-title">التشديد الأمني اللامركزي</h3>
           <p class="alliance-desc">بنية تشفير موضعية مشفرة بـ AES-256 محلياً على هاتف الأخصائي والمراجع دون مشاركتها خارج الجهاز.</p>
         </div>
         <!-- Alliance 3 -->
         <div class="alliance-card reveal">
-          <div class="alliance-icon">🌐</div>
-          <h3 class="alliance-title">تكامل FHIR & HL7 APIs</h3>
-          <p class="alliance-desc">جاهزية برمجية تامة للربط وتبادل البيانات مع السجلات الطبية المركزية للمستشفيات والمنشآت.</p>
+          <div class="alliance-icon">
+            <svg class="fes-svg-icon" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          </div>
+          <h3 class="alliance-title">تكامل HL7 & FHIR</h3>
+          <p class="alliance-desc">التوافق التقني والربط البرمجي المعياري مع مواصفات HL7 و FHIR العالمية لتسهيل التبادل البيني مع الأنظمة الطبية.</p>
         </div>
         <!-- Alliance 4 -->
         <div class="alliance-card reveal">
-          <div class="alliance-icon">🔍</div>
+          <div class="alliance-icon">
+            <svg class="fes-svg-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
           <h3 class="alliance-title">معالجة Stateless OCR</h3>
           <p class="alliance-desc">استخلاص البيانات والتحاليل المخبرية فورياً من الصور دون حفظ أي نسخة منها على الخوادم.</p>
         </div>
@@ -1014,7 +1038,9 @@
       <div class="v-m-grid">
         <!-- Vision -->
         <div class="v-m-card vision-card reveal">
-          <div class="v-m-icon">👁️</div>
+          <div class="v-m-icon">
+            <svg class="fes-svg-icon" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
           <h2 class="v-m-title">رؤيتنا</h2>
           <p class="v-m-desc">
             أن نكون الشريك البرمجي والتكنولوجي الأول عالمياً للعيادات والمنشآت الصحية في تقديم حلول إدارة المراجعين والتخطيط الغذائي اللامركزي، ممهدين الطريق لعصر جديد من سيادة البيانات الفردية وسرية السجلات الصحية دون التضحية بالسرعة والابتكار التقني.
@@ -1022,7 +1048,9 @@
         </div>
         <!-- Mission -->
         <div class="v-m-card mission-card reveal">
-          <div class="v-m-icon">🎯</div>
+          <div class="v-m-icon">
+            <svg class="fes-svg-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
           <h2 class="v-m-title">رسالتنا</h2>
           <p class="v-m-desc">
             تمكين أخصائيي التغذية والمؤسسات الصحية بالأدوات الذكية والآمنة التي تمنحهم الكفاءة المطلقة أوفلاين. نسعى إلى تبسيط إدارة المراجعات وأتمتة التقارير وتوفير الوقت للتركيز على رعاية المراجعين، مع الالتزام التام بعدم المساس بخصوصية البيانات الطبية.
@@ -1047,28 +1075,36 @@
         <!-- Value 1: Integrity -->
         <div class="val-card reveal">
           <span class="val-badge">01</span>
-          <div class="val-icon">🤝</div>
+          <div class="val-icon">
+            <svg class="fes-svg-icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 11 2 2 4-4"/></svg>
+          </div>
           <h3 class="val-title">النزاهة والشفافية</h3>
           <p class="val-desc">نلتزم بالصدق والوضوح التام في كافة خدماتنا وقدرات برامجنا، دون مبالغة تسويقية أو تضليل.</p>
         </div>
         <!-- Value 2: Scientific Rigor -->
         <div class="val-card reveal">
           <span class="val-badge">02</span>
-          <div class="val-icon">🔬</div>
+          <div class="val-icon">
+            <svg class="fes-svg-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
+          </div>
           <h3 class="val-title">الرصانة والتدقيق العلمي</h3>
           <p class="val-desc">لا ندرج ميزة حسابية أو توصية إلا بعد فحصها وتدقيقها علمياً لضمان توافقها مع البروتوكولات الموثوقة.</p>
         </div>
         <!-- Value 3: Client Sovereignty -->
         <div class="val-card reveal">
           <span class="val-badge">03</span>
-          <div class="val-icon">👑</div>
+          <div class="val-icon">
+            <svg class="fes-svg-icon" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
           <h3 class="val-title">سيادة وحرمة البيانات</h3>
           <p class="val-desc">نؤمن بأن بيانات العيادات والمراجعين ملك خالص لهم، ونمتنع تماماً عن استخدامها لأي أغراض ربحية.</p>
         </div>
         <!-- Value 4: Continuous Innovation -->
         <div class="val-card reveal">
           <span class="val-badge">04</span>
-          <div class="val-icon">💡</div>
+          <div class="val-icon">
+            <svg class="fes-svg-icon" viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A5 5 0 0 0 8 8c0 1.3.5 2.6 1.5 3.5.8.8 1.3 1.5 1.5 2.5"/><line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/></svg>
+          </div>
           <h3 class="val-title">الابتكار المستمر</h3>
           <p class="val-desc">نسعى باستمرار لتطوير خوارزمياتنا وأدواتنا لتبسيط العمليات الإدارية وتقديم حلول عصرية متكاملة.</p>
         </div>
@@ -1076,62 +1112,73 @@
     </div>
   </section>
 
-  <!-- Core Pillars -->
-  <section class="about-section" aria-label="ركائزنا">
+  <!-- Core Pillars - Split Asymmetric layout -->
+  <section class="about-section" style="background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFF 100%) !important;" aria-label="ركائزنا">
     <div class="container">
-      <div class="section-header-dark">
-        <span class="section-label">ركائز التطوير</span>
-        <h2 class="section-title">المبادئ التي تحكم <span>تطوير بيئاتنا البرمجية والغذائية</span></h2>
-        <p class="section-subtitle">
-          نحن لا نبني برمجيات عامة؛ بل نصمم بيئات حوسبة متكاملة تتوافق مع أعلى معايير الحوكمة التقنية والأمن السيبراني.
-        </p>
-      </div>
+      <div class="pillars-grid-split">
+        <!-- Sidebar Label -->
+        <div class="pillars-sidebar reveal-right">
+          <span class="section-label">ركائز التطوير</span>
+          <h2 class="section-title">المبادئ الحاكمة <span>لبيئاتنا البرمجية</span></h2>
+          <p class="section-subtitle">
+            نحن لا نصمم برمجيات عامة؛ بل نبتكر بيئات حوسبة متخصصة تحترم معايير الحوكمة التكنولوجية والأمنية الدقيقة لخدمة الممارس بكفاءة.
+          </p>
+        </div>
 
-      <div class="pillars-grid">
-        <!-- Pillar 1 -->
-        <div class="pillar-card reveal">
-          <div class="pillar-icon-box">🎯</div>
-          <h3 class="pillar-title">الدقة والاعتمادية العلمية</h3>
-          <p class="pillar-desc">
-            تخضع كافة خوارزمياتنا وحسابات الاحتياجات لمطابقة دقيقة مع التوجيهات الغذائية والأكاديمية العالمية المعتمدة مثل (KDOQI, ASMBS, USDA).
-          </p>
-        </div>
-        <!-- Pillar 2 -->
-        <div class="pillar-card reveal">
-          <div class="pillar-icon-box">🔒</div>
-          <h3 class="pillar-title">الخصوصية السيادية واللامركزية</h3>
-          <p class="pillar-desc">
-            نعتمد بنية هيكلية خالية من تجميع هويات المرضى (De-identification) مع تشفير محلي عسكري كامل (AES-256) لمنح العيادات والمراجعين سيادة مطلقة على سجلاتهم وملفاتهم.
-          </p>
-        </div>
-        <!-- Pillar 3 -->
-        <div class="pillar-card reveal">
-          <div class="pillar-icon-box">📡</div>
-          <h3 class="pillar-title">التشغيل البيني الموحد</h3>
-          <p class="pillar-desc">
-            أنظمتنا مجهزة تماماً للربط الفوري والآمن مع السجلات والأنظمة الإدارية للمستشفيات والعيادات عبر بروتوكولات المزامنة المعيارية HL7 و FHIR APIs.
-          </p>
-        </div>
-        <!-- Pillar 4 -->
-        <div class="pillar-card reveal">
-          <div class="pillar-icon-box">🧠</div>
-          <h3 class="pillar-title">الذكاء الاصطناعي التخطيطي المسؤول</h3>
-          <p class="pillar-desc">
-            نوظف الذكاء الاصطناعي كمساعد تخطيطي وإداري للممارس لتسهيل صياغة الجداول التغذوية ومراجعتها وتوفير الوقت، دون التدخل في القرارات المستقلة للممارس.
-          </p>
+        <!-- Pillars Stack -->
+        <div class="pillars-stack reveal-left">
+          <!-- Pillar 1 -->
+          <div class="pillar-row-card">
+            <div class="pillar-row-icon">
+              <svg class="fes-svg-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            </div>
+            <div class="pillar-row-content">
+              <h3 class="pillar-row-title">الدقة والاعتمادية العلمية</h3>
+              <p class="pillar-row-desc">تخضع كافة خوارزمياتنا وحسابات الاحتياجات لمطابقة دقيقة مع التوجيهات الغذائية والأكاديمية العالمية المعتمدة مثل (KDOQI, ASMBS, USDA).</p>
+            </div>
+          </div>
+          <!-- Pillar 2 -->
+          <div class="pillar-row-card">
+            <div class="pillar-row-icon">
+              <svg class="fes-svg-icon" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <div class="pillar-row-content">
+              <h3 class="pillar-row-title">الخصوصية السيادية واللامركزية</h3>
+              <p class="pillar-row-desc">نعتمد بنية هيكلية خالية من تجميع هويات المرضى مع تشفير محلي عسكري كامل (AES-256) لمنح العيادات والمراجعين سيادة مطلقة على ملفاتهم.</p>
+            </div>
+          </div>
+          <!-- Pillar 3 -->
+          <div class="pillar-row-card">
+            <div class="pillar-row-icon">
+              <svg class="fes-svg-icon" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><circle cx="12" cy="18" r="2"/></svg>
+            </div>
+            <div class="pillar-row-content">
+              <h3 class="pillar-row-title">التشغيل البيني المتوافق</h3>
+              <p class="pillar-row-desc">أنظمتنا مجهزة بأدوات ربط متوافقة مع مواصفات التبادل الدولية (HL7 و FHIR APIs) لتسهيل الربط الآمن مع السجلات والمنشآت الكبرى عند الطلب.</p>
+            </div>
+          </div>
+          <!-- Pillar 4 -->
+          <div class="pillar-row-card">
+            <div class="pillar-row-icon">
+              <svg class="fes-svg-icon" viewBox="0 0 24 24"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1 0-4.12 2.5 2.5 0 0 1 0-4.88A2.5 2.5 0 0 1 9.5 2zM14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 0-4.12 2.5 2.5 0 0 0 0-4.88A2.5 2.5 0 0 0 14.5 2z"/></svg>
+            </div>
+            <div class="pillar-row-content">
+              <h3 class="pillar-row-title">الذكاء الاصطناعي التخطيطي المسؤول</h3>
+              <p class="pillar-row-desc">نوظف الذكاء الاصطناعي كمساعد تخطيطي وإداري للأخصائي لتسهيل صياغة الجداول التغذوية ومراجعتها وتوفير الوقت، دون التدخل في القرارات المستقلة للممارس.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-
-  <!-- Governance Section -->
-  <section class="about-section" aria-label="مجلس الحوكمة وإدارة الجودة">
+  <!-- Governance Section - Dark Clinical Contrast Layout -->
+  <section class="about-section gov-dark-section" aria-label="مجلس الحوكمة وإدارة الجودة">
     <div class="container">
       <div class="section-header-dark">
         <span class="section-label">مجلس الحوكمة وإدارة الجودة</span>
-        <h2 class="section-title">التدقيق العلمي <span>وإدارة الجودة المستمرة</span></h2>
-        <p class="section-subtitle">
+        <h2 class="section-title" style="color: #FFFFFF !important;">التدقيق العلمي <span>وإدارة الجودة المستمرة</span></h2>
+        <p class="section-subtitle" style="color: #94A3B8 !important;">
           تخضع كافة أنظمتنا وجداولنا لمطابقة ومراجعة مستمرة لضمان توافق المخرجات مع التطبيقات الإدارية والتغذوية المعاصرة.
         </p>
       </div>
@@ -1139,25 +1186,33 @@
       <div class="governance-grid">
         <!-- Gov 1 -->
         <div class="gov-pill reveal">
-          <div class="gov-icon">🫘</div>
+          <div class="gov-icon-box">
+            <svg class="fes-svg-icon" viewBox="0 0 24 24"><circle cx="12" cy="5" r="3"/><circle cx="12" cy="19" r="3"/><circle cx="5" cy="12" r="3"/><circle cx="19" cy="12" r="3"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </div>
           <span class="gov-title">التخطيط الغذائي للأمراض المزمنة</span>
           <span class="gov-desc">مراجعة وتدقيق معايير الجداول التغذوية وملاءمتها للمراجعين ذوي الحالات المزمنة.</span>
         </div>
         <!-- Gov 2 -->
         <div class="gov-pill reveal">
-          <div class="gov-icon">🥗</div>
+          <div class="gov-icon-box">
+            <svg class="fes-svg-icon" viewBox="0 0 24 24"><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+          </div>
           <span class="gov-title">علوم الأغذية والتفاعلات التغذوية</span>
           <span class="gov-desc">مراجعة قواعد البيانات الغذائية الضخمة والتداخلات المحتملة مع الأغذية لتأمين الجداول.</span>
         </div>
         <!-- Gov 3 -->
         <div class="gov-pill reveal">
-          <div class="gov-icon">🏥</div>
+          <div class="gov-icon-box">
+            <svg class="fes-svg-icon" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
           <span class="gov-title">متابعة وسلوك جراحات السمنة</span>
           <span class="gov-desc">مراجعة مراحل التدرج الغذائي وتتبع السلوك بعد العملية لضمان التعافي السليم والآمن.</span>
         </div>
         <!-- Gov 4 -->
         <div class="gov-pill reveal">
-          <div class="gov-icon">🔒</div>
+          <div class="gov-icon-box">
+            <svg class="fes-svg-icon" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
           <span class="gov-title">أمن المعلومات والخصوصية</span>
           <span class="gov-desc">تدقيق تشفير البيانات وعزل الهويات والتخزين اللامركزي بما يتوافق مع HIPAA و GDPR.</span>
         </div>
