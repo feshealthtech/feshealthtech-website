@@ -112,22 +112,7 @@
         </ul>
       </div>
  
-      <!-- Newsletter -->
-      <div>
-        <h4 class="footer-col-title">ابقَ على اطلاع</h4>
-        <p class="footer-newsletter-text">
-          اشترك في نشرتنا البريدية لتصلك آخر المستجدات والتحديثات.
-        </p>
-        <div class="footer-newsletter-form">
-          <input class="footer-newsletter-input" type="email"
-            placeholder="بريدك الإلكتروني"
-            id="newsletterEmail"
-            aria-label="البريد الإلكتروني للاشتراك" />
-          <button class="footer-newsletter-btn" id="newsletterBtn" type="button">
-            اشترك الآن
-          </button>
-        </div>
-      </div>
+
  
     </div>
  
@@ -228,26 +213,7 @@
     });
   }
 
-  // ── Newsletter ───────────────────────────────────
-  function initNewsletter() {
-    const btn   = document.getElementById('newsletterBtn');
-    const input = document.getElementById('newsletterEmail');
-    if (!btn || !input) return;
 
-    btn.addEventListener('click', () => {
-      const email = input.value.trim();
-      const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-      if (!valid) {
-        input.style.borderColor = '#f87171';
-        setTimeout(() => (input.style.borderColor = ''), 2000);
-        return;
-      }
-      btn.textContent = '✅ تم!';
-      btn.disabled = true;
-      input.value = '';
-      setTimeout(() => { btn.textContent = 'اشترك الآن'; btn.disabled = false; }, 3000);
-    });
-  }
 
   // ── Scroll Reveal ────────────────────────────────
   function initReveal() {
@@ -383,7 +349,6 @@
     initAnnounceBar();
     initDrawer();
     initActiveNav();
-    initNewsletter();
     initReveal();
     initCookieBanner();
  

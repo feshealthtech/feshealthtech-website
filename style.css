@@ -1886,7 +1886,7 @@ input, textarea, select { font-family: inherit; }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  grid-template-columns: 2fr 1fr 1fr;
   gap: 48px;
   padding-bottom: 56px;
   border-bottom: 1px solid var(--navy-border);
