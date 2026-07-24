@@ -100,7 +100,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
-  direction: rtl;
+  direction: ltr;
 }
 
 body {
@@ -432,8 +432,8 @@ input, textarea, select { font-family: inherit; }
 .drawer-panel {
   position: absolute;
   top: 0;
-  right: 0;
-  left: auto;
+  left: 0;
+  right: auto;
   width: 80%;
   max-width: 320px;
   height: 100%;
@@ -442,7 +442,7 @@ input, textarea, select { font-family: inherit; }
   display: flex;
   flex-direction: column;
   gap: 8px;
-  transform: translateX(100%);
+  transform: translateX(-100%);
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   overflow-y: auto;
 }
@@ -700,7 +700,7 @@ input, textarea, select { font-family: inherit; }
 .hero-stats-float {
   position: absolute;
   top: -16px;
-  right: -24px;
+  left: -24px;
   background: white;
   border-radius: var(--radius-lg);
   padding: 14px 18px;
@@ -714,8 +714,8 @@ input, textarea, select { font-family: inherit; }
 .hero-stats-float-2 {
   top: auto;
   bottom: -16px;
-  right: auto;
-  left: -24px;
+  left: auto;
+  right: -24px;
 }
 
 .hf-icon { font-size: 1.5rem; }
@@ -1396,7 +1396,8 @@ input, textarea, select { font-family: inherit; }
 }
 
 .comp-col-head.ours span { font-size: 1rem; }
-.comp-col-head.feature-col { text-align: right; }
+.comp-col-head.feature-col { text-align: left; }
+.comp-col-head.our-col { color: var(--primary); }
 
 .comparison-row {
   display: grid;
@@ -2166,6 +2167,8 @@ input, textarea, select { font-family: inherit; }
   /* Comparison */
   .comparison-header { grid-template-columns: 1.5fr 1fr 1fr; }
   .comparison-row { grid-template-columns: 1.5fr 1fr 1fr; }
+  .comp-us::before { content: 'FES: '; font-size: 0.72rem; color: var(--primary); font-weight: 700; margin-right: 6px; }
+  .comp-others::before { content: 'Others: '; font-size: 0.72rem; color: var(--text-muted); font-weight: 700; margin-right: 6px; }
 
   /* Footer */
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
@@ -2279,8 +2282,8 @@ input, textarea, select { font-family: inherit; }
   .comparison-row { grid-template-columns: 1fr; gap: 0; }
   .comp-feature { padding: 12px 16px; font-size: 0.85rem; border-bottom: 1px solid var(--border-light); }
   .comp-us, .comp-others { padding: 12px 16px; font-size: 0.85rem; justify-content: flex-start; }
-  .comp-us::before { content: 'FES: '; font-size: 0.72rem; color: var(--primary); font-weight: 700; margin-left: 6px; }
-  .comp-others::before { content: 'غيرنا: '; font-size: 0.72rem; color: var(--text-muted); font-weight: 700; margin-left: 6px; }
+  .comp-us::before { content: 'FES: '; font-size: 0.72rem; color: var(--primary); font-weight: 700; margin-right: 6px; }
+  .comp-others::before { content: 'Others: '; font-size: 0.72rem; color: var(--text-muted); font-weight: 700; margin-right: 6px; }
 
   /* Testimonials & Pricing */
   .testimonials-grid { grid-template-columns: 1fr; }
@@ -2354,8 +2357,8 @@ input, textarea, select { font-family: inherit; }
   .page-breadcrumb { font-size: 0.75rem; }
 
   /* About page */
-  .full-timeline { padding-right: 24px; }
-  .ft-dot { right: -31px; }
+  .full-timeline { padding-left: 24px; }
+  .ft-dot { left: -31px; }
   .ft-title { font-size: 0.92rem; }
   .ft-text { font-size: 0.82rem; }
 
@@ -2478,8 +2481,8 @@ input, textarea, select { font-family: inherit; }
   .why-text { font-size: 0.8rem; }
 
   /* Timeline (about page) */
-  .full-timeline { padding-right: 20px; }
-  .ft-dot { right: -27px; width: 14px; height: 14px; }
+  .full-timeline { padding-left: 20px; }
+  .ft-dot { left: -27px; width: 14px; height: 14px; }
 
   /* Legal */
   .legal-section-title { font-size: 0.92rem; }
@@ -3087,20 +3090,20 @@ input, textarea, select { font-family: inherit; }
 .value-text { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
 
 /* Full Timeline */
-.full-timeline { max-width: 680px; margin: 0 auto; position: relative; padding-right: 32px; }
+.full-timeline { max-width: 680px; margin: 0 auto; position: relative; padding-left: 32px; }
 .full-timeline::before {
   content: '';
   position: absolute;
-  right: 0; top: 0; bottom: 0;
+  left: 0; top: 0; bottom: 0;
   width: 2px;
   background: linear-gradient(180deg, var(--primary), var(--primary-pale));
 }
 .ft-item { position: relative; padding-bottom: 36px; }
 .ft-item:last-child { padding-bottom: 0; }
 .ft-dot {
-  position: absolute; right: -39px; top: 4px;
-  width: 16px; height: 16px;
-  background: var(--primary); border: 3px solid white;
+  position: absolute; left: -39px; top: 4px;
+  width: 18px; height: 18px;
+  background: white; border: 3px solid var(--primary);
   border-radius: 50%;
   box-shadow: 0 0 0 3px var(--primary-pale);
 }

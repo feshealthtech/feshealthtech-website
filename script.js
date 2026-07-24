@@ -127,7 +127,7 @@
     if (slider && textVal && bmrVal && tdeeVal) {
       slider.addEventListener('input', (e) => {
         const weight = parseInt(e.target.value, 10);
-        textVal.textContent = weight + ' كجم';
+        textVal.textContent = weight + ' kg';
         // Mifflin-St Jeor estimate
         const bmr = Math.round(10 * weight + 6.25 * 175 - 5 * 30 + 5);
         const tdee = Math.round(bmr * 1.375);

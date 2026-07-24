@@ -20,49 +20,49 @@
   function getNavbarHTML() {
     return `
 <!-- Navbar -->
-<nav class="navbar" id="navbar" role="navigation" aria-label="القائمة الرئيسية">
+<nav class="navbar" id="navbar" role="navigation" aria-label="Main Navigation">
   <div class="container nav-inner">
-    <a href="${R}index.html" class="nav-logo" aria-label="FES HealthTech — الصفحة الرئيسية">
-      <img src="${R}assets/logo.webp" alt="شعار FES HealthTech" width="208" height="36" fetchpriority="high" />
+    <a href="${R}index.html" class="nav-logo" aria-label="FES HealthTech — Home">
+      <img src="${R}assets/logo.webp" alt="FES HealthTech Logo" width="208" height="36" fetchpriority="high" />
     </a>
  
     <ul class="nav-links" role="list">
-      <li><a href="${R}index.html">الرئيسية</a></li>
-      <li><a href="${R}pages/about.html">من نحن</a></li>
-      <li><a href="${R}pages/portfolio.html">منتجاتنا</a></li>
-      <li><a href="${R}pages/faq.html">الأسئلة الشائعة</a></li>
-      <li><a href="${R}pages/research.html">الأبحاث</a></li>
-      <li><a href="${R}pages/contact.html">تواصل معنا</a></li>
+      <li><a href="${R}index.html">Home</a></li>
+      <li><a href="${R}pages/about.html">About Us</a></li>
+      <li><a href="${R}pages/portfolio.html">Products</a></li>
+      <li><a href="${R}pages/faq.html">FAQ</a></li>
+      <li><a href="${R}pages/research.html">Research</a></li>
+      <li><a href="${R}pages/contact.html">Contact Us</a></li>
     </ul>
  
     <div class="nav-cta">
-      <a href="${R}pages/portfolio.html" class="btn btn-outline btn-sm">استكشف منتجاتنا</a>
-      <a href="${R}pages/contact.html" class="btn btn-primary btn-sm">تواصل معنا</a>
+      <a href="${R}pages/portfolio.html" class="btn btn-outline btn-sm">Explore Products</a>
+      <a href="${R}pages/contact.html" class="btn btn-primary btn-sm">Contact Us</a>
     </div>
  
-    <button class="hamburger" id="hamburger" aria-label="فتح القائمة" aria-expanded="false">
+    <button class="hamburger" id="hamburger" aria-label="Open Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
  
 <!-- Mobile Drawer -->
-<div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-label="القائمة المتنقلة">
+<div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-label="Mobile Menu">
   <div class="drawer-overlay" id="drawerOverlay"></div>
   <div class="drawer-panel">
     <div class="drawer-header">
       <img src="${R}assets/logo.webp" alt="FES HealthTech" width="162" height="28" style="height:28px;" />
-      <button class="drawer-close" id="drawerClose" aria-label="إغلاق القائمة">✕</button>
+      <button class="drawer-close" id="drawerClose" aria-label="Close Menu">✕</button>
     </div>
-    <a href="${R}index.html" class="drawer-link">الرئيسية</a>
-    <a href="${R}pages/about.html" class="drawer-link">من نحن</a>
-    <a href="${R}pages/portfolio.html" class="drawer-link">منتجاتنا</a>
-    <a href="${R}pages/faq.html" class="drawer-link">الأسئلة الشائعة</a>
-    <a href="${R}pages/research.html" class="drawer-link">الأبحاث</a>
-    <a href="${R}pages/contact.html" class="drawer-link">تواصل معنا</a>
+    <a href="${R}index.html" class="drawer-link">Home</a>
+    <a href="${R}pages/about.html" class="drawer-link">About Us</a>
+    <a href="${R}pages/portfolio.html" class="drawer-link">Products</a>
+    <a href="${R}pages/faq.html" class="drawer-link">FAQ</a>
+    <a href="${R}pages/research.html" class="drawer-link">Research</a>
+    <a href="${R}pages/contact.html" class="drawer-link">Contact Us</a>
     <div class="drawer-cta">
-      <a href="${R}pages/portfolio.html" class="btn btn-outline">استكشف منتجاتنا</a>
-      <a href="${R}pages/contact.html" class="btn btn-primary">تواصل معنا</a>
+      <a href="${R}pages/portfolio.html" class="btn btn-outline">Explore Products</a>
+      <a href="${R}pages/contact.html" class="btn btn-primary">Contact Us</a>
     </div>
   </div>
 </div>`;
@@ -79,8 +79,7 @@
       <div class="footer-brand">
         <img src="${R}assets/logo.webp" alt="FES HealthTech" class="footer-logo" width="185" height="32" loading="lazy" />
         <p class="footer-brand-text">
-          FES HealthTech — شركة تقنيات صحية رائدة متخصصة في بناء منصات إدارة العيادات والحلول الرقمية الذكية
-          للرعاية الصحية عالمياً. نؤمن بأن التكنولوجيا الجيدة تخدم الممارس الصحي ولا تُعقّد عمله.
+          FES HealthTech — A premier health-tech firm specializing in intelligent clinic management platforms and digital healthcare solutions globally. We believe technology should empower practitioners, not complicate their workflows.
         </p>
         <div class="footer-social">
           <div class="footer-social-link" title="X (Twitter)" role="button">𝕏</div>
@@ -92,23 +91,23 @@
  
       <!-- Company Links -->
       <div>
-        <h3 class="footer-col-title">الشركة</h3>
+        <h3 class="footer-col-title">Company</h3>
         <ul class="footer-links">
-          <li><a href="${R}index.html">الرئيسية</a></li>
-          <li><a href="${R}pages/about.html">من نحن</a></li>
-          <li><a href="${R}pages/portfolio.html">منتجاتنا</a></li>
-          <li><a href="${R}pages/faq.html">الأسئلة الشائعة</a></li>
-          <li><a href="${R}pages/research.html">الأبحاث</a></li>
-          <li><a href="${R}pages/contact.html">تواصل معنا</a></li>
+          <li><a href="${R}index.html">Home</a></li>
+          <li><a href="${R}pages/about.html">About Us</a></li>
+          <li><a href="${R}pages/portfolio.html">Products</a></li>
+          <li><a href="${R}pages/faq.html">FAQ</a></li>
+          <li><a href="${R}pages/research.html">Research</a></li>
+          <li><a href="${R}pages/contact.html">Contact Us</a></li>
         </ul>
       </div>
  
       <!-- Products Links -->
       <div>
-        <h3 class="footer-col-title">منتجاتنا</h3>
+        <h3 class="footer-col-title">Products</h3>
         <ul class="footer-links">
-          <li><a href="${R}pages/portfolio.html#murshid">مرشد — إدارة عيادات التغذية</a></li>
-          <li><a href="${R}pages/portfolio.html#bariatric">مساعد جراحات السمنة</a></li>
+          <li><a href="${R}pages/portfolio.html#murshid">Murshid — Dietetics Clinic Management</a></li>
+          <li><a href="${R}pages/portfolio.html#bariatric">Bariatric Surgery Assistant</a></li>
         </ul>
       </div>
  
@@ -118,12 +117,12 @@
  
     <div class="footer-bottom">
       <p class="footer-copy">
-        © <span id="footerYear">2026</span> FES Medical Software Technology. جميع الحقوق محفوظة.
+        © <span id="footerYear">2026</span> FES Medical Software Technology. All rights reserved.
       </p>
       <div class="footer-bottom-links">
-        <a href="${R}pages/privacy.html">سياسة الخصوصية</a>
-        <a href="${R}pages/terms.html">شروط الاستخدام</a>
-        <a href="${R}pages/contact.html">تواصل معنا</a>
+        <a href="${R}pages/privacy.html">Privacy Policy</a>
+        <a href="${R}pages/terms.html">Terms of Use</a>
+        <a href="${R}pages/contact.html">Contact Us</a>
       </div>
     </div>
   </div>
@@ -254,8 +253,8 @@
         flex-direction: column;
         gap: 14px;
         animation: cookieFadeUp 0.5s ease forwards;
-        direction: rtl;
-        text-align: right;
+        direction: ltr;
+        text-align: left;
       }
       @media (max-width: 576px) {
         .cookie-banner {
@@ -317,12 +316,11 @@
     banner.className = 'cookie-banner';
     banner.innerHTML = `
       <p class="cookie-text">
-        🔒 يستخدم موقعنا ملفات تعريف الارتباط الطبية لتحسين الأداء وتحليل حركة المرور. تصفحك للموقع يعني موافقتك على ذلك. لمزيد من المعلومات، اقرأ 
-        <a href="${R}pages/privacy.html">سياسة الخصوصية</a>.
+        🔒 Our website uses medical-grade cookies to enhance performance and analyze traffic. By continuing to browse, you consent to our use of cookies. For more information, read our <a href="${R}pages/privacy.html">Privacy Policy</a>.
       </p>
       <div class="cookie-btn-group">
-        <button class="cookie-btn cookie-reject" id="cookieReject">إغلاق</button>
-        <button class="cookie-btn cookie-accept" id="cookieAccept">موافق</button>
+        <button class="cookie-btn cookie-reject" id="cookieReject">Close</button>
+        <button class="cookie-btn cookie-accept" id="cookieAccept">Accept</button>
       </div>
     `;
     document.body.appendChild(banner);
