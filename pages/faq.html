@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="الأسئلة الشائعة والأجوبة التقنية لشركة FES HealthTech — الخصوصية، البنية التحتية، طريقة العمل، والتراخيص." />
-  <title>الأسئلة الشائعة التقنية والمؤسسية | FES HealthTech</title>
+  <meta name="description" content="Technical FAQs and Answers for FES HealthTech — Privacy, Infrastructure, Workflows, and Licensing." />
+  <title>Technical & Corporate FAQs | FES HealthTech</title>
   <link rel="stylesheet" href="../style.css" />
   <link rel="icon" type="image/webp" href="../assets/favicon.webp" />
 
@@ -15,7 +15,7 @@
     body {
       background-color: #F8FAFC !important;
       color: #0F172A !important;
-      font-family: var(--font-arabic);
+      font-family: var(--font-english);
     }
 
     .faq-hero {
@@ -78,12 +78,12 @@
       border: 1px solid #CBD5E1;
       color: #0F172A;
       font-size: 0.9rem;
-      padding: 14px 44px 14px 20px;
+      padding: 14px 20px 14px 44px;
       border-radius: 14px;
       outline: none;
       transition: all 0.3s ease;
       box-shadow: 0 4px 12px rgba(15,23,42,0.02);
-      text-align: right;
+      text-align: left;
     }
     .faq-search-input:focus {
       background: #FFFFFF;
@@ -93,7 +93,7 @@
     .faq-search-icon {
       position: absolute;
       top: 50%;
-      right: 36px;
+      left: 36px;
       transform: translateY(-50%);
       font-size: 1.1rem;
       color: #94A3B8;
@@ -231,31 +231,31 @@
   <div id="navbar-placeholder"></div>
 
   <!-- Hero Section -->
-  <section class="faq-hero" aria-label="مقدمة الأسئلة الشائعة">
-    <div class="faq-hero-eyebrow">مركز المساعدة والأسئلة الشائعة</div>
-    <h1 class="faq-hero-title">إجابات تقنية <span>ومهنية دقيقة</span></h1>
+  <section class="faq-hero" aria-label="FAQ Introduction">
+    <div class="faq-hero-eyebrow">Help Center & FAQ</div>
+    <h1 class="faq-hero-title">Accurate Technical <span>and Professional Answers</span></h1>
     <p class="faq-hero-desc">
-      تصفّح تفاصيل البنية التحتية البرمجية لشركة FES HealthTech، وتعرّف على آلية حفظ خصوصية البيانات وتكامل الأنظمة.
+      Explore the details of FES HealthTech's software infrastructure, and learn about our data privacy and system integration mechanisms.
     </p>
 
     <!-- Search Bar -->
     <div class="faq-search-wrap">
       <span class="faq-search-icon">🔍</span>
-      <input type="text" class="faq-search-input" id="faqSearchInput" placeholder="ابحث عن سؤالك هنا..." aria-label="البحث في الأسئلة الشائعة" />
+      <input type="text" class="faq-search-input" id="faqSearchInput" placeholder="Search for your question here..." aria-label="Search FAQ" />
     </div>
 
     <!-- Filter Buttons -->
     <div class="faq-tabs">
-      <button class="faq-tab-btn active" data-group="all">✨ الكل</button>
-      <button class="faq-tab-btn" data-group="about">🏢 الشركة والمنصات</button>
-      <button class="faq-tab-btn" data-group="security">🔒 الخصوصية والأمان</button>
-      <button class="faq-tab-btn" data-group="tech">🧮 التقنية والحوسبة</button>
-      <button class="faq-tab-btn" data-group="license">💼 الاشتراك والتراخيص</button>
+      <button class="faq-tab-btn active" data-group="all">✨ All</button>
+      <button class="faq-tab-btn" data-group="about">🏢 Company & Platforms</button>
+      <button class="faq-tab-btn" data-group="security">🔒 Privacy & Security</button>
+      <button class="faq-tab-btn" data-group="tech">🧮 Tech & Computing</button>
+      <button class="faq-tab-btn" data-group="license">💼 Subscription & Licensing</button>
     </div>
   </section>
 
   <!-- FAQ List Section -->
-  <section class="faq-content-section" aria-label="تفاصيل الأسئلة">
+  <section class="faq-content-section" aria-label="FAQ Details">
     <div class="faq-container">
       
       <!-- ALL FAQ GROUP wrapper -->
@@ -264,36 +264,36 @@
         <!-- Category 1: About -->
         <div class="faq-card" data-cat="about">
           <div class="faq-question">
-            <span>ما هي رؤية شركة FES HealthTech؟</span>
+            <span>What is FES HealthTech's vision?</span>
             <span class="faq-toggle">+</span>
           </div>
           <div class="faq-answer">
             <div class="faq-answer-inner">
-              نسعى لتقديم البنية التحتية الرقمية الأكثر أماناً وسلاسة للممارسين الصحيين ومراكز التغذية على مستوى العالم، مع التركيز على حماية البيانات بالكامل (Zero-Knowledge) والأداء المحلي الفائق (Edge Computing).
+              We strive to provide the most secure and seamless digital infrastructure for healthcare practitioners and nutrition centers worldwide, focusing entirely on data protection (Zero-Knowledge) and superior local performance (Edge Computing).
             </div>
           </div>
         </div>
 
         <div class="faq-card" data-cat="about">
           <div class="faq-question">
-            <span>هل منصة مرشد هي المنتج الوحيد لـ FES HealthTech؟</span>
+            <span>Is the Murshid platform the only product by FES HealthTech?</span>
             <span class="faq-toggle">+</span>
           </div>
           <div class="faq-answer">
             <div class="faq-answer-inner">
-              تعتبر منصة مرشد (Murshid App) هي منصتنا الرئيسية المعتمدة حالياً والمخصصة لإدارة عيادات التغذية بدقة متناهية. نعمل باستمرار على توسيع وتطوير حلول جديدة متوافقة مع التوجه الإداري والأمني الصارم.
+              Murshid App is currently our primary, fully approved platform designed for managing nutrition clinics with extreme precision. We are constantly expanding and developing new solutions that align with our strict administrative and security guidelines.
             </div>
           </div>
         </div>
 
         <div class="faq-card" data-cat="about">
           <div class="faq-question">
-            <span>كيف تساهم تكنولوجيا FES في تحسين أداء العيادة؟</span>
+            <span>How does FES technology contribute to improving clinic performance?</span>
             <span class="faq-toggle">+</span>
           </div>
           <div class="faq-answer">
             <div class="faq-answer-inner">
-              من خلال أتمتة المهام التشغيلية، وسرعة استخلاص نصوص التحاليل الطبية بـ OCR الذكي، وحساب المقاييس التغذوية المعقدة محلياً، مما يقلل الوقت الإداري بنسبة 45% ويسمح بالتركيز على جودة الخدمة.
+              By automating operational tasks, rapidly extracting medical test texts using smart OCR, and calculating complex nutritional metrics locally. This reduces administrative time by 45% and allows you to focus on service quality.
             </div>
           </div>
         </div>
@@ -301,36 +301,36 @@
         <!-- Category 2: Security -->
         <div class="faq-card" data-cat="security">
           <div class="faq-question">
-            <span>ماذا يعني مفهوم الحوسبة السيادية (Zero-Knowledge Architecture)؟</span>
+            <span>What does Sovereign Computing (Zero-Knowledge Architecture) mean?</span>
             <span class="faq-toggle">+</span>
           </div>
           <div class="faq-answer">
             <div class="faq-answer-inner">
-              يعني أن جميع بيانات مراجعيك تُشفر وتُخزن محلياً على جهازك فقط. لا تستطيع خوادمنا أو أي طرف خارجي الوصول إلى أسماء المرضى، أو أرقام هواتفهم، أو سجلاتهم الطبية. مفاتيح التشفير يمتلكها الأخصائي فقط.
+              It means that all your patients' data is encrypted and stored locally on your device only. Neither our servers nor any third party can access patient names, phone numbers, or medical records. The encryption keys are owned solely by the specialist.
             </div>
           </div>
         </div>
 
         <div class="faq-card" data-cat="security">
           <div class="faq-question">
-            <span>هل منصة مرشد متوافقة مع الأنظمة العالمية لحماية البيانات؟</span>
+            <span>Is the Murshid platform compliant with global data protection regulations?</span>
             <span class="faq-toggle">+</span>
           </div>
           <div class="faq-answer">
             <div class="faq-answer-inner">
-              نعم، نلتزم بالمعايير الفنية الصارمة لحماية خصوصية البيانات الصحية (مثل مبادئ التشفير والتأمين المتوافقة مع اللائحة العامة لحماية البيانات GDPR وحماية السجلات الطبية).
+              Yes, we adhere to strict technical standards for protecting health data privacy (such as encryption and security principles compliant with GDPR and medical records protection laws).
             </div>
           </div>
         </div>
 
         <div class="faq-card" data-cat="security">
           <div class="faq-question">
-            <span>هل يتم حفظ صور التحاليل الطبية عند استخدام الـ OCR؟</span>
+            <span>Are medical test images saved when using OCR?</span>
             <span class="faq-toggle">+</span>
           </div>
           <div class="faq-answer">
             <div class="faq-answer-inner">
-              مطلقاً. تتم عملية قراءة البيانات واستخلاصها داخل الذاكرة المؤقتة (Stateless RAM Processing) للخدمة عبر اتصال مشفر وآمن بالكامل، وتُحذف الصورة نهائياً وتلقائياً فور اكتمال الاستخلاص.
+              Absolutely not. The process of reading and extracting data occurs entirely within the service's temporary memory (Stateless RAM Processing) via a fully secure and encrypted connection. The image is permanently and automatically deleted as soon as the extraction is complete.
             </div>
           </div>
         </div>
@@ -338,36 +338,36 @@
         <!-- Category 3: Technology -->
         <div class="faq-card" data-cat="tech">
           <div class="faq-question">
-            <span>هل تعمل الحاسبات والمقاييس دون إنترنت؟</span>
+            <span>Do the calculators and metrics work without the internet?</span>
             <span class="faq-toggle">+</span>
           </div>
           <div class="faq-answer">
             <div class="faq-answer-inner">
-              نعم، 100% من الحاسبات والمقاييس التغذوية مدمجة محلياً في كود المنصة وتعمل بسرعة 0ms وبدقة تامة أوفلاين دون الحاجة لأي اتصال بالشبكة.
+              Yes, 100% of the nutritional calculators and metrics are integrated locally into the platform's code and work at 0ms speed with complete accuracy offline, without requiring any network connection.
             </div>
           </div>
         </div>
 
         <div class="faq-card" data-cat="tech">
           <div class="faq-question">
-            <span>ما مدى دقة حاسبات مؤشرات النمو للأطفال (Z-Scores)؟</span>
+            <span>How accurate are the child growth indicator calculators (Z-Scores)?</span>
             <span class="faq-toggle">+</span>
           </div>
           <div class="faq-answer">
             <div class="faq-answer-inner">
-              تمت برمجة حاسبات مؤشرات النمو وتدقيقها استناداً إلى الجداول والمعايير المعتمدة رسمياً من منظمة الصحة العالمية (WHO Growth Standards 0-19 Years)، مما يوفر نتائج دقيقة للممارس.
+              Our growth indicator calculators are programmed and audited based on officially approved tables and standards from the World Health Organization (WHO Growth Standards 0-19 Years), providing accurate results for the practitioner.
             </div>
           </div>
         </div>
 
         <div class="faq-card" data-cat="tech">
           <div class="faq-question">
-            <span>كيف تتكامل قاعدة بيانات الأغذية مع وزارة الزراعة الأمريكية (USDA)؟</span>
+            <span>How does the food database integrate with the USDA?</span>
             <span class="faq-toggle">+</span>
           </div>
           <div class="faq-answer">
             <div class="faq-answer-inner">
-              توفر المنصة قاعدة بيانات محلية (أوفلاين) بأكثر من 14,000 صنف غذائي معتاد، وعند توفر الإنترنت، يتكامل محرك البحث ديناميكياً مع USDA API للوصول المباشر لأكثر من 600,000 صنف إضافي.
+              The platform provides a local (offline) database of over 14,000 common food items. When internet is available, the search engine dynamically integrates with the USDA API to provide direct access to over 600,000 additional items.
             </div>
           </div>
         </div>
@@ -375,36 +375,36 @@
         <!-- Category 4: Licensing -->
         <div class="faq-card" data-cat="license">
           <div class="faq-question">
-            <span>كيف يتم ترخيص المنصة واستخدامها للمراكز الكبرى؟</span>
+            <span>How is the platform licensed and used for major centers?</span>
             <span class="faq-toggle">+</span>
           </div>
           <div class="faq-answer">
             <div class="faq-answer-inner">
-              نوفر باقات مرنة تناسب العيادات الفردية والمراكز الكبرى متعددة الفروع. يمكنكم التواصل مع قسم المبيعات لترتيب اشتراك مؤسسي متكامل يلائم احتياجاتكم.
+              We offer flexible packages suitable for individual clinics and major multi-branch centers. You can contact our sales department to arrange an integrated corporate subscription tailored to your needs.
             </div>
           </div>
         </div>
 
         <div class="faq-card" data-cat="license">
           <div class="faq-question">
-            <span>هل تدعم المنصة تخصيص التقارير بالشعار والهوية البصرية للعيادة؟</span>
+            <span>Does the platform support customizing reports with the clinic's logo and visual identity?</span>
             <span class="faq-toggle">+</span>
           </div>
           <div class="faq-answer">
             <div class="faq-answer-inner">
-              نعم، يتيح التطبيق للأخصائي رفع شعاره الخاص وإدخال بيانات عيادته وتوقيعه، لتظهر تلقائياً على كافة التقارير الطبية والأنظمة المصدّرة بصيغة PDF بشكل فاخر وجذاب.
+              Yes, the app allows the specialist to upload their own logo, enter clinic details, and add a signature. These automatically appear on all exported PDF medical and dietary reports in a luxurious and attractive layout.
             </div>
           </div>
         </div>
 
         <div class="faq-card" data-cat="license">
           <div class="faq-question">
-            <span>ما هي طرق النسخ الاحتياطي المتاحة؟</span>
+            <span>What backup methods are available?</span>
             <span class="faq-toggle">+</span>
           </div>
           <div class="faq-answer">
             <div class="faq-answer-inner">
-              توفر المنصة خاصية النسخ الاحتياطي المشفر على حسابك الخاص في Google Drive (Sovereign Cloud Backup)، حيث يتم تشفير قاعدة البيانات المحلية بالكامل قبل رفعها لضمان الخصوصية.
+              The platform offers encrypted backup directly to your personal Google Drive account (Sovereign Cloud Backup), where the entire local database is encrypted before being uploaded to guarantee total privacy.
             </div>
           </div>
         </div>
