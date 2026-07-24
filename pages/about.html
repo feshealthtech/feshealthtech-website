@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,8 +9,8 @@
   <noscript>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
   </noscript>
-  <meta name="description" content="من نحن — FES HealthTech. قصة الشركة، رؤيتها، رسالتها ومجلس الحوكمة السريري في تقنيات الرعاية الصحية." />
-  <title>من نحن | FES HealthTech</title>
+  <meta name="description" content="About Us — FES HealthTech. The company's story, vision, mission, and the Clinical Governance Board in healthcare technologies." />
+  <title>About Us | FES HealthTech</title>
   <link rel="stylesheet" href="../style.css" />
   <link rel="icon" type="image/webp" href="../assets/favicon.webp" />
 
@@ -215,7 +215,7 @@
       font-family: serif;
       position: absolute;
       top: -24px;
-      right: -16px;
+      left: -16px;
       color: rgba(37, 99, 235, 0.1) !important;
     }
 
@@ -276,13 +276,13 @@
       line-height: 1.4;
       color: #0D1B2A;
       margin-bottom: 20px;
-      text-align: right;
+      text-align: left;
     }
     .pillars-sidebar .section-subtitle {
       font-size: 0.96rem;
       line-height: 1.8;
       color: #475569;
-      text-align: right;
+      text-align: left;
     }
     .pillars-stack {
       display: flex;
@@ -594,14 +594,14 @@
         padding: 70px 0;
       }
       .timeline-container::before {
-        right: 16px !important;
+        left: 16px !important;
       }
       .t-item {
-        padding-right: 40px !important;
+        padding-left: 40px !important;
         margin-bottom: 36px;
       }
       .t-dot {
-        right: 7px !important;
+        left: 7px !important;
         width: 20px !important;
         height: 20px !important;
         border-width: 3px !important;
@@ -858,6 +858,11 @@
       transform: translateY(-5px);
       box-shadow: 0 25px 50px rgba(37, 99, 235, 0.06);
     }
+    .decorative-plus {
+      position: absolute;
+      top: 20px; left: 20px;
+      color: var(--primary);
+    }
     .val-badge {
       position: absolute;
       top: 20px; right: 20px;
@@ -873,6 +878,13 @@
       display: flex; align-items: center; justify-content: center;
       font-size: 1.5rem;
       margin-bottom: 20px;
+    }
+    .pillar-row-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #0D1B2A;
+      margin-bottom: 12px;
+      text-align: left;
     }
     .val-title {
       font-size: 1.05rem;
@@ -920,24 +932,24 @@
   <main id="main-content">
   <section class="about-hero">
     <div class="container page-hero-content">
-      <nav class="page-breadcrumb" aria-label="مسار التنقل">
-        <a href="../index.html">الرئيسية</a>
+      <nav class="page-breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
         <span class="page-breadcrumb-sep">›</span>
-        <span>من نحن</span>
+        <span>About Us</span>
       </nav>
-      <div class="page-hero-eyebrow">🏢 حوسبة تغذوية وإدارية مأمونة · ABOUT FES HEALTHTECH</div>
+      <div class="page-hero-eyebrow">🏢 SECURE NUTRITIONAL & ADMIN COMPUTING · ABOUT FES HEALTHTECH</div>
       <h1 class="page-hero-title">
-        نبني الحوسبة الإدارية والتغذوية التي تضع<br />
-        <span>كفاءة الممارس أولاً</span>
+        Building the Admin and Nutritional Computing that Puts<br />
+        <span>Practitioner Efficiency First</span>
       </h1>
       <p class="page-hero-subtitle">
-        مؤسسة رائدة في تطوير أنظمة إدارة العيادات والتخطيط الغذائي وحلول المتابعة اللامركزية. نلتزم بأعلى معايير الأمان والدقة التقنية لتمكين الممارسين وتسهيل سير العمل اليومي.
+        A leading institution in developing clinic management systems, nutritional planning, and decentralized tracking solutions. We are committed to the highest standards of security and technical precision to empower practitioners and streamline daily workflows.
       </p>
     </div>
   </section>
 
   <!-- Company Story (About Us) -->
-  <section class="about-section" aria-label="قصتنا">
+  <section class="about-section" aria-label="Our Story">
     <div class="container">
       <div class="about-grid-2">
         
@@ -947,44 +959,44 @@
             <div class="about-quote-card-header">
               <div class="about-q-avatar">🥗</div>
               <div class="about-q-meta">
-                <span class="about-q-title">مجلس الحوكمة وإدارة الجودة</span>
+                <span class="about-q-title">Governance & Quality Management Board</span>
                 <span class="about-q-sub">FES HealthTech Advisory</span>
               </div>
             </div>
             <p class="about-quote-text">
-              التكنولوجيا لا ينبغي أن تُعقّد عمل الأخصائي، بل يجب أن تمنحه الكفاءة والدعم التنظيمي الكامل لتسهيل التخطيط الغذائي والحد من السهو البشري.
+              Technology should not complicate the specialist's work, but rather grant them complete efficiency and organizational support to facilitate nutritional planning and reduce human error.
             </p>
             
             <div class="about-stats-grid">
               <div class="about-stat-item">
                 <div class="about-stat-number">AES</div>
-                <div class="about-stat-label">تشفير عسكري 256</div>
+                <div class="about-stat-label">Military-Grade AES-256</div>
               </div>
               <div class="about-stat-item">
                 <div class="about-stat-number">100%</div>
-                <div class="about-stat-label">سيادة ولا مركزية</div>
+                <div class="about-stat-label">Sovereignty & Decentralization</div>
               </div>
               <div class="about-stat-item">
                 <div class="about-stat-number">FHIR</div>
-                <div class="about-stat-label">تبادل بيني نشط</div>
+                <div class="about-stat-label">Active Interoperability</div>
               </div>
             </div>
           </div>
         </div>
 
         <div class="about-text-content reveal-left">
-          <span class="section-label">من نحن</span>
+          <span class="section-label">About Us</span>
           <h2 class="section-title" style="margin-bottom:18px;">
-            من الرؤية الأكاديمية <span>إلى السيادة التقنية وتأمين البيانات</span>
+            From Academic Vision <span>to Technical Sovereignty and Data Security</span>
           </h2>
           <p>
-            تأسست <strong>FES HealthTech</strong> كاستجابة لفجوة عميقة في القطاع البرمجي الصحي: افتقار الممارسين الصحيين والأخصائيين إلى أدوات رقمية فائقة التطور تضاهي كفاءة كبرى الأنظمة العالمية، وفي نفس الوقت تحترم السيادة الكاملة لبيانات المراجعين وتلتزم ببروتوكولات الأمان وحماية الخصوصية الصارمة.
+            <strong>FES HealthTech</strong> was founded in response to a deep gap in the healthcare software sector: the lack of ultra-advanced digital tools for healthcare practitioners and specialists that match the efficiency of major global systems, while simultaneously respecting the absolute sovereignty of patient data and adhering to strict security and privacy protocols.
           </p>
           <p>
-            يحمل اسمنا <strong>FES</strong> بعدين متكاملين: فهو يمثل اختصاراً لركائزنا التشغيلية الثلاث: <strong>Functional Excellence & Security</strong> (التميز الوظيفي وأمن البيانات)، كما يشير في نفس الوقت إلى المصطلح الطبي الفيزيائي الشهير <em>(Functional Electrical Stimulation)</em> كرمز للتنشيط والتحفيز التقني الذي نحدثه في البنية البرمجية للرعاية الصحية.
+            Our name <strong>FES</strong> carries two integrated dimensions: it stands as an acronym for our three operational pillars: <strong>Functional Excellence & Security</strong>, and simultaneously references the well-known biophysical medical term <em>(Functional Electrical Stimulation)</em> as a symbol of the technical activation and stimulation we bring to healthcare software infrastructure.
           </p>
           <p>
-            تتبع أبحاثنا وتطويرنا في <strong>FES HealthTech</strong> نهجاً صارماً يربط بين النظرية الأكاديمية والتطبيق الهندسي المأمون. ترتكز حلولنا التقنية على بناء نوى برمجية متخصصة ومحركات استعلام ذكية، لتسهيل إدارة العيادات والمراجعات اليومية وإعداد الخطط الغذائية بكفاءة، مع الحفاظ الكامل على أعلى معايير الخصوصية الصحية للبيانات محلياً.
+            Our research and development at <strong>FES HealthTech</strong> follows a rigorous approach that bridges academic theory with secure engineering application. Our technical solutions are based on building specialized software kernels and intelligent query engines to streamline clinic management, daily consultations, and nutritional planning efficiently, while strictly preserving the highest standards of local health data privacy.
           </p>
         </div>
 
@@ -993,13 +1005,13 @@
   </section>
 
   <!-- Technology Alliances & Integration -->
-  <section class="about-section alliance-section" aria-label="التحالفات والشراكات التقنية">
+  <section class="about-section alliance-section" aria-label="Technical Alliances & Partnerships">
     <div class="container">
       <div class="section-header-dark">
-        <span class="section-label">التحالفات والربط التقني</span>
-        <h2 class="section-title">التكامل البيني <span>والتوافقية البرمجية</span></h2>
+        <span class="section-label">Alliances & Technical Integration</span>
+        <h2 class="section-title">Interoperability <span>and Software Compatibility</span></h2>
         <p class="section-subtitle">
-          تعتمد أنظمتنا على معايير تشغيل وبنية تحتية سحابية ومحلية موحدة تضمن الأمان والتكامل مع المؤسسات الصحية الكبرى.
+          Our systems rely on unified operational standards and hybrid (cloud and local) infrastructure that ensure security and integration with major healthcare institutions.
         </p>
       </div>
 
@@ -1009,39 +1021,39 @@
           <div class="alliance-icon">
             <svg class="fes-svg-icon" viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
           </div>
-          <h3 class="alliance-title">البنية السحابية من Google</h3>
-          <p class="alliance-desc">نستخدم خدمات Google Cloud الآمنة لإدارة بيانات Firestore والمصادقة والذكاء الاصطناعي مع عزل الهويات.</p>
+          <h3 class="alliance-title">Google Cloud Infrastructure</h3>
+          <p class="alliance-desc">We utilize secure Google Cloud services for Firestore data management, authentication, and AI, with isolated identities.</p>
         </div>
         <!-- Alliance 2 -->
         <div class="alliance-card reveal">
           <div class="alliance-icon">
             <svg class="fes-svg-icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
-          <h3 class="alliance-title">التشديد الأمني اللامركزي</h3>
-          <p class="alliance-desc">بنية تشفير موضعية مشفرة بـ AES-256 محلياً على هاتف الأخصائي والمراجع دون مشاركتها خارج الجهاز.</p>
+          <h3 class="alliance-title">Decentralized Security Hardening</h3>
+          <p class="alliance-desc">A localized encryption architecture using AES-256 natively on the practitioner's and patient's devices, without sharing keys outside the device.</p>
         </div>
         <!-- Alliance 3 -->
         <div class="alliance-card reveal">
           <div class="alliance-icon">
             <svg class="fes-svg-icon" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
           </div>
-          <h3 class="alliance-title">تكامل HL7 & FHIR</h3>
-          <p class="alliance-desc">التوافق التقني والربط البرمجي المعياري مع مواصفات HL7 و FHIR العالمية لتسهيل التبادل البيني مع الأنظمة الطبية.</p>
+          <h3 class="alliance-title">HL7 & FHIR Integration</h3>
+          <p class="alliance-desc">Technical compatibility and standardized API connections with global HL7 and FHIR specifications to facilitate interoperability with medical systems.</p>
         </div>
         <!-- Alliance 4 -->
         <div class="alliance-card reveal">
           <div class="alliance-icon">
             <svg class="fes-svg-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
           </div>
-          <h3 class="alliance-title">معالجة Stateless OCR</h3>
-          <p class="alliance-desc">استخلاص البيانات والتحاليل المخبرية فورياً من الصور دون حفظ أي نسخة منها على الخوادم.</p>
+          <h3 class="alliance-title">Stateless OCR Processing</h3>
+          <p class="alliance-desc">Extracting data and laboratory tests instantly from images without storing any copies on servers.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Vision & Mission -->
-  <section class="about-section v-m-section" aria-label="الرؤية والرسالة">
+  <section class="about-section v-m-section" aria-label="Vision and Mission">
     <div class="container">
       <div class="v-m-grid">
         <!-- Vision -->
@@ -1049,9 +1061,9 @@
           <div class="v-m-icon">
             <svg class="fes-svg-icon" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
           </div>
-          <h2 class="v-m-title">رؤيتنا</h2>
+          <h2 class="v-m-title">Our Vision</h2>
           <p class="v-m-desc">
-            أن نكون الشريك البرمجي والتكنولوجي الأول عالمياً للعيادات والمنشآت الصحية في تقديم حلول إدارة المراجعين والتخطيط الغذائي اللامركزي، ممهدين الطريق لعصر جديد من سيادة البيانات الفردية وسرية السجلات الصحية دون التضحية بالسرعة والابتكار التقني.
+            To be the world's premier software and technological partner for clinics and healthcare facilities in providing patient management and decentralized nutritional planning solutions, paving the way for a new era of individual data sovereignty and health record confidentiality without sacrificing speed and technical innovation.
           </p>
         </div>
         <!-- Mission -->
@@ -1059,9 +1071,9 @@
           <div class="v-m-icon">
             <svg class="fes-svg-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
           </div>
-          <h2 class="v-m-title">رسالتنا</h2>
+          <h2 class="v-m-title">Our Mission</h2>
           <p class="v-m-desc">
-            تمكين أخصائيي التغذية والمؤسسات الصحية بالأدوات الذكية والآمنة التي تمنحهم الكفاءة المطلقة أوفلاين. نسعى إلى تبسيط إدارة المراجعات وأتمتة التقارير وتوفير الوقت للتركيز على رعاية المراجعين، مع الالتزام التام بعدم المساس بخصوصية البيانات الطبية.
+            Empowering dietitians and healthcare institutions with smart, secure tools that grant them absolute offline efficiency. We strive to simplify consultation management, automate reports, and save time to focus on patient care, with a firm commitment to never compromise medical data privacy.
           </p>
         </div>
       </div>
@@ -1069,13 +1081,13 @@
   </section>
 
   <!-- Corporate Values -->
-  <section class="about-section values-section" aria-label="قيمنا المؤسسية">
+  <section class="about-section values-section" aria-label="Corporate Values">
     <div class="container">
       <div class="section-header-dark">
-        <span class="section-label">قيمنا المؤسسية</span>
-        <h2 class="section-title">المبادئ الأخلاقية <span>التي توجه أعمالنا</span></h2>
+        <span class="section-label">Corporate Values</span>
+        <h2 class="section-title">Ethical Principles <span>Guiding Our Work</span></h2>
         <p class="section-subtitle">
-          نلتزم بأعلى درجات النزاهة العلمية والتقنية لتوفير بيئات عمل آمنة وموثوقة تعزز نمو شركائنا.
+          We are committed to the highest degrees of scientific and technical integrity to provide safe, reliable work environments that foster our partners' growth.
         </p>
       </div>
 
@@ -1086,8 +1098,8 @@
           <div class="val-icon">
             <svg class="fes-svg-icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 11 2 2 4-4"/></svg>
           </div>
-          <h3 class="val-title">النزاهة والشفافية</h3>
-          <p class="val-desc">نلتزم بالصدق والوضوح التام في كافة خدماتنا وقدرات برامجنا، دون مبالغة تسويقية أو تضليل.</p>
+          <h3 class="val-title">Integrity & Transparency</h3>
+          <p class="val-desc">We commit to complete honesty and clarity regarding all our services and software capabilities, without marketing exaggeration or misleading claims.</p>
         </div>
         <!-- Value 2: Scientific Rigor -->
         <div class="val-card reveal">
@@ -1095,8 +1107,8 @@
           <div class="val-icon">
             <svg class="fes-svg-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
           </div>
-          <h3 class="val-title">الرصانة والتدقيق العلمي</h3>
-          <p class="val-desc">لا ندرج ميزة حسابية أو توصية إلا بعد فحصها وتدقيقها علمياً لضمان توافقها مع البروتوكولات الموثوقة.</p>
+          <h3 class="val-title">Scientific Rigor & Auditing</h3>
+          <p class="val-desc">We never incorporate a computational feature or recommendation without scientifically examining and auditing it to ensure compliance with reliable protocols.</p>
         </div>
         <!-- Value 3: Client Sovereignty -->
         <div class="val-card reveal">
@@ -1104,8 +1116,8 @@
           <div class="val-icon">
             <svg class="fes-svg-icon" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
           </div>
-          <h3 class="val-title">سيادة وحرمة البيانات</h3>
-          <p class="val-desc">نؤمن بأن بيانات العيادات والمراجعين ملك خالص لهم، ونمتنع تماماً عن استخدامها لأي أغراض ربحية.</p>
+          <h3 class="val-title">Data Sovereignty & Sanctity</h3>
+          <p class="val-desc">We believe clinic and patient data belongs purely to them, and we entirely refrain from using it for any commercial purposes.</p>
         </div>
         <!-- Value 4: Continuous Innovation -->
         <div class="val-card reveal">
@@ -1113,23 +1125,23 @@
           <div class="val-icon">
             <svg class="fes-svg-icon" viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A5 5 0 0 0 8 8c0 1.3.5 2.6 1.5 3.5.8.8 1.3 1.5 1.5 2.5"/><line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/></svg>
           </div>
-          <h3 class="val-title">الابتكار المستمر</h3>
-          <p class="val-desc">نسعى باستمرار لتطوير خوارزمياتنا وأدواتنا لتبسيط العمليات الإدارية وتقديم حلول عصرية متكاملة.</p>
+          <h3 class="val-title">Continuous Innovation</h3>
+          <p class="val-desc">We constantly strive to develop our algorithms and tools to simplify administrative operations and deliver comprehensive modern solutions.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Core Pillars - Split Asymmetric layout -->
-  <section class="about-section" style="background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFF 100%) !important;" aria-label="ركائزنا">
+  <section class="about-section" style="background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFF 100%) !important;" aria-label="Our Pillars">
     <div class="container">
       <div class="pillars-grid-split">
         <!-- Sidebar Label -->
         <div class="pillars-sidebar reveal-right">
-          <span class="section-label">ركائز التطوير</span>
-          <h2 class="section-title">المبادئ الحاكمة <span>لبيئاتنا البرمجية</span></h2>
+          <span class="section-label">Development Pillars</span>
+          <h2 class="section-title">Governing Principles of <span>Our Software Environments</span></h2>
           <p class="section-subtitle">
-            نحن لا نصمم برمجيات عامة؛ بل نبتكر بيئات حوسبة متخصصة تحترم معايير الحوكمة التكنولوجية والأمنية الدقيقة لخدمة الممارس بكفاءة.
+            We don't design generic software; we innovate specialized computing environments that respect strict technological and security governance standards to serve practitioners efficiently.
           </p>
         </div>
 
@@ -1141,8 +1153,8 @@
               <svg class="fes-svg-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
             </div>
             <div class="pillar-row-content">
-              <h3 class="pillar-row-title">الدقة والاعتمادية العلمية</h3>
-              <p class="pillar-row-desc">تخضع كافة خوارزمياتنا وحسابات الاحتياجات لمطابقة دقيقة مع التوجيهات الغذائية والأكاديمية العالمية المعتمدة مثل (KDOQI, ASMBS, USDA).</p>
+              <h3 class="pillar-row-title">Scientific Precision & Reliability</h3>
+              <p class="pillar-row-desc">All our algorithms and requirement calculations undergo strict matching with approved global nutritional and academic guidelines (such as KDOQI, ASMBS, USDA).</p>
             </div>
           </div>
           <!-- Pillar 2 -->
@@ -1151,8 +1163,8 @@
               <svg class="fes-svg-icon" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
             </div>
             <div class="pillar-row-content">
-              <h3 class="pillar-row-title">الخصوصية السيادية واللامركزية</h3>
-              <p class="pillar-row-desc">نعتمد بنية هيكلية خالية من تجميع هويات المرضى مع تشفير محلي عسكري كامل (AES-256) لمنح العيادات والمراجعين سيادة مطلقة على ملفاتهم.</p>
+              <h3 class="pillar-row-title">Sovereign & Decentralized Privacy</h3>
+              <p class="pillar-row-desc">We adopt an architecture free from patient identity aggregation, coupled with full military-grade local encryption (AES-256) to grant clinics and patients absolute sovereignty over their files.</p>
             </div>
           </div>
           <!-- Pillar 3 -->
@@ -1161,8 +1173,8 @@
               <svg class="fes-svg-icon" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><circle cx="12" cy="18" r="2"/></svg>
             </div>
             <div class="pillar-row-content">
-              <h3 class="pillar-row-title">التشغيل البيني المتوافق</h3>
-              <p class="pillar-row-desc">أنظمتنا مجهزة بأدوات ربط متوافقة مع مواصفات التبادل الدولية (HL7 و FHIR APIs) لتسهيل الربط الآمن مع السجلات والمنشآت الكبرى عند الطلب.</p>
+              <h3 class="pillar-row-title">Compatible Interoperability</h3>
+              <p class="pillar-row-desc">Our systems are equipped with integration tools conforming to international exchange specifications (HL7 and FHIR APIs) to facilitate secure connections with major records and facilities on demand.</p>
             </div>
           </div>
           <!-- Pillar 4 -->
@@ -1171,8 +1183,8 @@
               <svg class="fes-svg-icon" viewBox="0 0 24 24"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1 0-4.12 2.5 2.5 0 0 1 0-4.88A2.5 2.5 0 0 1 9.5 2zM14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 0-4.12 2.5 2.5 0 0 0 0-4.88A2.5 2.5 0 0 0 14.5 2z"/></svg>
             </div>
             <div class="pillar-row-content">
-              <h3 class="pillar-row-title">الذكاء الاصطناعي التخطيطي المسؤول</h3>
-              <p class="pillar-row-desc">نوظف الذكاء الاصطناعي كمساعد تخطيطي وإداري للأخصائي لتسهيل صياغة الجداول التغذوية ومراجعتها وتوفير الوقت، دون التدخل في القرارات المستقلة للممارس.</p>
+              <h3 class="pillar-row-title">Responsible Planning AI</h3>
+              <p class="pillar-row-desc">We deploy AI as a planning and administrative assistant for specialists to facilitate the drafting and reviewing of nutritional schedules, saving time without interfering with the practitioner's independent decisions.</p>
             </div>
           </div>
         </div>
@@ -1181,13 +1193,13 @@
   </section>
 
   <!-- Governance Section - Dark Clinical Contrast Layout -->
-  <section class="about-section gov-dark-section" aria-label="مجلس الحوكمة وإدارة الجودة">
+  <section class="about-section gov-dark-section" aria-label="Governance and Quality Management Board">
     <div class="container">
       <div class="section-header-dark">
-        <span class="section-label">مجلس الحوكمة وإدارة الجودة</span>
-        <h2 class="section-title" style="color: #FFFFFF !important;">التدقيق العلمي <span>وإدارة الجودة المستمرة</span></h2>
+        <span class="section-label">Governance & Quality Management Board</span>
+        <h2 class="section-title" style="color: #FFFFFF !important;">Scientific Auditing <span>and Continuous Quality Management</span></h2>
         <p class="section-subtitle" style="color: #94A3B8 !important;">
-          تخضع كافة أنظمتنا وجداولنا لمطابقة ومراجعة مستمرة لضمان توافق المخرجات مع التطبيقات الإدارية والتغذوية المعاصرة.
+          All our systems and schedules undergo continuous matching and review to ensure outputs align with contemporary administrative and nutritional practices.
         </p>
       </div>
 
@@ -1197,52 +1209,52 @@
           <div class="gov-icon-box">
             <svg class="fes-svg-icon" viewBox="0 0 24 24"><circle cx="12" cy="5" r="3"/><circle cx="12" cy="19" r="3"/><circle cx="5" cy="12" r="3"/><circle cx="19" cy="12" r="3"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
           </div>
-          <span class="gov-title">التخطيط الغذائي للأمراض المزمنة</span>
-          <span class="gov-desc">مراجعة وتدقيق معايير الجداول التغذوية وملاءمتها للمراجعين ذوي الحالات المزمنة.</span>
+          <span class="gov-title">Nutritional Planning for Chronic Diseases</span>
+          <span class="gov-desc">Reviewing and auditing criteria for nutritional schedules and their suitability for patients with chronic conditions.</span>
         </div>
         <!-- Gov 2 -->
         <div class="gov-pill reveal">
           <div class="gov-icon-box">
             <svg class="fes-svg-icon" viewBox="0 0 24 24"><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
           </div>
-          <span class="gov-title">علوم الأغذية والتفاعلات التغذوية</span>
-          <span class="gov-desc">مراجعة قواعد البيانات الغذائية الضخمة والتداخلات المحتملة مع الأغذية لتأمين الجداول.</span>
+          <span class="gov-title">Food Science & Nutritional Interactions</span>
+          <span class="gov-desc">Reviewing massive food databases and potential food interactions to secure schedules.</span>
         </div>
         <!-- Gov 3 -->
         <div class="gov-pill reveal">
           <div class="gov-icon-box">
             <svg class="fes-svg-icon" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
           </div>
-          <span class="gov-title">متابعة وسلوك جراحات السمنة</span>
-          <span class="gov-desc">مراجعة مراحل التدرج الغذائي وتتبع السلوك بعد العملية لضمان التعافي السليم والآمن.</span>
+          <span class="gov-title">Bariatric Surgery Follow-up & Behavior</span>
+          <span class="gov-desc">Reviewing stages of dietary progression and tracking post-operative behavior to ensure safe, proper recovery.</span>
         </div>
         <!-- Gov 4 -->
         <div class="gov-pill reveal">
           <div class="gov-icon-box">
             <svg class="fes-svg-icon" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           </div>
-          <span class="gov-title">أمن المعلومات والخصوصية</span>
-          <span class="gov-desc">تدقيق تشفير البيانات وعزل الهويات والتخزين اللامركزي بما يتوافق مع HIPAA و GDPR.</span>
+          <span class="gov-title">Information Security & Privacy</span>
+          <span class="gov-desc">Auditing data encryption, identity isolation, and decentralized storage in compliance with HIPAA and GDPR.</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Contact CTA -->
-  <section class="contact-cta-section" aria-label="تواصل معنا مؤسسياً">
+  <section class="contact-cta-section" aria-label="Corporate Contact">
     <div class="container">
       <div class="contact-cta-inner reveal c-clinical-glass">
         <div class="contact-cta-text">
           <h2 class="section-title section-title-dark">
-            شركاء في بناء <span>حلول الحوسبة التغذوية الآمنة</span>
+            Partners in Building <span>Secure Nutritional Computing Solutions</span>
           </h2>
           <p class="section-subtitle section-subtitle-dark">
-            إن كنت ممثلاً لمستشفى، مركزاً صحياً، باحثاً، أو مستثمراً مهتماً بالتقنيات الصحية والغذائية الآمنة — يسعدنا أن نتحاور.
+            If you represent a hospital, health center, researcher, or an investor interested in secure health and nutritional technologies — we would love to talk.
           </p>
         </div>
         <div class="contact-cta-actions">
-          <a href="contact.html" class="btn btn-accent btn-xl">✉️ تواصل مع فريق التطوير والربط الفني</a>
-          <a href="portfolio.html" class="btn btn-ghost-dark btn-xl">📂 استكشف منتجاتنا وحلولنا</a>
+          <a href="contact.html" class="btn btn-accent btn-xl">✉️ Contact Development & Technical Integration Team</a>
+          <a href="portfolio.html" class="btn btn-ghost-dark btn-xl">📂 Explore Our Products & Solutions</a>
         </div>
       </div>
     </div>
