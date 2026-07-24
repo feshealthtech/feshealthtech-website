@@ -23,7 +23,7 @@
 <nav class="navbar" id="navbar" role="navigation" aria-label="القائمة الرئيسية">
   <div class="container nav-inner">
     <a href="${R}index.html" class="nav-logo" aria-label="FES HealthTech — الصفحة الرئيسية">
-      <img src="${R}assets/logo.png" alt="شعار FES HealthTech" />
+      <img src="${R}assets/logo.png" alt="شعار FES HealthTech" width="208" height="36" fetchpriority="high" />
     </a>
  
     <ul class="nav-links" role="list">
@@ -51,7 +51,7 @@
   <div class="drawer-overlay" id="drawerOverlay"></div>
   <div class="drawer-panel">
     <div class="drawer-header">
-      <img src="${R}assets/logo.png" alt="FES HealthTech" style="height:28px;" />
+      <img src="${R}assets/logo.png" alt="FES HealthTech" width="162" height="28" style="height:28px;" />
       <button class="drawer-close" id="drawerClose" aria-label="إغلاق القائمة">✕</button>
     </div>
     <a href="${R}index.html" class="drawer-link">الرئيسية</a>
@@ -77,7 +77,7 @@
  
       <!-- Brand -->
       <div class="footer-brand">
-        <img src="${R}assets/logo.png" alt="FES HealthTech" class="footer-logo" />
+        <img src="${R}assets/logo.png" alt="FES HealthTech" class="footer-logo" width="185" height="32" loading="lazy" />
         <p class="footer-brand-text">
           FES HealthTech — شركة تقنيات صحية رائدة متخصصة في بناء منصات إدارة العيادات والحلول الرقمية الذكية
           للرعاية الصحية عالمياً. نؤمن بأن التكنولوجيا الجيدة تخدم الممارس الصحي ولا تُعقّد عمله.
@@ -92,7 +92,7 @@
  
       <!-- Company Links -->
       <div>
-        <h4 class="footer-col-title">الشركة</h4>
+        <h3 class="footer-col-title">الشركة</h3>
         <ul class="footer-links">
           <li><a href="${R}index.html">الرئيسية</a></li>
           <li><a href="${R}pages/about.html">من نحن</a></li>
@@ -105,7 +105,7 @@
  
       <!-- Products Links -->
       <div>
-        <h4 class="footer-col-title">منتجاتنا</h4>
+        <h3 class="footer-col-title">منتجاتنا</h3>
         <ul class="footer-links">
           <li><a href="${R}pages/portfolio.html#murshid">مرشد — إدارة عيادات التغذية</a></li>
           <li><a href="${R}pages/portfolio.html#bariatric">مساعد جراحات السمنة</a></li>

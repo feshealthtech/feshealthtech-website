@@ -311,6 +311,16 @@ input, textarea, select { font-family: inherit; }
   50% { opacity: 0.5; transform: scale(0.7); }
 }
 
+#navbar-placeholder {
+  min-height: 76px;
+  display: block;
+}
+@media (max-width: 768px) {
+  #navbar-placeholder {
+    min-height: 64px;
+  }
+}
+
 /* ══════════════════════════════════════
    NAVBAR
 ══════════════════════════════════════ */
