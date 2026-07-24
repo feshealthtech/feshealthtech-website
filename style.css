@@ -213,7 +213,9 @@ input, textarea, select { font-family: inherit; }
   font-weight: 700;
   font-family: var(--font-english);
   transition: var(--transition);
-  white-space: nowrap;
+  white-space: normal;
+  text-align: center;
+  line-height: 1.4;
   position: relative;
   overflow: hidden;
 }
