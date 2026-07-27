@@ -105,7 +105,9 @@ html {
 
 body {
   font-family: var(--font-english);
+  background-color: #F8FAFF;
   background-color: var(--bg-page);
+  color: #374151;
   color: var(--text-body);
   line-height: 1.7;
   overflow-x: hidden;
@@ -235,13 +237,13 @@ input, textarea, select { font-family: inherit; }
 
 .btn-outline {
   background: transparent;
-  color: var(--primary);
+  color: var(--primary-dark);
   border: 2px solid var(--border);
 }
 
 .btn-outline:hover {
   background: var(--primary-pale);
-  border-color: var(--primary);
+  border-color: var(--primary-dark);
 }
 
 .btn-ghost-dark {
@@ -751,7 +753,7 @@ input, textarea, select { font-family: inherit; }
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--gray-400);
+  color: var(--gray-700);
   text-align: center;
   margin-bottom: 16px;
 }
@@ -777,7 +779,7 @@ input, textarea, select { font-family: inherit; }
   padding: 0 40px;
   font-size: 0.88rem;
   font-weight: 700;
-  color: var(--gray-400);
+  color: var(--gray-700);
   white-space: nowrap;
   transition: var(--transition);
   font-family: var(--font-english);
@@ -3275,6 +3277,7 @@ input, textarea, select { font-family: inherit; }
   background: linear-gradient(to top, rgba(37,99,235,0.2), var(--primary));
   border-radius: 4px 4px 0 0;
   height: var(--h, 40%);
+  transform-origin: bottom;
   animation: l-bar-grow 2.5s ease-out infinite alternate;
 }
 
@@ -3311,8 +3314,8 @@ input, textarea, select { font-family: inherit; }
 }
 
 @keyframes l-bar-grow {
-  0% { height: 10%; }
-  100% { height: var(--h); }
+  0% { transform: scaleY(0.25); }
+  100% { transform: scaleY(1); }
 }
 
 /* Floating Ambient Rings */
@@ -3464,9 +3467,9 @@ input, textarea, select { font-family: inherit; }
 }
 
 @keyframes l-ocr-scan {
-  0% { top: 0%; }
-  50% { top: 100%; }
-  100% { top: 0%; }
+  0% { transform: translateY(0); }
+  50% { transform: translateY(20000%); }
+  100% { transform: translateY(0); }
 }
 
 /* Floating Particles */
